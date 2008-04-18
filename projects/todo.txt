@@ -1,0 +1,29 @@
+Bubble IOC:
+	- Remote calls (RPC)
+	- Web service exposure
+	- AOP integration
+	- JMX exposure
+	- Web request/session/application scopes
+
+WEB 	
+	- Internationalization & Localization
+		- Left to Right (English)
+		- Right to Legt (Arabic)
+		- hierarchy
+	- Secuirty
+		- XSS filtering
+	- Wiki like content editing
+		- MediaWiki like tags
+	- Google's "sitemap" integration
+	- RSS integration
+	- Handling of "if-modeified-since" http header (?)
+	- AJAX integration
+		- Google web toolkit (GWT)
+	- Mobile compatible
+	- Print layout support
+	- Word Link
+
+	
+
+	
+		
