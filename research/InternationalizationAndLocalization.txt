@@ -1,5 +1,3 @@
-
-
 Due to their length, the terms "Internationalization" and "Localization" are frequently abbreviated to i18n 
 (where 18 stands for the number of letters between the i and the n in internationalization, a usage coined 
 at DEC in the 1970s or 80s[1]) and L10n respectively. 
