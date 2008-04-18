@@ -1,0 +1,34 @@
+
+
+Due to their length, the terms "Internationalization" and "Localization" are frequently abbreviated to i18n 
+(where 18 stands for the number of letters between the i and the n in internationalization, a usage coined 
+at DEC in the 1970s or 80s[1]) and L10n respectively. 
+The capital L on L10n helps to distinguish it from the lowercase i in i18n. [2]
+
+
+
+Globalization (G11N) [rif.1]
+	is the process of developing a program whose features and code design are not solely based on a single language or 
+	locale. Globalizing an application involves two independent steps: internationalization and localization. 
+	Globalization aims to address all of the unique challenges an enterprise faces as it expands to the global market.
+
+Internationalization (I18N) [rif.1]
+	is the process of developing code in such a way that it is completely independent of any culture-specific information. 
+	Fully internationalized applications can be localized to a particular country or region without any changes in the 
+	program code. An application that supports internationalization will have the following characteristics:
+
+
+Localization (L10N) [rif.1]
+	is the process of adapting an application, ideally one which has already been properly internationalized, to run 
+	in a particular locale, country, or linguistic market. This includes displaying all text in the native language, 
+	and using native conventions for formatting and sorting. It takes into account such details as national regulations 
+	and holidays, cultural sensitivities and gender roles, and local currency. The goal is for the final service or 
+	product to appear as if it was developed within a local culture.
+
+
+
+
+
+[1] http://www.compassrosetech.com/services/i18n.html
+
+[2] http://en.wikipedia.org/wiki/Internationalization
