@@ -3,8 +3,6 @@ Due to their length, the terms "Internationalization" and "Localization" are fre
 at DEC in the 1970s or 80s[1]) and L10n respectively. 
 The capital L on L10n helps to distinguish it from the lowercase i in i18n. [2]
 
-
-
 Globalization (G11N) [rif.1]
 	is the process of developing a program whose features and code design are not solely based on a single language or 
 	locale. Globalizing an application involves two independent steps: internationalization and localization. 

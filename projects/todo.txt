@@ -21,7 +21,8 @@ WEB
 		- Google web toolkit (GWT)
 	- Mobile compatible
 	- Print layout support
-	- Word Link
+	- Word Links as defined by user "special links" section
+	- Word links depending on referent query parameters (Yahoo, Google) 
 
 	
 
