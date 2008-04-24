@@ -1,0 +1,59 @@
+Javdoc structure [3]
+	Types (CLasses, Interfaces)
+		* A description which summarizes the purpose of the type (i.e., class or interface)
+		* An @author tag for each author
+		* Optional @see tags
+	
+	 
+	Methods 
+		* A description which summarizes the parameters, return value, and actions of the method
+		* A @param tag for each parameter for the method
+		* A @return tag if the method returns a value (i.e., is not void)
+		* An @exception tag for each exception thrown by the method
+		* Optional @see tags
+	
+	
+	Fields
+		* A description which summarizes the field
+		* Optional @see tags
+	
+Javadoc elements [3]
+	@author <text Type> 
+	Adds an “Author:” entry containing the specified text.
+	
+	@param <parameter-name> <description Method>
+	Adds the specified parameter and its specified description to the “Parameters:” section of the current method.  
+	If the description is longer than one line, it may be continued on the next.
+	
+	@return <description> <Method>
+	Adds a “Returns:” section containing the specified description to the documentation.
+	
+	
+	
+	@exception <full-classname> <description Method> 
+	Adds a “Throws:” entry to the documentation.  The entry contains the specified class name of the exception, 
+	and the description specified, which should explain the significance of the exception.
+	
+	
+	
+	@see <classname Type>, <Method>, <Field> 
+	Adds a “See Also:” entry to the documentation that contains a hyperlink to the specified class (or interface).
+	
+	
+	
+	@see <full-classname  <Type>, <Method>, <Field> 
+	Adds a “See Also:” entry to the documentation that contains a hyperlink to the specified class (or interface).
+	
+	
+	
+	@see <full-classname#method-name  Type>, <Method>, <Field> 
+	Adds a “See Also:” entry to the documentation that contains a hyperlink to the specified method of the specified 
+	class (or interface).
+	
+
+[1] http://java.sun.com/j2se/javadoc/writingdoccomments/index.html
+[2] http://java.sun.com/j2se/javadoc/faq/
+[3] http://www.ontko.com/java/javadoc.doc
+
+
+
