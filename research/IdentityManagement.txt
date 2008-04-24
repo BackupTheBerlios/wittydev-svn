@@ -1,0 +1,63 @@
+Online identity management (OIM) [1]
+	is a set of methods for generating a distinguished presence of a person on the Internet. 
+	OIM is a part of another discipline called Search Engine Optimization with the difference 
+	that the only keyword is the person's name, and the optimization object is not necessary 
+	a single web site; 
+	A survey by CareerBuilder.com found that 1 in 4 hiring managers used search engines to 
+	screen candidates. 
+	One in 10 also checked candidates' profiles on social networking sites such as MySpace 
+	or Facebook [2]. 
+	Roughly half of U.S. hiring officials use the Internet in vetting job applications 
+
+OIM sites
+	http://claimid.com/
+		ClaimID users create a directory of links to information about themselves on 
+		the Internet, a system much like the one used by del.icio.us, an online 
+		bookmarking service.
+	
+	http://www.naymz.com/
+		Naymz is much like a personal PR service.
+		Naymz users, create a profile and link to various other resources that exist 
+		about them - a blog, a photo page, or their social networking profile
+	
+	
+Online Reputation Management (ORM) [3]
+	is a set of methods for generating a distinguished presence of a person on the Internet. 
+	That presence could be reflected in any kind of content that refers to the person, 
+	including news, participation in blogs and forums, personal web sites, social media 
+	presence, pictures, video, etc
+
+ORM How To? [4]
+	1- Write press releases (if a company) and publish them on every PR websites.
+	2- Create profiles on other websites:
+		Flickr profile 			http://www.flickr.com
+		LinkedIn profile		http://www.linkedin.com/
+		MySpace profile and blog	http://www.myspace.com/
+		Friendster profile 		http://www.friendster.com/
+		Yahoo profile 			http://profiles.yahoo.com/
+		Yahoo 360 page 			http://360.yahoo.com/
+		Technorati profile		http://www.technorati.com/
+		Bloglines blog 			http://www.bloglines.com/blog/
+		43 Things page			http://www.43things.com/
+		Typekey profile 		http://www.sixapart.com/typekey/
+		GooglePages page		http://pages.google.com/
+		Blinklist page			http://www.blinklist.com/
+		Blogger blog			http://www.blogger.com/
+		LiveJournal page		http://www.livejournal.com/community/
+		Geocities page			http://www.geocities.com/
+		Fortunecity page		http://members.fortunecity.com/
+		Tripod page			http://members.tripod.com/
+		AOL Hometown page		http://hometown.aol.com/
+		Facebook			http://www.facebook.com/
+	3- Register on different online forums and contribute as much as you can.
+
+
+More on
+	http://mashable.com/2007/09/10/online-identity/
+		=> 25 sites for identity management
+
+
+[1] http://en.wikipedia.org/wiki/Online_Identity_Management 
+[2] http://www.csmonitor.com/2006/1129/p13s01-stct.html
+[3] http://en.wikipedia.org/wiki/Reputation_management 
+[4] http://zafarahmed.com/

@@ -1,0 +1,22 @@
+JavaServer Faces technology is a server-side user interface component framework for Java
+technology-based web applications.
+
+
+The main components of JavaServer Faces technology are as follows:
+- An API for representing UI components and managing their state; handling events,
+server-side validation, and data conversion; defining page navigation; supporting
+internationalization and accessibility; and providing extensibility for all these features
+- Two JavaServer Pages (JSP) custom tag libraries for expressing UI components within a JSP
+page and for wiring components to server-side objects
+
+
+
+JSF vs Struts
+	http://websphere.sys-con.com/read/46516.htm
+
+
+[1] http://java.sun.com/javaee/5/docs/tutorial/doc/JavaEETutorial.pdf
+[1] http://java.sun.com/javaee/5/docs/tutorial/doc/index.html
+
+
+	
