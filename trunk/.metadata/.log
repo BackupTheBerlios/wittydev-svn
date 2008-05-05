@@ -1,0 +1,1173 @@
+!SESSION 2008-05-05 18:38:51.523 -----------------------------------------------
+eclipse.buildId=I20070625-1500
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86 -clean
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:38:53.507
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.ast_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:38:53.538
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.core_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:38:53.554
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.database_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:38:53.570
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.help_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:38:53.585
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.hibernate_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:38:53.601
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.jsf_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:38:53.616
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.jspdesign_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:38:53.616
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.platform_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:38:53.632
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.struts_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:38:53.648
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.tapestry_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:38:53.663
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.uml_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:39:12.601
+!MESSAGE Could not install bundle plugins/javax.servlet.jsp_2.0.0.v200706191603.jar   Bundle "javax.servlet.jsp" version "2.0.0.v200706191603" has already been installed from: update@../myeclipse/eclipse/plugins/javax.servlet.jsp_2.0.0.v200706191603.jar
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:39:12.617
+!MESSAGE Could not install bundle plugins/javax.servlet_2.4.0.v200706111738.jar   Bundle "javax.servlet" version "2.4.0.v200706111738" has already been installed from: update@../myeclipse/eclipse/plugins/javax.servlet_2.4.0.v200706111738.jar
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:39:12.617
+!MESSAGE Could not install bundle plugins/org.apache.commons.el_1.0.0.v200706111724.jar   Bundle "org.apache.commons.el" version "1.0.0.v200706111724" has already been installed from: update@../myeclipse/eclipse/plugins/org.apache.commons.el_1.0.0.v200706111724.jar
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:39:12.617
+!MESSAGE Could not install bundle plugins/org.apache.commons.logging_1.0.4.v200706111724.jar   Bundle "org.apache.commons.logging" version "1.0.4.v200706111724" has already been installed from: update@../myeclipse/eclipse/plugins/org.apache.commons.logging_1.0.4.v200706111724.jar
+
+!ENTRY org.eclipse.ui.workbench 2 0 2008-05-05 18:41:05.556
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:41:05.556
+!MESSAGE Conflict for 'AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureTypeNodeContribution/com.genuitec.eclipse.sqlexplorer.actions.RefreshTypeNodeAction':
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureTypeNodeContribution/com.genuitec.eclipse.sqlexplorer.actions.RefreshTypeNodeAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.actions.RefreshTypeNodeAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureTypeNodeContribution/com.genuitec.eclipse.sqlexplorer.actions.RefreshTypeNodeAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.actions.RefreshTypeNodeAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:41:05.556
+!MESSAGE Conflict for 'AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mysql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mysql.actions.editNodeAction':
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mysql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mysql.actions.editNodeAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mysql.actions.EditNodeAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mysql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mysql.actions.editNodeAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mysql.actions.EditNodeAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:41:05.556
+!MESSAGE Conflict for 'org.polarion.team.svn.ui.command.CompareTwoSelectedRepositoryResourcesCommand':
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.CompareTwoSelectedRepositoryResourcesCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.remote.CompareSelectedAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.CompareTwoSelectedRepositoryResourcesCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.remote.CompareSelectedAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:41:05.556
+!MESSAGE Conflict for 'org.polarion.team.svn.ui.command.ShareProjectsCommand':
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.ShareProjectsCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.management.ShareProjectsAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.ShareProjectsCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.management.ShareProjectsAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:41:05.556
+!MESSAGE Conflict for 'org.polarion.team.svn.ui.command.DisconnectCommand':
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.DisconnectCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.management.DisconnectAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.DisconnectCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.management.DisconnectAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:41:05.556
+!MESSAGE Conflict for 'AUTOGEN:::ValidationMenuAction/ValidationAction':
+HandlerActivation(commandId=AUTOGEN:::ValidationMenuAction/ValidationAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.wst.validation.internal.ui.ValidationMenuAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ValidationMenuAction/ValidationAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.wst.validation.internal.ui.ValidationMenuAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:41:05.556
+!MESSAGE Conflict for 'org.polarion.team.svn.ui.command.CompareTwoRepositoryResourcesCommand':
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.CompareTwoRepositoryResourcesCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.remote.CompareAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.CompareTwoRepositoryResourcesCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.remote.CompareAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:41:05.556
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.jst.ws.internal.consumption.ui.wizard.client.genwsil/org.eclipse.jst.ws.consumption.ui.wsilimport':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.jst.ws.internal.consumption.ui.wizard.client.genwsil/org.eclipse.jst.ws.consumption.ui.wsilimport,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.wst.command.internal.env.ui.widgets.popup.DynamicPopupWizard),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.jst.ws.internal.consumption.ui.wizard.client.genwsil/org.eclipse.jst.ws.consumption.ui.wsilimport,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.wst.command.internal.env.ui.widgets.popup.DynamicPopupWizard),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:41:05.556
+!MESSAGE Conflict for 'AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.runFunctionAction':
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.runFunctionAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mssql.actions.RunSybaseFunctionProcedureAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.runFunctionAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mssql.actions.RunMssqlFunctionProcedureAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:41:05.556
+!MESSAGE Conflict for 'AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mysql.triggerNodeActions/com.genuitec.eclipse.sqlexplorer.mysql.openTriggerAction':
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mysql.triggerNodeActions/com.genuitec.eclipse.sqlexplorer.mysql.openTriggerAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mysql.actions.OpenTriggerAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mysql.triggerNodeActions/com.genuitec.eclipse.sqlexplorer.mysql.openTriggerAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mysql.actions.OpenTriggerAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:41:05.556
+!MESSAGE Conflict for 'org.polarion.team.svn.ui.command.CleanupCommand':
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.CleanupCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.management.CleanupAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.CleanupCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.management.CleanupAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:41:05.556
+!MESSAGE Conflict for 'AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.triggerNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.openTriggerAction':
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.triggerNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.openTriggerAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mssql.actions.OpenTriggerAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.triggerNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.openTriggerAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mssql.actions.OpenTriggerAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:41:05.556
+!MESSAGE Conflict for 'AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.editProcedureAction':
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.editProcedureAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mssql.actions.EditMssqlNodeAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.editProcedureAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mssql.actions.EditMssqlNodeAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:41:05.556
+!MESSAGE Conflict for 'AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.spHelpAction':
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.spHelpAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mssql.actions.MssqlSpHelpAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.spHelpAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mssql.actions.MssqlSpHelpAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:41:05.556
+!MESSAGE Conflict for 'org.polarion.team.svn.ui.command.CopyUrlCommand':
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.CopyUrlCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.remote.CopyUrlAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.CopyUrlCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.remote.CopyUrlAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@13306ad),sourcePriority=16384)
+
+!ENTRY org.eclipse.jface 2 0 2008-05-05 18:41:05.572
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:41:05.572
+!MESSAGE A conflict occurred for ALT+CTRL+U:
+Binding(ALT+CTRL+U,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.UpdateCommand,Update,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.UpdateAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+U,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.UpdateCommand,Update,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.UpdateAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:41:05.572
+!MESSAGE A conflict occurred for ALT+CTRL+S:
+Binding(ALT+CTRL+S,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.SynchronizeCommand,Synchronize with Repository,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.SynchronizeAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+S,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.SynchronizeCommand,Synchronize with Repository,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.SynchronizeAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:41:05.572
+!MESSAGE A conflict occurred for ALT+CTRL+P:
+Binding(ALT+CTRL+P,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.CreatePatchCommand,Create Patch...,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.CreatePatchAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+P,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.CreatePatchCommand,Create Patch...,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.CreatePatchAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:41:05.572
+!MESSAGE A conflict occurred for ALT+CTRL+R:
+Binding(ALT+CTRL+R,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.CompareWithRevisionCommand,URL...,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.CompareWithRevisionAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+R,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.CompareWithRevisionCommand,Revision...,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.CompareWithRevisionAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:41:05.572
+!MESSAGE A conflict occurred for ALT+CTRL+L:
+Binding(ALT+CTRL+L,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.CompareWithLatestRevisionCommand,Latest from Repository,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.CompareWithLatestRevisionAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+L,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.CompareWithLatestRevisionCommand,Latest from Repository,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.CompareWithLatestRevisionAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:41:05.572
+!MESSAGE A conflict occurred for ALT+SHIFT+V:
+Binding(ALT+SHIFT+V,
+	ParameterizedCommand(Command(com.genuitec.org.springframework.ide.eclipse.beans.ui.commands.showinview,Show in Spring Beans View,
+		,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+V,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.move.element,Move - Refactoring ,
+		Move the selected element to a new location,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:41:05.572
+!MESSAGE A conflict occurred for ALT+SHIFT+T:
+Binding(ALT+SHIFT+T,
+	ParameterizedCommand(Command(com.genuitec.org.springframework.ide.eclipse.beans.ui.commands.openjavatype,Open Java Type,
+		,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.refactor.quickMenu,Show Refactor Quick Menu,
+		Shows the refactor quick menu,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:41:05.572
+!MESSAGE A conflict occurred for ALT+CTRL+H:
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.call.hierarchy,Open Call Hierarchy,
+		Open a call hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.ShowResourceHistoryCommand,Show Resource History,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.ShowHistoryAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:41:05.572
+!MESSAGE A conflict occurred for ALT+CTRL+A:
+Binding(ALT+CTRL+A,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.ShowAnnotationCommand,Show Annotation,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.ShowAnnotationAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+A,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.AddToSVNCommand,Add to Version Control...,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.AddToSVNAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:41:05.572
+!MESSAGE A conflict occurred for ALT+CTRL+I:
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.AddToSVNIgnoreCommand,Add to svn:ignore...,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.AddToSVNIgnoreAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.AddToSVNIgnoreCommand,Add to svn:ignore...,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.AddToSVNIgnoreAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:41:05.572
+!MESSAGE A conflict occurred for ALT+CTRL+C:
+Binding(ALT+CTRL+C,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.CommitCommand,Commit...,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.CommitAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+C,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.CommitCommand,Commit...,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.CommitAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.genuitec.eclipse.core 1 0 2008-05-05 18:41:07.931
+!MESSAGE Unable to locate .myeclipse.properties file
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2008-05-05 18:41:19.260
+!MESSAGE Installed snippet library: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\plugins\com.genuitec.eclipse.wizards_5.9.100\snippets\html\css_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2008-05-05 18:41:19.400
+!MESSAGE Installed snippet library: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\plugins\com.genuitec.eclipse.wizards_5.9.100\snippets\html\forms_lists_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2008-05-05 18:41:19.447
+!MESSAGE Installed snippet library: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\plugins\com.genuitec.eclipse.wizards_5.9.100\snippets\html\htmlform_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2008-05-05 18:41:19.525
+!MESSAGE Installed snippet library: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\plugins\com.genuitec.eclipse.wizards_5.9.100\snippets\html\html_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2008-05-05 18:41:19.604
+!MESSAGE Installed snippet library: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\plugins\com.genuitec.eclipse.wizards_5.9.100\snippets\html\javascript_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2008-05-05 18:41:19.666
+!MESSAGE Installed snippet library: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\plugins\com.genuitec.eclipse.wizards_5.9.100\snippets\jsp\jsf_f_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2008-05-05 18:41:19.775
+!MESSAGE Installed snippet library: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\plugins\com.genuitec.eclipse.wizards_5.9.100\snippets\jsp\jsf_h_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2008-05-05 18:41:19.838
+!MESSAGE Installed snippet library: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\plugins\com.genuitec.eclipse.wizards_5.9.100\snippets\jsp\struts_bean_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2008-05-05 18:41:19.916
+!MESSAGE Installed snippet library: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\plugins\com.genuitec.eclipse.wizards_5.9.100\snippets\jsp\struts_html_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2008-05-05 18:41:19.994
+!MESSAGE Installed snippet library: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\plugins\com.genuitec.eclipse.wizards_5.9.100\snippets\jsp\struts_logic_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2008-05-05 18:41:20.057
+!MESSAGE Installed snippet library: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\plugins\com.genuitec.eclipse.wizards_5.9.100\snippets\jsp\struts_tiles_snippets.xml
+
+!ENTRY com.tikal.eclipse.updatemanager.quicksetup 4 4 2008-05-05 18:42:15.761
+!MESSAGE Network connection problems encountered during search.
+!SESSION 2008-05-05 18:49:22.794 -----------------------------------------------
+eclipse.buildId=I20070625-1500
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86 -clean
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:49:26.091
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.ast_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:49:26.107
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.core_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:49:26.107
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.database_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:49:26.122
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.help_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:49:26.122
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.hibernate_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:49:26.138
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.jsf_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:49:26.153
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.jspdesign_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:49:26.169
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.platform_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:49:26.169
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.struts_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:49:26.185
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.tapestry_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:49:26.200
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.uml_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:49:36.982
+!MESSAGE Could not install bundle plugins/javax.servlet.jsp_2.0.0.v200706191603.jar   Bundle "javax.servlet.jsp" version "2.0.0.v200706191603" has already been installed from: update@../myeclipse/eclipse/plugins/javax.servlet.jsp_2.0.0.v200706191603.jar
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:49:36.997
+!MESSAGE Could not install bundle plugins/javax.servlet_2.4.0.v200706111738.jar   Bundle "javax.servlet" version "2.4.0.v200706111738" has already been installed from: update@../myeclipse/eclipse/plugins/javax.servlet_2.4.0.v200706111738.jar
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:49:36.997
+!MESSAGE Could not install bundle plugins/org.apache.commons.el_1.0.0.v200706111724.jar   Bundle "org.apache.commons.el" version "1.0.0.v200706111724" has already been installed from: update@../myeclipse/eclipse/plugins/org.apache.commons.el_1.0.0.v200706111724.jar
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:49:36.997
+!MESSAGE Could not install bundle plugins/org.apache.commons.logging_1.0.4.v200706111724.jar   Bundle "org.apache.commons.logging" version "1.0.4.v200706111724" has already been installed from: update@../myeclipse/eclipse/plugins/org.apache.commons.logging_1.0.4.v200706111724.jar
+
+!ENTRY org.eclipse.ui.workbench 2 0 2008-05-05 18:49:53.497
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:49:53.513
+!MESSAGE Conflict for 'AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureTypeNodeContribution/com.genuitec.eclipse.sqlexplorer.actions.RefreshTypeNodeAction':
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureTypeNodeContribution/com.genuitec.eclipse.sqlexplorer.actions.RefreshTypeNodeAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.actions.RefreshTypeNodeAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureTypeNodeContribution/com.genuitec.eclipse.sqlexplorer.actions.RefreshTypeNodeAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.actions.RefreshTypeNodeAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:49:53.513
+!MESSAGE Conflict for 'AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mysql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mysql.actions.editNodeAction':
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mysql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mysql.actions.editNodeAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mysql.actions.EditNodeAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mysql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mysql.actions.editNodeAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mysql.actions.EditNodeAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:49:53.513
+!MESSAGE Conflict for 'org.polarion.team.svn.ui.command.CompareTwoSelectedRepositoryResourcesCommand':
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.CompareTwoSelectedRepositoryResourcesCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.remote.CompareSelectedAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.CompareTwoSelectedRepositoryResourcesCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.remote.CompareSelectedAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:49:53.513
+!MESSAGE Conflict for 'org.polarion.team.svn.ui.command.ShareProjectsCommand':
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.ShareProjectsCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.management.ShareProjectsAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.ShareProjectsCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.management.ShareProjectsAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:49:53.513
+!MESSAGE Conflict for 'org.polarion.team.svn.ui.command.DisconnectCommand':
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.DisconnectCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.management.DisconnectAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.DisconnectCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.management.DisconnectAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:49:53.513
+!MESSAGE Conflict for 'AUTOGEN:::ValidationMenuAction/ValidationAction':
+HandlerActivation(commandId=AUTOGEN:::ValidationMenuAction/ValidationAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.wst.validation.internal.ui.ValidationMenuAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ValidationMenuAction/ValidationAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.wst.validation.internal.ui.ValidationMenuAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:49:53.513
+!MESSAGE Conflict for 'org.polarion.team.svn.ui.command.CompareTwoRepositoryResourcesCommand':
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.CompareTwoRepositoryResourcesCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.remote.CompareAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.CompareTwoRepositoryResourcesCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.remote.CompareAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:49:53.513
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.jst.ws.internal.consumption.ui.wizard.client.genwsil/org.eclipse.jst.ws.consumption.ui.wsilimport':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.jst.ws.internal.consumption.ui.wizard.client.genwsil/org.eclipse.jst.ws.consumption.ui.wsilimport,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.wst.command.internal.env.ui.widgets.popup.DynamicPopupWizard),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.jst.ws.internal.consumption.ui.wizard.client.genwsil/org.eclipse.jst.ws.consumption.ui.wsilimport,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.wst.command.internal.env.ui.widgets.popup.DynamicPopupWizard),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:49:53.513
+!MESSAGE Conflict for 'AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.runFunctionAction':
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.runFunctionAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mssql.actions.RunMssqlFunctionProcedureAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.runFunctionAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mssql.actions.RunSybaseFunctionProcedureAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:49:53.513
+!MESSAGE Conflict for 'AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mysql.triggerNodeActions/com.genuitec.eclipse.sqlexplorer.mysql.openTriggerAction':
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mysql.triggerNodeActions/com.genuitec.eclipse.sqlexplorer.mysql.openTriggerAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mysql.actions.OpenTriggerAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mysql.triggerNodeActions/com.genuitec.eclipse.sqlexplorer.mysql.openTriggerAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mysql.actions.OpenTriggerAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:49:53.513
+!MESSAGE Conflict for 'org.polarion.team.svn.ui.command.CleanupCommand':
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.CleanupCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.management.CleanupAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.CleanupCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.management.CleanupAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:49:53.513
+!MESSAGE Conflict for 'AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.triggerNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.openTriggerAction':
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.triggerNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.openTriggerAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mssql.actions.OpenTriggerAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.triggerNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.openTriggerAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mssql.actions.OpenTriggerAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:49:53.513
+!MESSAGE Conflict for 'AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.editProcedureAction':
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.editProcedureAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mssql.actions.EditMssqlNodeAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.editProcedureAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mssql.actions.EditMssqlNodeAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:49:53.513
+!MESSAGE Conflict for 'AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.spHelpAction':
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.spHelpAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mssql.actions.MssqlSpHelpAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.spHelpAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mssql.actions.MssqlSpHelpAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:49:53.513
+!MESSAGE Conflict for 'org.polarion.team.svn.ui.command.CopyUrlCommand':
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.CopyUrlCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.remote.CopyUrlAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.CopyUrlCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.remote.CopyUrlAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@d28dfa),sourcePriority=16384)
+
+!ENTRY org.eclipse.jface 2 0 2008-05-05 18:49:53.560
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:49:53.560
+!MESSAGE A conflict occurred for ALT+CTRL+U:
+Binding(ALT+CTRL+U,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.UpdateCommand,Update,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.UpdateAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+U,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.UpdateCommand,Update,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.UpdateAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:49:53.560
+!MESSAGE A conflict occurred for ALT+CTRL+S:
+Binding(ALT+CTRL+S,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.SynchronizeCommand,Synchronize with Repository,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.SynchronizeAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+S,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.SynchronizeCommand,Synchronize with Repository,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.SynchronizeAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:49:53.560
+!MESSAGE A conflict occurred for ALT+CTRL+P:
+Binding(ALT+CTRL+P,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.CreatePatchCommand,Create Patch...,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.CreatePatchAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+P,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.CreatePatchCommand,Create Patch...,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.CreatePatchAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:49:53.560
+!MESSAGE A conflict occurred for ALT+CTRL+R:
+Binding(ALT+CTRL+R,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.CompareWithRevisionCommand,URL...,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.CompareWithRevisionAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+R,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.CompareWithRevisionCommand,Revision...,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.CompareWithRevisionAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:49:53.560
+!MESSAGE A conflict occurred for ALT+CTRL+L:
+Binding(ALT+CTRL+L,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.CompareWithLatestRevisionCommand,Latest from Repository,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.CompareWithLatestRevisionAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+L,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.CompareWithLatestRevisionCommand,Latest from Repository,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.CompareWithLatestRevisionAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:49:53.560
+!MESSAGE A conflict occurred for ALT+SHIFT+V:
+Binding(ALT+SHIFT+V,
+	ParameterizedCommand(Command(com.genuitec.org.springframework.ide.eclipse.beans.ui.commands.showinview,Show in Spring Beans View,
+		,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+V,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.move.element,Move - Refactoring ,
+		Move the selected element to a new location,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:49:53.560
+!MESSAGE A conflict occurred for ALT+SHIFT+T:
+Binding(ALT+SHIFT+T,
+	ParameterizedCommand(Command(com.genuitec.org.springframework.ide.eclipse.beans.ui.commands.openjavatype,Open Java Type,
+		,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.refactor.quickMenu,Show Refactor Quick Menu,
+		Shows the refactor quick menu,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:49:53.560
+!MESSAGE A conflict occurred for ALT+CTRL+H:
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.call.hierarchy,Open Call Hierarchy,
+		Open a call hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.ShowResourceHistoryCommand,Show Resource History,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.ShowHistoryAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:49:53.560
+!MESSAGE A conflict occurred for ALT+CTRL+A:
+Binding(ALT+CTRL+A,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.ShowAnnotationCommand,Show Annotation,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.ShowAnnotationAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+A,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.AddToSVNCommand,Add to Version Control...,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.AddToSVNAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:49:53.560
+!MESSAGE A conflict occurred for ALT+CTRL+I:
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.AddToSVNIgnoreCommand,Add to svn:ignore...,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.AddToSVNIgnoreAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.AddToSVNIgnoreCommand,Add to svn:ignore...,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.AddToSVNIgnoreAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:49:53.560
+!MESSAGE A conflict occurred for ALT+CTRL+C:
+Binding(ALT+CTRL+C,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.CommitCommand,Commit...,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.CommitAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+C,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.CommitCommand,Commit...,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.CommitAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.genuitec.eclipse.core 1 0 2008-05-05 18:49:54.028
+!MESSAGE Unable to locate .myeclipse.properties file
+
+!ENTRY com.tikal.eclipse.updatemanager.quicksetup 4 4 2008-05-05 18:50:48.247
+!MESSAGE Network connection problems encountered during search.
+!SESSION 2008-05-05 18:52:42.028 -----------------------------------------------
+eclipse.buildId=I20070625-1500
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86 -clean
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:52:43.294
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.ast_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:52:43.294
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.core_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:52:43.310
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.database_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:52:43.325
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.help_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:52:43.325
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.hibernate_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:52:43.341
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.jsf_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:52:43.357
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.jspdesign_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:52:43.357
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.platform_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:52:43.372
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.struts_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:52:43.388
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.tapestry_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:52:43.403
+!MESSAGE Unable to find feature.xml in directory: D:\carlos\develop\ide\MyEclipse-6.0M1\myeclipse\eclipse\features\com.genuitec.myeclipse.uml_6.0.0.zmyeclipse60020070820
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:52:52.857
+!MESSAGE Could not install bundle plugins/javax.servlet.jsp_2.0.0.v200706191603.jar   Bundle "javax.servlet.jsp" version "2.0.0.v200706191603" has already been installed from: update@../myeclipse/eclipse/plugins/javax.servlet.jsp_2.0.0.v200706191603.jar
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:52:52.857
+!MESSAGE Could not install bundle plugins/javax.servlet_2.4.0.v200706111738.jar   Bundle "javax.servlet" version "2.4.0.v200706111738" has already been installed from: update@../myeclipse/eclipse/plugins/javax.servlet_2.4.0.v200706111738.jar
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:52:52.872
+!MESSAGE Could not install bundle plugins/org.apache.commons.el_1.0.0.v200706111724.jar   Bundle "org.apache.commons.el" version "1.0.0.v200706111724" has already been installed from: update@../myeclipse/eclipse/plugins/org.apache.commons.el_1.0.0.v200706111724.jar
+
+!ENTRY org.eclipse.update.configurator 2008-05-05 18:52:52.872
+!MESSAGE Could not install bundle plugins/org.apache.commons.logging_1.0.4.v200706111724.jar   Bundle "org.apache.commons.logging" version "1.0.4.v200706111724" has already been installed from: update@../myeclipse/eclipse/plugins/org.apache.commons.logging_1.0.4.v200706111724.jar
+
+!ENTRY org.eclipse.ui.workbench 2 0 2008-05-05 18:53:09.982
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:53:09.982
+!MESSAGE Conflict for 'AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureTypeNodeContribution/com.genuitec.eclipse.sqlexplorer.actions.RefreshTypeNodeAction':
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureTypeNodeContribution/com.genuitec.eclipse.sqlexplorer.actions.RefreshTypeNodeAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.actions.RefreshTypeNodeAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureTypeNodeContribution/com.genuitec.eclipse.sqlexplorer.actions.RefreshTypeNodeAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.actions.RefreshTypeNodeAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:53:09.982
+!MESSAGE Conflict for 'AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mysql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mysql.actions.editNodeAction':
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mysql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mysql.actions.editNodeAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mysql.actions.EditNodeAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mysql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mysql.actions.editNodeAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mysql.actions.EditNodeAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:53:09.982
+!MESSAGE Conflict for 'org.polarion.team.svn.ui.command.CompareTwoSelectedRepositoryResourcesCommand':
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.CompareTwoSelectedRepositoryResourcesCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.remote.CompareSelectedAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.CompareTwoSelectedRepositoryResourcesCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.remote.CompareSelectedAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:53:09.982
+!MESSAGE Conflict for 'org.polarion.team.svn.ui.command.ShareProjectsCommand':
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.ShareProjectsCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.management.ShareProjectsAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.ShareProjectsCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.management.ShareProjectsAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:53:09.982
+!MESSAGE Conflict for 'org.polarion.team.svn.ui.command.DisconnectCommand':
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.DisconnectCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.management.DisconnectAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.DisconnectCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.management.DisconnectAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:53:09.982
+!MESSAGE Conflict for 'AUTOGEN:::ValidationMenuAction/ValidationAction':
+HandlerActivation(commandId=AUTOGEN:::ValidationMenuAction/ValidationAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.wst.validation.internal.ui.ValidationMenuAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ValidationMenuAction/ValidationAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.wst.validation.internal.ui.ValidationMenuAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:53:09.982
+!MESSAGE Conflict for 'org.polarion.team.svn.ui.command.CompareTwoRepositoryResourcesCommand':
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.CompareTwoRepositoryResourcesCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.remote.CompareAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.CompareTwoRepositoryResourcesCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.remote.CompareAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:53:09.982
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.jst.ws.internal.consumption.ui.wizard.client.genwsil/org.eclipse.jst.ws.consumption.ui.wsilimport':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.jst.ws.internal.consumption.ui.wizard.client.genwsil/org.eclipse.jst.ws.consumption.ui.wsilimport,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.wst.command.internal.env.ui.widgets.popup.DynamicPopupWizard),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.jst.ws.internal.consumption.ui.wizard.client.genwsil/org.eclipse.jst.ws.consumption.ui.wsilimport,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.wst.command.internal.env.ui.widgets.popup.DynamicPopupWizard),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:53:09.982
+!MESSAGE Conflict for 'AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.runFunctionAction':
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.runFunctionAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mssql.actions.RunSybaseFunctionProcedureAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.runFunctionAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mssql.actions.RunMssqlFunctionProcedureAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:53:09.982
+!MESSAGE Conflict for 'AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mysql.triggerNodeActions/com.genuitec.eclipse.sqlexplorer.mysql.openTriggerAction':
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mysql.triggerNodeActions/com.genuitec.eclipse.sqlexplorer.mysql.openTriggerAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mysql.actions.OpenTriggerAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mysql.triggerNodeActions/com.genuitec.eclipse.sqlexplorer.mysql.openTriggerAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mysql.actions.OpenTriggerAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:53:09.982
+!MESSAGE Conflict for 'org.polarion.team.svn.ui.command.CleanupCommand':
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.CleanupCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.management.CleanupAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.CleanupCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.management.CleanupAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:53:09.982
+!MESSAGE Conflict for 'AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.triggerNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.openTriggerAction':
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.triggerNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.openTriggerAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mssql.actions.OpenTriggerAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.triggerNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.openTriggerAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mssql.actions.OpenTriggerAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:53:09.982
+!MESSAGE Conflict for 'AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.editProcedureAction':
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.editProcedureAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mssql.actions.EditMssqlNodeAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.editProcedureAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mssql.actions.EditMssqlNodeAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:53:09.982
+!MESSAGE Conflict for 'AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.spHelpAction':
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.spHelpAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mssql.actions.MssqlSpHelpAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::com.genuitec.eclipse.sqlexplorer.mssql.procedureNodeActions/com.genuitec.eclipse.sqlexplorer.mssql.spHelpAction,
+	handler=ActionDelegateHandlerProxy(null,com.genuitec.eclipse.sqlexplorer.mssql.actions.MssqlSpHelpAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2008-05-05 18:53:09.982
+!MESSAGE Conflict for 'org.polarion.team.svn.ui.command.CopyUrlCommand':
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.CopyUrlCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.remote.CopyUrlAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+HandlerActivation(commandId=org.polarion.team.svn.ui.command.CopyUrlCommand,
+	handler=ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.remote.CopyUrlAction),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@b2e752),sourcePriority=16384)
+
+!ENTRY org.eclipse.jface 2 0 2008-05-05 18:53:10.107
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:53:10.107
+!MESSAGE A conflict occurred for ALT+CTRL+U:
+Binding(ALT+CTRL+U,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.UpdateCommand,Update,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.UpdateAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+U,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.UpdateCommand,Update,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.UpdateAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:53:10.107
+!MESSAGE A conflict occurred for ALT+CTRL+S:
+Binding(ALT+CTRL+S,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.SynchronizeCommand,Synchronize with Repository,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.SynchronizeAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+S,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.SynchronizeCommand,Synchronize with Repository,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.SynchronizeAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:53:10.107
+!MESSAGE A conflict occurred for ALT+CTRL+P:
+Binding(ALT+CTRL+P,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.CreatePatchCommand,Create Patch...,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.CreatePatchAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+P,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.CreatePatchCommand,Create Patch...,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.CreatePatchAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:53:10.107
+!MESSAGE A conflict occurred for ALT+CTRL+R:
+Binding(ALT+CTRL+R,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.CompareWithRevisionCommand,URL...,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.CompareWithRevisionAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+R,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.CompareWithRevisionCommand,Revision...,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.CompareWithRevisionAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:53:10.107
+!MESSAGE A conflict occurred for ALT+CTRL+L:
+Binding(ALT+CTRL+L,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.CompareWithLatestRevisionCommand,Latest from Repository,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.CompareWithLatestRevisionAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+L,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.CompareWithLatestRevisionCommand,Latest from Repository,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.CompareWithLatestRevisionAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:53:10.107
+!MESSAGE A conflict occurred for ALT+SHIFT+V:
+Binding(ALT+SHIFT+V,
+	ParameterizedCommand(Command(com.genuitec.org.springframework.ide.eclipse.beans.ui.commands.showinview,Show in Spring Beans View,
+		,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+V,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.move.element,Move - Refactoring ,
+		Move the selected element to a new location,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:53:10.107
+!MESSAGE A conflict occurred for ALT+SHIFT+T:
+Binding(ALT+SHIFT+T,
+	ParameterizedCommand(Command(com.genuitec.org.springframework.ide.eclipse.beans.ui.commands.openjavatype,Open Java Type,
+		,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.refactor.quickMenu,Show Refactor Quick Menu,
+		Shows the refactor quick menu,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:53:10.107
+!MESSAGE A conflict occurred for ALT+CTRL+H:
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.call.hierarchy,Open Call Hierarchy,
+		Open a call hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.ShowResourceHistoryCommand,Show Resource History,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.ShowHistoryAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:53:10.107
+!MESSAGE A conflict occurred for ALT+CTRL+A:
+Binding(ALT+CTRL+A,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.ShowAnnotationCommand,Show Annotation,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.ShowAnnotationAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+A,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.AddToSVNCommand,Add to Version Control...,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.AddToSVNAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:53:10.107
+!MESSAGE A conflict occurred for ALT+CTRL+I:
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.AddToSVNIgnoreCommand,Add to svn:ignore...,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.AddToSVNIgnoreAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.AddToSVNIgnoreCommand,Add to svn:ignore...,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.AddToSVNIgnoreAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2008-05-05 18:53:10.107
+!MESSAGE A conflict occurred for ALT+CTRL+C:
+Binding(ALT+CTRL+C,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.CommitCommand,Commit...,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.CommitAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+C,
+	ParameterizedCommand(Command(org.polarion.team.svn.ui.command.CommitCommand,Commit...,
+		,
+		Category(org.polarion.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.polarion.team.svn.ui.action.local.CommitAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.genuitec.eclipse.core 1 0 2008-05-05 18:53:10.497
+!MESSAGE Unable to locate .myeclipse.properties file
