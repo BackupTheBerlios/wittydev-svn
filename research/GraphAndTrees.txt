@@ -1,0 +1,11 @@
+In graph theory, a tree is a graph in which any two vertices are connected by exactly one path. [1]
+Any connected graph with no cycles is a tree.[1]
+
+
+In computer science, a B-tree is a tree data structure that keeps data sorted and allows searches, 
+insertions, and deletions in logarithmic amortized time. It is most commonly used in databases and 
+filesystems. [3]
+
+http://en.wikipedia.org/wiki/Tree_(graph_theory) [1]
+http://www.cs.hope.edu/alganim/ccaa/tree.html [2]
+http://en.wikipedia.org/wiki/B-tree [3]

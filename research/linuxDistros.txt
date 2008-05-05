@@ -1,0 +1,5 @@
+http://distrowatch.com/table.php?distribution=centos
+http://linux.softpedia.com/get/System/Operating-Systems/Linux-Distributions/CentOS-Live-CD-12197.shtml
+
+http://www.zimbio.com/Free+and+Open+Source+Software/articles/132/HowTo+CentOS+Install+cPanel+Web+Server
+http://paragonhost.wordpress.com/2006/11/14/howto-centos-install-for-a-cpanel-web-server/
