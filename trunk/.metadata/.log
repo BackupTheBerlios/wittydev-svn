@@ -1969,3 +1969,221 @@ Binding(ALT+CTRL+C,
 !MESSAGE The project description file (.project) for 'BUBBLE' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
 !SUBENTRY 1 org.eclipse.core.resources 2 234 2008-05-07 17:26:25.806
 !MESSAGE The project description file (.project) for 'WD_GENERIC_LIBS' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.polarion.team.svn.core.svnnature 4 0 2008-05-07 17:34:04.225
+!MESSAGE Subversive: '0x00000121: Share Projects' operation finished with error
+!SUBENTRY 1 org.polarion.team.svn.core.svnnature 4 0 2008-05-07 17:34:04.225
+!MESSAGE Share project was failed.
+!STACK 0
+org.polarion.team.svn.core.client.ClientWrapperException: RA layer request failed
+svn: OPTIONS request failed on '/svnroot/repos/wittydev'
+svn: OPTIONS of '/svnroot/repos/wittydev': could not connect to server (https://svn.berlios.de)
+
+	at org.polarion.team.svn.client.javahl.SubversionNativeClientProxy.handleClientException(SubversionNativeClientProxy.java:867)
+	at org.polarion.team.svn.client.javahl.SubversionNativeClientProxy.mkdir(SubversionNativeClientProxy.java:530)
+	at org.polarion.team.svn.core.operation.local.management.ShareProjectOperation.mkdir(ShareProjectOperation.java:262)
+	at org.polarion.team.svn.core.operation.local.management.ShareProjectOperation.runImpl(ShareProjectOperation.java:167)
+	at org.polarion.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:70)
+	at org.polarion.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:105)
+	at org.polarion.team.svn.core.operation.CompositeOperation.runImpl(CompositeOperation.java:91)
+	at org.polarion.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:70)
+	at org.polarion.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:105)
+	at org.polarion.team.svn.core.operation.CompositeOperation.runImpl(CompositeOperation.java:91)
+	at org.polarion.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:70)
+	at org.polarion.team.svn.core.operation.LoggedOperation.run(LoggedOperation.java:38)
+	at org.polarion.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:105)
+	at org.polarion.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:91)
+	at org.polarion.team.svn.ui.utility.DefaultCancellableOperationWrapper.run(DefaultCancellableOperationWrapper.java:55)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:113)
+Caused by: org.tigris.subversion.javahl.ClientException: RA layer request failed
+svn: OPTIONS request failed on '/svnroot/repos/wittydev'
+svn: OPTIONS of '/svnroot/repos/wittydev': could not connect to server (https://svn.berlios.de)
+
+	at org.tigris.subversion.javahl.SVNClient.mkdir(Native Method)
+	at org.polarion.team.svn.client.javahl.SubversionNativeClientProxy.mkdir(SubversionNativeClientProxy.java:527)
+	... 14 more
+
+!ENTRY org.polarion.team.svn.core.svnnature 4 0 2008-05-07 17:35:29.599
+!MESSAGE Subversive: '0x00400106: Get Repository Folder Children' operation finished with error
+!SUBENTRY 1 org.polarion.team.svn.core.svnnature 4 0 2008-05-07 17:35:29.599
+!MESSAGE Get repository folder children operation failed.
+!STACK 0
+org.polarion.team.svn.core.client.ClientWrapperException: RA layer request failed
+svn: PROPFIND request failed on '/svnroot/repos/wittydev/trunk'
+svn: PROPFIND of '/svnroot/repos/wittydev/trunk': could not connect to server (https://svn.berlios.de)
+
+	at org.polarion.team.svn.client.javahl.SubversionNativeClientProxy.handleClientException(SubversionNativeClientProxy.java:867)
+	at org.polarion.team.svn.client.javahl.SubversionNativeClientProxy.list(SubversionNativeClientProxy.java:448)
+	at org.polarion.team.svn.core.svnstorage.SVNRepositoryContainer.getChildren(SVNRepositoryContainer.java:68)
+	at org.polarion.team.svn.ui.operation.GetRemoteFolderChildrenOperation.runImpl(GetRemoteFolderChildrenOperation.java:48)
+	at org.polarion.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:70)
+	at org.polarion.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:105)
+	at org.polarion.team.svn.core.operation.CompositeOperation.runImpl(CompositeOperation.java:91)
+	at org.polarion.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:70)
+	at org.polarion.team.svn.core.operation.LoggedOperation.run(LoggedOperation.java:38)
+	at org.polarion.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:105)
+	at org.polarion.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:91)
+	at org.polarion.team.svn.ui.utility.DefaultCancellableOperationWrapper.run(DefaultCancellableOperationWrapper.java:55)
+	at org.polarion.team.svn.ui.utility.ScheduledOperationWrapper.run(ScheduledOperationWrapper.java:37)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.tigris.subversion.javahl.ClientException: RA layer request failed
+svn: PROPFIND request failed on '/svnroot/repos/wittydev/trunk'
+svn: PROPFIND of '/svnroot/repos/wittydev/trunk': could not connect to server (https://svn.berlios.de)
+
+	at org.tigris.subversion.javahl.SVNClient.list(Native Method)
+	at org.polarion.team.svn.client.javahl.SubversionNativeClientProxy.list(SubversionNativeClientProxy.java:439)
+	... 12 more
+
+!ENTRY org.polarion.team.svn.core.svnnature 4 0 2008-05-07 17:35:29.599
+!MESSAGE Subversive: '0x00400107: Get Repository Resource Revision' operation finished with error
+!SUBENTRY 1 org.polarion.team.svn.core.svnnature 4 0 2008-05-07 17:35:29.599
+!MESSAGE Get repository resource revision operation failed.
+!STACK 0
+org.polarion.team.svn.core.client.ClientWrapperException: RA layer request failed
+svn: PROPFIND request failed on '/svnroot/repos/wittydev/trunk'
+svn: PROPFIND of '/svnroot/repos/wittydev/trunk': could not connect to server (https://svn.berlios.de)
+
+	at org.polarion.team.svn.client.javahl.SubversionNativeClientProxy.handleClientException(SubversionNativeClientProxy.java:867)
+	at org.polarion.team.svn.client.javahl.SubversionNativeClientProxy.info2(SubversionNativeClientProxy.java:403)
+	at org.polarion.team.svn.core.svnstorage.SVNRepositoryContainer.getRevisionImpl(SVNRepositoryContainer.java:95)
+	at org.polarion.team.svn.core.svnstorage.SVNRepositoryResource.getRevision(SVNRepositoryResource.java:97)
+	at org.polarion.team.svn.ui.operation.GetRemoteResourceRevisionOperation.runImpl(GetRemoteResourceRevisionOperation.java:39)
+	at org.polarion.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:70)
+	at org.polarion.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:105)
+	at org.polarion.team.svn.core.operation.CompositeOperation.runImpl(CompositeOperation.java:91)
+	at org.polarion.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:70)
+	at org.polarion.team.svn.core.operation.LoggedOperation.run(LoggedOperation.java:38)
+	at org.polarion.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:105)
+	at org.polarion.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:91)
+	at org.polarion.team.svn.ui.utility.DefaultCancellableOperationWrapper.run(DefaultCancellableOperationWrapper.java:55)
+	at org.polarion.team.svn.ui.utility.ScheduledOperationWrapper.run(ScheduledOperationWrapper.java:37)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.tigris.subversion.javahl.ClientException: RA layer request failed
+svn: PROPFIND request failed on '/svnroot/repos/wittydev/trunk'
+svn: PROPFIND of '/svnroot/repos/wittydev/trunk': could not connect to server (https://svn.berlios.de)
+
+	at org.tigris.subversion.javahl.SVNClient.info2(Native Method)
+	at org.polarion.team.svn.client.javahl.SubversionNativeClientProxy.info2(SubversionNativeClientProxy.java:400)
+	... 13 more
+
+!ENTRY org.polarion.team.svn.core.svnnature 4 0 2008-05-07 17:36:22.302
+!MESSAGE Subversive: '0x00400107: Get Repository Resource Revision' operation finished with error
+!SUBENTRY 1 org.polarion.team.svn.core.svnnature 4 0 2008-05-07 17:36:22.302
+!MESSAGE Get repository resource revision operation failed.
+!STACK 0
+org.polarion.team.svn.core.client.ClientWrapperException: RA layer request failed
+svn: PROPFIND request failed on '/svnroot/repos/wittydev/trunk'
+svn: PROPFIND of '/svnroot/repos/wittydev/trunk': could not connect to server (https://svn.berlios.de)
+
+	at org.polarion.team.svn.client.javahl.SubversionNativeClientProxy.handleClientException(SubversionNativeClientProxy.java:867)
+	at org.polarion.team.svn.client.javahl.SubversionNativeClientProxy.info2(SubversionNativeClientProxy.java:403)
+	at org.polarion.team.svn.core.svnstorage.SVNRepositoryContainer.getRevisionImpl(SVNRepositoryContainer.java:95)
+	at org.polarion.team.svn.core.svnstorage.SVNRepositoryResource.getRevision(SVNRepositoryResource.java:97)
+	at org.polarion.team.svn.ui.operation.GetRemoteResourceRevisionOperation.runImpl(GetRemoteResourceRevisionOperation.java:39)
+	at org.polarion.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:70)
+	at org.polarion.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:105)
+	at org.polarion.team.svn.core.operation.CompositeOperation.runImpl(CompositeOperation.java:91)
+	at org.polarion.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:70)
+	at org.polarion.team.svn.core.operation.LoggedOperation.run(LoggedOperation.java:38)
+	at org.polarion.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:105)
+	at org.polarion.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:91)
+	at org.polarion.team.svn.ui.utility.DefaultCancellableOperationWrapper.run(DefaultCancellableOperationWrapper.java:55)
+	at org.polarion.team.svn.ui.utility.ScheduledOperationWrapper.run(ScheduledOperationWrapper.java:37)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.tigris.subversion.javahl.ClientException: RA layer request failed
+svn: PROPFIND request failed on '/svnroot/repos/wittydev/trunk'
+svn: PROPFIND of '/svnroot/repos/wittydev/trunk': could not connect to server (https://svn.berlios.de)
+
+	at org.tigris.subversion.javahl.SVNClient.info2(Native Method)
+	at org.polarion.team.svn.client.javahl.SubversionNativeClientProxy.info2(SubversionNativeClientProxy.java:400)
+	... 13 more
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.068
+!MESSAGE Invalid preference page path: ASP and PHP
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.068
+!MESSAGE Invalid preference page path: Bejy
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.068
+!MESSAGE Invalid preference page path: Cache
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.068
+!MESSAGE Invalid preference page path: Common Editor Preferences
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.068
+!MESSAGE Invalid preference page path: CSS
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.068
+!MESSAGE Invalid preference page path: DTD
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.068
+!MESSAGE Invalid preference page path: Geronimo
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.068
+!MESSAGE Invalid preference page path: Glassfish
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.068
+!MESSAGE Invalid preference page path: Hibernate Config
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.068
+!MESSAGE Invalid preference page path: HQL
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.068
+!MESSAGE Invalid preference page path: HTML
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.068
+!MESSAGE Invalid preference page path: Image
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.083
+!MESSAGE Invalid preference page path: JavaScript
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.083
+!MESSAGE Invalid preference page path: JBoss
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.083
+!MESSAGE Invalid preference page path: Jetty
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.083
+!MESSAGE Invalid preference page path: JOnAS
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.083
+!MESSAGE Invalid preference page path: JRun
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.083
+!MESSAGE Invalid preference page path: JSF Config
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.083
+!MESSAGE Invalid preference page path: JSP
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.083
+!MESSAGE Invalid preference page path: Oracle
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.083
+!MESSAGE Invalid preference page path: Orion
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.083
+!MESSAGE Invalid preference page path: Resin
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.083
+!MESSAGE Invalid preference page path: SQL
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.083
+!MESSAGE Invalid preference page path: Struts Config
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.083
+!MESSAGE Invalid preference page path: Sun Java System Application Server
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.083
+!MESSAGE Invalid preference page path: TCP/IP Monitor
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.083
+!MESSAGE Invalid preference page path: Tomcat
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.083
+!MESSAGE Invalid preference page path: WebLogic
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.083
+!MESSAGE Invalid preference page path: WebSphere
+
+!ENTRY org.eclipse.ui 4 4 2008-05-07 17:36:34.083
+!MESSAGE Invalid preference page path: XML
