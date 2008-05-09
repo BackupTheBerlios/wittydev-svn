@@ -16,7 +16,7 @@ JSF vs Struts
 
 
 [1] http://java.sun.com/javaee/5/docs/tutorial/doc/JavaEETutorial.pdf
-[1] http://java.sun.com/javaee/5/docs/tutorial/doc/index.html
-
+[2] http://java.sun.com/javaee/5/docs/tutorial/doc/index.html
+[3] http://java.sun.com/developer/technicalArticles/GUI/JavaServerFaces/
 
 	
