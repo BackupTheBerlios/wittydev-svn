@@ -1,0 +1,10 @@
+
+Filters
+	Java EE5 tutorial [Rif.2 page 120]
+
+
+[1] http://docs.sun.com/app/docs/doc/820-1646/abxij?a=view
+	=> Sample Web Application XML file
+	
+[2] http://java.sun.com/javaee/5/docs/tutorial/doc/JavaEETutorial.pdf	
+	=> Java EE 5 tutorial
