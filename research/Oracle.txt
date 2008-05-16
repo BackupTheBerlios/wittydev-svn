@@ -1,0 +1,7 @@
+ - View Session Parameters 
+ 	show parameter
+ 	show parameter nls 
+ 	
+ 	
+
+	

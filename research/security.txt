@@ -1,0 +1,61 @@
+
+
+Cryptography
+	http://www.owasp.org/index.php/Cryptography
+	
+J2EE Session IDS Generation
+	The important properties of a session ID should be that it is unique, and it is not possible 
+	for one user to guess another user's session ID. [3]
+	
+	Netcraft Recommendations [3]
+		=> There should be some real random input to the session IDs if they are to be used as 
+		the sole means of session
+		=> Any meaningful data being used in session IDs should be one-way encrypted. 
+		
+	Recent versions of Sun's Java servlet code (from version 2.1) use a session ID system, which 
+	includes a large random component. However, developers building application servers should 
+	enhance the code to make the session count inaccessible.
+	
+	
+	Apache Tomcat
+		Starting with version 3.2, Tomcat uses a secure rando number generator, and maintain 
+		uniqueness of session IDs without leaking the session count.
+		
+	Sessions allow web applications to maintani state. HTTP is a stateless protocol. 
+	Three methods are used to perform this function : cookies, GET form data, and POST form data.
+	Developers use on or more of these methods to propagate the SID from one page to the next so 
+	that a users session can be maintained
+			
+J2EE Session Attacks [4]
+	Session attacks consist of two major cateogires: 
+		Session Hijacking
+		Session Fixation
+	
+	Session Hijacking are hijacked in one or three ways
+		Prediction 	: Occurs when a malefactor realizes that a pattern exists between SIDs
+				  Some SIDs are more predictable then others. Some SIDs may be hashed or
+				  contain information such as ip addresses or timestamps. This information
+				  makes prediction more difficult, but not unpredictable
+		Brute force	: Occurs when a malefactor repeatedly tries numerous SIDs until he happen
+				  a valid one.
+				  
+		Interception	: Occurs when a malfactor is able to extract data allowing him to 
+				  determine the SID. The methods to intercept SIDs are generally more 
+				  complicated than the methods of brute force and prediction.
+		
+	Security flaws that that allow interception:
+		
+	
+[1] http://www.owasp.org/
+	The Open Web Application Security Project (OWASP) is a worldwide free and open community 
+	focused on improving the security of application software
+	
+[2]	http://www.sans.org/
+		"SANS is the most trusted & by far the largest source for information 
+		security training, certification & research in the world"
+
+[3] http://news.netcraft.com/archives/2003/01/01/security_advisory_2001011_predictable_session_ids.html
+
+[4] https://www2.sans.org/reading_room/whitepapers/webservers/1594.php
+	
+	http://www.spindriftgroup.com/publications/ATG-Security-Recommendations

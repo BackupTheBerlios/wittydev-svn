@@ -29,6 +29,21 @@ Installing JSF
 		</servlet-mapping>
 
 
+Tags
+	verbatim
+		This tag renders output component (UIOutput) within the closest component. 
+		It takes the content from the body of this tag. This tag can be used to nest 
+		plain html within the JSF component tree. Any Html and jsp tags in the view 
+		tag can be nested within verbatim tag. The reason behind it is that all 
+		the content inside the f:view tag should be in the JSF component tree. 
+		When JSF component tree is rendered, it contains only JSF components. But 
+		html and JSP tags are not JSF components. So we nest the non JSF  tags to 
+		the verbatim tag that treats them as JSF components. 
+
+
+Message Resources
+	
+
 JSF ViewHandler
 	A JSF ViewHandler is a plug-in that handles the Render Response and Restore View 
 	phases of the JSF request-processing life cycle for different response-generation 

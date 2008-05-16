@@ -1,3 +1,4 @@
 Pseudocode	A way of writing program descriptions that is similar to programming languages but may include English descriptions.
 CRUD		Create, Read, Update and Delete
 DRY		Don't Repeat Yourself. DRY Principle. DRY Code: Don't repeat code.
+SID		Session ID
