@@ -1,0 +1,10 @@
+<jboss>    
+    <enterprise-beans>
+        <session>        
+            <ejb-name>ServerInfoSessionBean</ejb-name>        
+            <clustered>False</clustered>
+            <!--partition-name>${jboss.partition.name:DefaultPartition}</partition-name-->        
+        </session>    
+    </enterprise-beans>
+</jboss> 
+                

@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+
+<project name="WittyBuild_TEMPLATE_BAPP" default="packageIt" basedir="../">
+    <description>
+        Generic J2EE Business Application (JAR) build 
+    </description>
+
+	
+  <!-- set global properties for this build -->
+	<tstamp>
+		<format property="V_TODAY" pattern="yyyyMMdd" locale="it,IT"/>
+	</tstamp>
+
+  	<property name="project.home" value="${basedir}"/>
+  	<property name="project.name" value="TEMPLATE"/>
+	<property name="build.path" value="${project.home}/build"/>
+	<property name="dist.path" value="${project.home}/dist"/>
+	<property name="jboss.home" value="d:/appl/iwbin/jboss-4.2.1.GA"/>
+	<!--property name="genericlibs" value="${project.home}/../W_SERVIZI_INCASSI/misc/lib"/-->
+	<!--property name="libapp.path" value="${project.home}/../WittyMiscServices_LIB"/-->
+	
+	<!-- Build classpath -->
+	<fileset dir="${jboss.home}" id="miscLibs">
+    	<include name="server/default/lib/commons-io-1.3.1.jar"/>
+    	<include name="server/default/lib/commons-logging.jar"/>
+    	<include name="server/default/lib/commons-fileupload-1.2.jar"/>
+    	<include name="server/default/lib/commons-io-1.3.1.jar"/>
+    	<include name="server/default/lib/commons-logging.jar"/>
+    	<include name="server/default/lib/servlet-api.jar"/>
+		<include name="server/default/lib/jboss-annotations-ejb3.jar"/>
+		<include name="server/default/lib/jboss-ejb3x.jar"/>
+		<include name="server/default/lib/hibernate-annotations.jar"/>
+		<include name="client/jbossall-client.jar"/>
+    </fileset>
+    <fileset dir="${jboss.home}/server/default/deploy/ejb3.deployer" id="ejb3Libs">
+        <include name="*.jar"/>
+    </fileset>
+    <fileset dir="${jboss.home}/server/default/lib" id="ejb3PersistenceLibs">
+        <include name="*ejb3-persistence.jar"/>
+    </fileset>
+	
+	<!--fileset dir="${genericlibs}/struts/2.X" id="struts2Libs"/-->
+	<!--fileset dir="${genericlibs}/junit/4.X" id="junitLibs"/-->
+
+	<path id="classpath">
+		<!--fileset refid="struts2Libs"/-->
+		<fileset refid="miscLibs"/>
+		<fileset refid="ejb3Libs"/>
+		<fileset refid="ejb3PersistenceLibs"/>
+		<!--fileset refid="struts2Libs"/-->
+		<!--fileset refid="junitLibs"/-->
+		<pathelement location="${build.classes.dir}"/>
+		<!--pathelement location="${libapp.path}/dist/WittyMiscServices_LIB.jar"/-->
+	</path>
+
+  	<target name="checkHomeDir" unless="project.home.exists">
+  		<echo message="Warning: Project home does not exists => ${project.home}"/>
+  	</target>
+
+	<target name="clean" description="clean up" >
+	    <delete dir="${build.path}"/>
+		<!--delete file="${dist.path}/*.jar"/-->
+		<delete dir="${dist.path}" includes="*.*"/>
+	</target>
+
+	<target name="init" depends="clean">
+	  	<available file="${project.home}" type="dir" property="project.home.exists"	/>
+		<antcall target="checkHomeDir"/>
+  		<mkdir dir="${build.path}/classes"/>
+  		<mkdir dir="${dist.path}"/>
+	</target>
+	
+	
+  	<target name="compileIt" depends="init"  description="compile the source " if="project.home.exists">
+ 	    <echo message="Copying resources ${project.home}/src"/>		
+  		<copy todir="${build.path}/classes">
+	      <fileset dir="${project.home}/src" excludes="**/*.java"/>
+	    </copy>
+
+  	    <echo message="compiling ${project.home}/src"/>		
+	  	
+		<javac srcdir="${project.home}/src"
+	        destdir="${build.path}/classes"
+			classpathref="classpath"
+		    debug="on"
+	        source="1.5"
+	        fork="false"
+			includes="**/*"
+			verbose="no"
+			excludes="**/ClasToExclude.java"
+		  >
+			<compilerarg value="-version"/>
+		</javac>
+
+  	</target>
+  	
+  	<target name="packageIt" depends="compileIt"  description="Jar it">
+  		<jar destfile="${dist.path}/${project.name}_BAPP.jar" >
+  			<metainf dir="${build.path}/classes/META-INF"></metainf>
+			<fileset dir="${build.path}/classes/">
+  		  		<exclude name="META-INF/*"/>	
+  		  		<include name="**/*"/>
+  		  	</fileset>
+  		</jar>
+  		<jar destfile="${dist.path}/${project.name}_BAPP_client.jar" >
+			<fileset dir="${build.path}/classes/">
+				<include name="*/**/*Service.class"/>
+				<include name="*/**/domain/**/*"/>
+  		  	</fileset>
+  		</jar>
+  	</target>
+	
+	
+
+	
+
+  	  <target name="oneStepFtp" depends="packageIt" description="ftp the war">
+  	  	<echo message="Local file: ${dist.path}/${project.name}.jar"/>
+  	  	<echo message="Remote file: ${remote.deploy.path}/${project.name}.jar"/>
+  	    <ftp server="${remote.ftp.host}"
+  	         port="${remote.ftp.port}"
+  	         remotedir="${remote.deploy.path}/${remote.deploy.bappFolder}"
+  	         userid="${remote.ftp.user}"
+  	         password="${remote.ftp.password}"
+  	         passive="yes"
+  	         depends="yes"
+  	         binary="yes" 
+  	    	 verbose="false"
+  	    	>
+  	      <fileset file="${dist.path}/${project.name}.jar"/>
+  	    </ftp>
+  	  </target>
+	
+	  <target name="oneStepCopy" depends="packageIt" description="copy to deploy dir">
+ 	    <echo message="Copying resources JAR file"/>		
+	  	<echo message="From file: ${dist.path}/${project.name}_BAPP.jar"/>
+	  	<echo message="To file: ${local.deploy.path}/${local.deploy.bappFolder}/${project.name}_BAPP.jar"/>
+  		<copy todir="${local.deploy.path}/${local.deploy.bappFolder}">
+  			<fileset file="${dist.path}/${project.name}_BAPP.jar"/>
+	    </copy>
+
+	  </target>
+	
+	
+	
+  <!--
+  		target name="buildIt" depends="compileAll" if="PROJ_basedir.exists">
+  	<delete file="${PROJ_basedir}/${GTAR_NAME}"/>
+  	<tar destfile="${PROJ_basedir}/${GTAR_NAME}"
+		  basedir="${PROJ_basedir}/templates"
+		  longfile="gnu"
+	/>	
+  </target>
+	
+  <target name="ftpIt" depends="buildIt" if="PROJ_basedir.exists">
+  	<property name="REMOTE_DIR" 
+  		value="/usr/cpqrdp/rdist_iwbank/templates/DEPLOY_PACKETS/temp/AUTO_GEN/"/>
+  	<echo message="Local file: ${PROJ_basedir}/${GTAR_NAME}"/>
+  	<echo message="Remote file: ${REMOTE_DIR}${GTAR_NAME}"/>
+    <ftp server="iwbtest03.lan.iw"
+         port="21"
+         remotedir="${REMOTE_DIR}"
+         userid="dynamo"
+         password="dynamo"
+         passive="yes"
+         depends="yes"
+         binary="yes" 
+    	 verbose="false"
+    	>
+      <fileset file="${PROJ_basedir}/${GTAR_NAME}"/>
+    </ftp>
+  </target-->
+	
+	
+  <!--target name="dist" depends="compile"
+        description="generate the distribution" >
+    <jar jarfile="${dist}/lib/MyProject-${DSTAMP}.jar" basedir="${build}"/>
+  </target-->
+
+</project>
+

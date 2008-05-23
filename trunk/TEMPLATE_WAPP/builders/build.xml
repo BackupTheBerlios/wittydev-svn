@@ -1,0 +1,138 @@
+<project name="IWBuild_MAV_ATTIVA_WAPP" default="packageIt" basedir="../">
+    <description>
+        IWBank Build generic
+    </description>
+
+	
+  <!-- set global properties for this build -->
+  <!--property name="PROJ_PATH" location="d:\shared\pvcs\rilasci\IWT_BUILD_PROVA"/-->
+	<tstamp>
+		<format property="TODAY_CK" pattern="yyyyMMdd" locale="it,IT"/>
+	</tstamp>
+
+  	<property name="project.home" value="${basedir}"/>
+  	<property name="project.name" value="MAV_ATTIVA"/>
+	<property name="build.path" value="${project.home}/build"/>
+	<property name="dist.path" value="${project.home}/dist"/>
+	<property name="jboss.home" value="${project.home}/../W_SERVIZI_INCASSI/misc/server/jboss-4.2.1.GA"/>
+	<property name="genericlibs" value="${project.home}/../W_SERVIZI_INCASSI/misc/lib"/>
+	
+	<property name="bapp.path" value="${project.home}/../${project.name}_BAPP"/>
+	
+	<property name="IWMiscServices_WAPP.path" value="${project.home}/../IWMiscServices_WAPP"/>
+	<property name="IWMiscServices_LIB.path"  value="${project.home}/../IWMiscServices_LIB"/>
+	<property name="IWMiscServices_BAPP.path" value="${project.home}/../IWMiscServices_BAPP"/>
+	
+	<!-- Build classpath -->
+	<fileset dir="${jboss.home}/server/iwbank_template/lib" id="miscLibs">
+    	<include name="iwlib/ojdbc14_9.2.0.8.jar"/>
+    	<include name="commons-io-1.3.1.jar"/>
+    	<include name="commons-logging.jar"/>
+    	<include name="commons-fileupload-1.2.jar"/>
+    	<include name="commons-io-1.3.1.jar"/>
+    	<include name="commons-logging.jar"/>
+    	<include name="servlet-api.jar"/>
+		<include name="jboss-annotations-ejb3.jar"/>
+		<include name="jboss-ejb3x.jar"/>
+		<include name="hibernate-annotations.jar"/>
+
+    </fileset>
+    <fileset dir="${jboss.home}/server/iwbank_template/deploy/ejb3.deployer" id="ejb3Libs">
+        <include name="*.jar"/>
+    </fileset>
+    <fileset dir="${jboss.home}/server/iwbank_template/lib" id="ejb3PersistenceLibs">
+        <include name="*ejb3-persistence.jar"/>
+    </fileset>
+	<fileset dir="${genericlibs}/struts/2.X" id="struts2Libs"/>
+
+	<path id="classpath">
+		<fileset refid="struts2Libs"/>
+		<fileset refid="miscLibs"/>
+		<fileset refid="ejb3Libs"/>
+		<fileset refid="ejb3PersistenceLibs"/>
+		<fileset refid="struts2Libs"/>
+		<pathelement location="${build.classes.dir}"/>
+		<pathelement location="${bapp.path}/dist/MAV_ATTIVA_BAPP_client.jar"/>
+		<pathelement location="${IWMiscServices_LIB.path}/dist/IWMiscServices_LIB.jar"/>
+		<pathelement location="${IWMiscServices_BAPP.path}/dist/IWMiscServices_BAPP_client.jar"/>
+		<pathelement location="${IWMiscServices_WAPP.path}/dist/IWMiscServices_WAPP_lib.jar"/>
+	
+	</path>
+	
+  	<target name="checkHomeDir" unless="project.home.exists">
+  		<echo message="Warning: Project home does not exists => ${project.home}"/>
+  	</target>
+
+	<target name="clean" description="clean up" >
+	    <!--delete dir="${build.path}"/-->
+		<delete dir="${build.path}">
+			<!--exclude name="**/*.class"/-->
+		</delete>
+		<echo message="${dist.path}/"/>
+		<delete dir="${dist.path}" includes="*.*"/>
+	</target>
+
+	<target name="init" depends="clean">
+	  	<available file="${project.home}" type="dir" property="project.home.exists"	/>
+		<antcall target="checkHomeDir"/>
+  		<mkdir dir="${build.path}/classes"/>
+  		<mkdir dir="${dist.path}"/>
+	</target>
+	
+	<!--target name="checkProjRevision" unless="project.revision">
+		<echo message="Setting project.revision to 1"/>
+		<property name="project.revision" value="1"/>
+	</target-->
+
+	
+  	<target name="compileIt" depends="init"  description="compile the source " if="project.home.exists">
+  		<!--echo message="Copying resources ${project.home}/src"/>		
+  		<copy todir="${build.path}/classes">
+	      <fileset dir="${project.home}/src" excludes="**/*.java"/>
+	    </copy-->
+
+  		
+  		<echo message="Copying resources ${project.home}/src"/>		
+  		<copy todir="${build.path}/classes">
+	      <fileset dir="${project.home}/src" excludes="**/*.java"/>
+	    </copy>
+
+  	    <echo message="compiling ${project.home}/src"/>		
+	  	
+		<javac srcdir="${project.home}/src"
+	        destdir="${build.path}/classes"
+			classpathref="classpath"
+		    debug="on"
+	        source="1.5"
+	        fork="false"
+			includes="**/*"
+			verbose="no"
+		  >
+			<compilerarg value="-version"/>
+		</javac>
+
+  	</target>
+  	
+  	<target name="packageIt" depends="compileIt"  description="War it">
+  		<war destfile="${dist.path}/${project.name}_WAPP.war" 
+  			webxml="${project.home}/WebRoot/WEB-INF/web.xml"
+  			manifest="${project.home}/src/META-INF/MANIFEST.MF"
+  			>
+			<fileset dir="${project.home}/WebRoot/">
+				<exclude name="WEB-INF/web.xml"/>
+				<exclude name="WEB-INF/classes/**/*"/>
+			</fileset>
+			<fileset dir="${IWMiscServices_WAPP.path}/WebRoot/">
+				<include name="common/**/*"/>
+				<include name="template/iwbank/common/**/*"/>	
+				<include name="template/iwsimple/**/*"/>
+			</fileset>
+  			
+  		  <classes dir="${build.path}/classes" includes="**" />
+  		</war>
+
+
+  	</target>
+
+</project>
+
