@@ -15,7 +15,7 @@
   	<property name="project.name" value="TEMPLATE"/>
 	<property name="build.path" value="${project.home}/build"/>
 	<property name="dist.path" value="${project.home}/dist"/>
-	<property name="jboss.home" value="d:/appl/iwbin/jboss-4.2.1.GA"/>
+	<property name="jboss.home" value="C:/carlos/dev/servers/jboss-4.2.2.GA"/>
 	<!--property name="genericlibs" value="${project.home}/../W_SERVIZI_INCASSI/misc/lib"/-->
 	<!--property name="libapp.path" value="${project.home}/../WittyMiscServices_LIB"/-->
 	
@@ -87,7 +87,7 @@
 	        fork="false"
 			includes="**/*"
 			verbose="no"
-			excludes="**/ClasToExclude.java"
+			excludes="**/ClassToExclude.java"
 		  >
 			<compilerarg value="-version"/>
 		</javac>
