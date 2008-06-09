@@ -1,7 +1,7 @@
-<project name="IWBuild_MavAttiva_EAPP" default="IWBuild_Template_copyIt" basedir="../">
+<project name="WittyBuild_BAPP" default="Build_Template_copyIt" basedir="../">
   	<property name="project.name" value="TEMPLATE"/>
-	<target name="IWBuild_Template_copyIt" 
-			description="IWBuild MavAttiva in sviluppo03" >
+	<target name="Build_Template_copyIt" 
+			description="Build MavAttiva in sviluppo03" >
 		<!--property name="noCleanup" value="true"/-->
 		<property name="local.deploy.path" value="d:\appl\iwbin\jboss-4.2.1.GA\server\jb_retail01"/>
 		<property name="local.deploy.bappFolder" value="deploy"/>
@@ -9,8 +9,8 @@
 		<ant antfile="./builders/build.xml" target="oneStepCopy" inheritall="true"/>
 	</target>
 	
-	<target name="IWBuild_Template_remoteIt" 
-			description="IWBuild MavAttiva in sviluppo03" >
+	<target name="Build_Template_remoteIt" 
+			description="Build MavAttiva in sviluppo03" >
 		<property name="remote.deploy.path" value="/remoteDir/servizi_incassi/"/>
 		<property name="remote.deploy.bappFolder" value="deploy_bapp"/>
 		<property name="remote.deploy.wappFolder" value="deploy_wapp"/>
