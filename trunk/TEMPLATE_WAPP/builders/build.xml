@@ -1,61 +1,57 @@
-<project name="IWBuild_MAV_ATTIVA_WAPP" default="packageIt" basedir="../">
+<?xml version="1.0"?>
+
+<project name="WittyBuild_TEMPLATE_JSF_WAPP" default="packageIt" basedir="../">
     <description>
-        IWBank Build generic
+        Generic J2EE Web Application (WAR) build 
     </description>
 
 	
   <!-- set global properties for this build -->
-  <!--property name="PROJ_PATH" location="d:\shared\pvcs\rilasci\IWT_BUILD_PROVA"/-->
-	<tstamp>
+  	<tstamp>
 		<format property="TODAY_CK" pattern="yyyyMMdd" locale="it,IT"/>
 	</tstamp>
 
   	<property name="project.home" value="${basedir}"/>
-  	<property name="project.name" value="MAV_ATTIVA"/>
+  	<property name="project.name" value="TEMPLATE_JSF"/>
 	<property name="build.path" value="${project.home}/build"/>
 	<property name="dist.path" value="${project.home}/dist"/>
-	<property name="jboss.home" value="${project.home}/../W_SERVIZI_INCASSI/misc/server/jboss-4.2.1.GA"/>
-	<property name="genericlibs" value="${project.home}/../W_SERVIZI_INCASSI/misc/lib"/>
+	<property name="webLibs.path" value="${project.home}/lib"/>
+	<property name="jboss.home" value="C:/carlos/dev/servers/jboss-4.2.2.GA"/>
 	
 	<property name="bapp.path" value="${project.home}/../${project.name}_BAPP"/>
 	
-	<property name="IWMiscServices_WAPP.path" value="${project.home}/../IWMiscServices_WAPP"/>
-	<property name="IWMiscServices_LIB.path"  value="${project.home}/../IWMiscServices_LIB"/>
-	<property name="IWMiscServices_BAPP.path" value="${project.home}/../IWMiscServices_BAPP"/>
 	
 	<!-- Build classpath -->
-	<fileset dir="${jboss.home}/server/iwbank_template/lib" id="miscLibs">
-    	<include name="iwlib/ojdbc14_9.2.0.8.jar"/>
-    	<include name="commons-io-1.3.1.jar"/>
-    	<include name="commons-logging.jar"/>
-    	<include name="commons-fileupload-1.2.jar"/>
-    	<include name="commons-io-1.3.1.jar"/>
-    	<include name="commons-logging.jar"/>
-    	<include name="servlet-api.jar"/>
-		<include name="jboss-annotations-ejb3.jar"/>
-		<include name="jboss-ejb3x.jar"/>
-		<include name="hibernate-annotations.jar"/>
+	<fileset dir="${jboss.home}" id="miscLibs">
+    	<include name="server/default/lib/commons-io-1.3.1.jar"/>
+    	<include name="server/default/lib/commons-logging.jar"/>
+    	<include name="server/default/lib/commons-fileupload-1.2.jar"/>
+    	<include name="server/default/lib/commons-io-1.3.1.jar"/>
+    	<include name="server/default/lib/commons-logging.jar"/>
+    	<include name="server/default/lib/servlet-api.jar"/>
+		<include name="server/default/lib/jboss-annotations-ejb3.jar"/>
+		<include name="server/default/lib/jboss-ejb3x.jar"/>
+		<include name="server/default/lib/hibernate-annotations.jar"/>
 
     </fileset>
-    <fileset dir="${jboss.home}/server/iwbank_template/deploy/ejb3.deployer" id="ejb3Libs">
+    <fileset dir="${jboss.home}/server/default/deploy/ejb3.deployer" id="ejb3Libs">
         <include name="*.jar"/>
     </fileset>
-    <fileset dir="${jboss.home}/server/iwbank_template/lib" id="ejb3PersistenceLibs">
+    <fileset dir="${jboss.home}/server/default/lib" id="ejb3PersistenceLibs">
         <include name="*ejb3-persistence.jar"/>
     </fileset>
-	<fileset dir="${genericlibs}/struts/2.X" id="struts2Libs"/>
+	<fileset dir="${webLibs.path}/" id="jsfLibs">
+		<include name="el-api.jar"/>
+		<include name="jsf-*.jar"/>
+	</fileset>
 
 	<path id="classpath">
-		<fileset refid="struts2Libs"/>
+		<fileset refid="jsfLibs"/>
 		<fileset refid="miscLibs"/>
 		<fileset refid="ejb3Libs"/>
 		<fileset refid="ejb3PersistenceLibs"/>
-		<fileset refid="struts2Libs"/>
 		<pathelement location="${build.classes.dir}"/>
-		<pathelement location="${bapp.path}/dist/MAV_ATTIVA_BAPP_client.jar"/>
-		<pathelement location="${IWMiscServices_LIB.path}/dist/IWMiscServices_LIB.jar"/>
-		<pathelement location="${IWMiscServices_BAPP.path}/dist/IWMiscServices_BAPP_client.jar"/>
-		<pathelement location="${IWMiscServices_WAPP.path}/dist/IWMiscServices_WAPP_lib.jar"/>
+		<pathelement location="${bapp.path}/dist/TEMPLATE_BAPP_client.jar"/>
 	
 	</path>
 	
@@ -115,24 +111,47 @@
   	
   	<target name="packageIt" depends="compileIt"  description="War it">
   		<war destfile="${dist.path}/${project.name}_WAPP.war" 
-  			webxml="${project.home}/WebRoot/WEB-INF/web.xml"
+  			webxml="${project.home}/web/WEB-INF/web.xml"
   			manifest="${project.home}/src/META-INF/MANIFEST.MF"
   			>
-			<fileset dir="${project.home}/WebRoot/">
+  			
+			<fileset dir="${project.home}/web/">
 				<exclude name="WEB-INF/web.xml"/>
 				<exclude name="WEB-INF/classes/**/*"/>
 			</fileset>
-			<fileset dir="${IWMiscServices_WAPP.path}/WebRoot/">
-				<include name="common/**/*"/>
-				<include name="template/iwbank/common/**/*"/>	
-				<include name="template/iwsimple/**/*"/>
-			</fileset>
-  			
   		  <classes dir="${build.path}/classes" includes="**" />
+  		  <!--lib dir="${project.home}/lib" includes="jsf*.jar" /-->
   		</war>
 
-
   	</target>
+
+  	  <target name="oneStepFtp" depends="packageIt" description="ftp the war">
+  	  	<echo message="Local file: ${dist.path}/${project.name}.jar"/>
+  	  	<echo message="Remote file: ${remote.deploy.path}/${project.name}.jar"/>
+  	    <ftp server="${remote.ftp.host}"
+  	         port="${remote.ftp.port}"
+  	         remotedir="${remote.deploy.path}/${remote.deploy.wappFolder}"
+  	         userid="${remote.ftp.user}"
+  	         password="${remote.ftp.password}"
+  	         passive="yes"
+  	         depends="yes"
+  	         binary="yes" 
+  	    	 verbose="false"
+  	    	>
+  	      <fileset file="${dist.path}/${project.name}.jar"/>
+  	    </ftp>
+  	  </target>
+
+	  <target name="oneStepCopy" depends="packageIt" description="copy to deploy dir">
+ 	    <echo message="Copying resources WAR file"/>		
+	  	<echo message="From file: ${dist.path}/${project.name}_WAPP.war"/>
+	  	<echo message="To file: ${local.deploy.path}/${local.deploy.wappFolder}/${project.name}_WAPP.war"/>
+  		<copy todir="${local.deploy.path}/${local.deploy.wappFolder}">
+  			<fileset file="${dist.path}/${project.name}_WAPP.war"/>
+	    </copy>
+
+	  </target>
+
 
 </project>
 

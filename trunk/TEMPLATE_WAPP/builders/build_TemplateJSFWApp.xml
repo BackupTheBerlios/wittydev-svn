@@ -1,0 +1,28 @@
+<project name="WittyBuild_JSF_WAPP" default="Build_Template_copyIt" basedir="../">
+  	<property name="project.name" value="TEMPLATE"/>
+	<target name="Build_Template_copyIt" 
+			description="Build and copy on local server" >
+		<!--property name="noCleanup" value="true"/-->
+		<property name="local.deploy.path" value="C:\carlos\dev\servers\jboss-4.2.2.GA\server\ck1"/>
+		<property name="local.deploy.bappFolder" value="deploy"/>
+		<property name="local.deploy.wappFolder" value="deploy"/>
+		<ant antfile="./builders/build.xml" target="oneStepCopy" inheritall="true"/>
+	</target>
+	
+	
+	<target name="Build_Template_remoteIt" 
+			description="Build and copy on remote server" >
+		<property name="remote.deploy.path" value="/remoteDir/template/"/>
+		<property name="remote.deploy.bappFolder" value="deploy_bapp"/>
+		<property name="remote.deploy.wappFolder" value="deploy_wapp"/>
+		<property name="remote.ftp.host" value="ftp.wittydev.it"/>
+		<property name="remote.ftp.port" value="21"/>
+		<property name="remote.ftp.user" value="user"/>
+		<property name="remote.ftp.password" value="pwd"/>
+		<!--property name="noCleanup" value="true"/-->
+		<ant antfile="./builders/build_main.xml" target="oneStepFtp" inheritall="true"/>
+	</target>
+
+</project>
+
+
