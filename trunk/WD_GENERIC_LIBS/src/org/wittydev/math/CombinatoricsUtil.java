@@ -5,10 +5,9 @@ import org.wittydev.util.DataTools;
 public class CombinatoricsUtil {
 
 	/***
-	 * Same as method 
-	 * 		Object[][] combinationsArrays (Object[] s, int k )
-	 * the only difference that "s" is automatically set to :
-	 * 	new int {0,1,2,3, ..., n}  
+	 * Same as method  "Object[][] combinationsArrays (Object[] s, int k )".
+	 * The only difference is that the first argument ("s") is automatically set to :
+	 * new int {0,1,2,3, ..., n}  
 	 * 
 	 * @param n
 	 * @param k
