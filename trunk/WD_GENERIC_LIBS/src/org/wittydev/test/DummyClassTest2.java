@@ -54,9 +54,42 @@ public class DummyClassTest2 {
 	 * Test method for {@link org.wittydev.test.DummyClass#multiply(int, int)}.
 	 */
 	@Test
-	@Ignore
+	//@Ignore
 	public void testMultiply() {
-		fail("Not yet implemented");
+		try {
+			System.out.println("prima");
+			fail("Not yet implemented");
+			System.out.println("dopooooo");
+		} catch (Error e) {
+			//e.printStackTrace();
+			System.out.println("==>"+e);
+			
+			throw e;
+		}
 	}
 
+	
+	@Test
+	//@Ignore
+	public void testMultiply2() {
+		throw new RuntimeException ("dummy");
+	}
+	
+	@Test(expected= RuntimeException.class)
+	//@Ignore
+	public void testMultiply2b() {
+		throw new RuntimeException ("dummy");
+	}
+	
+	@Test
+	//@Ignore
+	public void testMultiply3() {
+		throw new AssertionError ("dummy assertion");
+	}
+
+	public void testMultiply4() {
+		System.out.println("test4");
+	}
+	
+	
 }
