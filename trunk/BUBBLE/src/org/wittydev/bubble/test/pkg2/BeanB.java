@@ -1,4 +1,4 @@
-package org.wittydev.test.pkg2;
+package org.wittydev.bubble.test.pkg2;
 
 /**
  * Title:

@@ -1,6 +1,6 @@
-package org.wittydev.test.pkg1;
-import org.wittydev.test.pkg2.BeanB;
-import org.wittydev.test.pkg3.BeanC;
+package org.wittydev.bubble.test.pkg1;
+import org.wittydev.bubble.test.pkg2.BeanB;
+import org.wittydev.bubble.test.pkg3.BeanC;
 
 /**
  * Title:
