@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 
+import java.util.StringTokenizer;
 import java.util.Vector;
 import java.util.zip.ZipFile;
 import java.util.zip.ZipEntry;
@@ -17,6 +18,7 @@ import org.wittydev.core.WDException;
 import org.wittydev.logging.LoggingService;
 import org.wittydev.util.BeansUtil;
 import org.wittydev.util.DataTools;
+import org.wittydev.util.PathsUtil;
 import org.wittydev.util.ReflectionTools;
 import org.wittydev.util.cache.LRUCache;
 
@@ -221,7 +223,8 @@ public class ConfigLoader {
 
             }else{
                 long dummyCount=System.currentTimeMillis();
-                param=getObj( cp, ce.getScope(),resolver, resolverArgs);
+                param=getObj( componentPath, cp, ce.getScope(),resolver, resolverArgs);
+                //System.out.println(componentPath);
             }
             try{
                 if (LoggingService.getDefaultLogger().isLoggingDebug())
@@ -245,7 +248,7 @@ public class ConfigLoader {
 
     }
 
-    Object getObj(ConfigProperty cp, String scope,ObjectResolver resolver, Object[] resolverArgs) throws WDException{
+    Object getObj(String callerPath, ConfigProperty cp, String scope,ObjectResolver resolver, Object[] resolverArgs) throws WDException{
         Object result;
         //System.out.println(cp.getType()+"=====>"+cp.getStringValue());
         // se e' esplicitamente un "riferimento semplice",
@@ -253,14 +256,20 @@ public class ConfigLoader {
         // lo considero come un riferimento
         if ( cp.isReference() || (!cp.isJNDIReference() && !isSpecialType(cp.getType()) )){
             String objectPath=cp.getStringValue(), propertyName=null;
-            int pos=objectPath.indexOf(".");
-            if ( pos>0){
-                propertyName=objectPath.substring(pos+1);
-                objectPath=objectPath.substring(0, pos);
+            /**/
+            int pos1=objectPath.lastIndexOf("/");
+            if (pos1<0)pos1=objectPath.lastIndexOf("\\");
+            
+            int pos2=objectPath.lastIndexOf(".");
+            if( pos2>0 && pos2>pos1 ){
+                propertyName=objectPath.substring(pos2+1);
+                objectPath=objectPath.substring(0, pos2);
             }
-            //System.out.println("===>"+objectPath);
+            
+            objectPath=normalizePath(callerPath, objectPath);
+            
             result=resolver.resolveComponentReference( objectPath, scope, resolverArgs  );
-
+            //System.out.println("===>"+objectPath+"==>"+result);
 
             if ( propertyName!=null && propertyName.length()>0 && result!=null ){
                 try{
@@ -491,7 +500,10 @@ public class ConfigLoader {
     public void internalLogWarning(String t){
         LoggingService.getDefaultLogger().logWarning(this, t);
     }
-
+    
+    private String normalizePath(String callerPath, String objectPath) {
+    	return PathsUtil.normalizePath(callerPath, objectPath);
+	}
 
     public static void main (String[] args) throws Exception{
         ConfigLoader tw= new ConfigLoader();

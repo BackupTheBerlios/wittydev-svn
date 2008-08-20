@@ -313,9 +313,9 @@ public class Architect extends  ScopeBubbleContext {//BubbleContext implements O
 
 
     public Object resolveComponentReference(String componentPath, String scope, Object[] resolverArgs){
-        BubbleContext context=
+    	
+    	BubbleContext context=
             (resolverArgs != null && resolverArgs .length>0)?(BubbleContext)resolverArgs[0]:null;
-
         return resolveName( componentPath, context, true );
     }
 
