@@ -23,6 +23,7 @@ public class BubbleUnitTest {
 		archy.setLoggingDebug(true);
 		archy.setLoggingWarning(true);
 		archy.setConfigPath(configPath);
+		archy.setJndiNamespaceType(Architect.REGISTER_JNDI_NAMESPACE);
 		archy.startService();
 		
 	}
