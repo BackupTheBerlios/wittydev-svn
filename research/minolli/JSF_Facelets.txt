@@ -1,0 +1,45 @@
+Facelets has several compelling features: [1]
+	* Templating (like Tiles) 
+	* Composition components 
+	* Custom logic tags 
+	* Expression functions 
+	* Designer-friendly page development 
+	* Creating component libraries 
+
+
+Unlike JSP, Facelets is a templating language built from the ground up with the JSF 
+component life cycle in mind. With Facelets, you produce templates that build a component 
+tree, not a servlet. 
+This allows for greater reuse because you can compose components out of a composition of 
+other components. 
+
+Facelets is similar to Tapestry and Tiles.
+
+
+Installing Facelets
+	1- Add the Facelets library
+		jsf-facelets.jar 
+		
+	2- Modify the JSF application's web.xml, and add the init parameter(s) [2]
+		<context-param>
+			<param-name>javax.faces.DEFAULT_SUFFIX</param-name>
+			<param-value>.xhtml</param-value>
+		</context-param>
+
+	3- Add the FaceletViewHandler to the faces-config.xml file
+		<application>
+			<locale-config>
+				<default-locale>en</default-locale>
+			</locale-config>
+			<view-handler>com.sun.facelets.FaceletViewHandler</view-handler>
+		</application>
+		
+		
+Templating with Faclets
+	See resource [6]
+
+
+[1] http://www.ibm.com/developerworks/java/library/j-facelets/
+	Facelets fits JSF as glove
+[2] https://facelets.dev.java.net/nonav/docs/dev/docbook.html#config-webapp
+	Facelets init parameters

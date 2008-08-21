@@ -1,0 +1,313 @@
+Search Engine Reputation Management (or SERM) [1]
+	tactics are often employed by companies and increasingly by individuals who seek to proactively 
+	shield their brands or reputations from damaging content brought to light through search engine 
+	queries. Some use these same tactics reactively, in attempts to minimize damage inflicted by 
+	inflammatory (or "flame") websites (and weblogs) launched by consumers and, as some believe, 
+	competitors.
+
+Search Engine Result Page (or SERP)
+
+Geographical Targeting [2]
+	Optimizing a website for a specific country or pushing searches to be only from Canada and UK? 
+	
+Search Engine Optimisation (SEO)
+		
+
+General
+	- Quality content. Make pages for users, not for search engines. 
+	Write pages that clearly describe your topic [6][9]
+	
+	- The meta description should be used to describe the content of your page honestly and 
+	concisely and be 1 or 2 sentences, 3 at most. [9]
+
+	- Link building is the core of SEO, it is the card to higher ranking. [2]
+	
+	- Submit your site to relevant directories such as the Open Directory Project and Yahoo!, 
+	as well as to other industry-specific expert sites. [6]
+	
+	- Offer a site map to your users with links that point to the important parts of your site. 
+	If the site map is larger than 100 or so links, you may want to break the site map into separate 
+	pages. [6]
+	
+	- Think about the words users would type to find your page and include  those words on your 
+	site	[6]
+	
+	- Try to use text instead of images to display important names, content, or links. [5][6]
+	
+	- Avoid broken links [6]
+	
+	- Not every search engine spider crawls dynamic pages (pages with the "?" character) as well as 
+	static pages. It helps to keep the parameters short and the number of them few.  [6]
+	
+	- Keep the links on a given page to a reasonable number (fewer than 100).  [6]
+
+	- Think about the words users would type to find your page and include  those words on 
+	your site [6]
+	
+	- Use a text browser, such as "Lynx" to examine your site [5][6]
+	
+	- Consider creating static copies of dynamic pages. In this case don't forget to add 
+	your dynamic pages to your robot.txt file to prevent google from treating them as 
+	duplicates [5][6][7]
+	
+	- Don't create multiple copies of a page under different URLs. In case of "text-only"
+	or "printer friendly" versions of pages add them to the robot.txt file to prevent google
+	fron treating the as duplicates. [5][6][7]
+	
+	- Make sure your web server supports the If-Modified-Since HTTP header. Supporting this 
+	feature saves you bandwidth and overhead. [6]
+	
+	
+	
+	- Use Structural (Semantic) Mark Up and Separate Content from Presentation 
+		Making proper use of heading elements is essential because search engines give more 
+		weight to the content within the heading elements
+		
+		Using CSS to separate the design elements from the content makes for much leaner code 
+		and makes it easier for search engines to find what they’re looking for, which is 
+		content. 
+	
+	- Make sure that your TITLE tags and ALT attributes are descriptive and accurate.  [5][6][9]	
+	
+	- Keyword Research and Effective Keyword Use
+		Create your website with keywords and key phrases in mind.  Single words are not 
+		always the most effective target, try multi-word phrases that are much more specific 
+		to your product/service 
+		
+		Assign each page 2-3 of the keywords you’ve identified and use the keywords throughout 
+		all the important elements of the page. Those are,
+			Title 
+			Meta Description 
+			Meta Keywords 
+			Heading Elements <H1> <H2> <H3> 
+			Text 
+			Alt Tag 
+			Title Tag 
+			Links 
+
+	- Quality Inbound Links
+		inbound links to your website can be likened to having a vote for the good but there 
+		are good links and bad links so therefore votes for the good and votes that are bad
+		Good links are links from other web pages that are regarded highly by the search engines 
+		and are contextually relevant to the content of your page. Bad links are links from web 
+		pages that aren’t regarded highly or potentially banned by search engines and have 
+		no relevance to the content of your page.
+		When sourcing links you should be thinking of quality over quantity and deep linking to 
+		pages within your website not just the home page.
+
+
+Top 5 Black Hat SEO - AVOID [9]
+	1- Hidden content
+		Hidden content comes in many guises but the basic principle is that within the code 
+		for the site there will be content stuffed with keywords, this content will not be 
+		visible to the end user of the site (for example by using the <noscript> or the 
+		<noframe> tag or even by using a very small font) [5][9]
+
+	2- Meta keyword stuffing
+		The meta description should be used to describe the content of your page honestly and 
+		concisely and be 1 or 2 sentences, 3 at most.
+	
+	3- Meta Keywords
+		Meta Keywords should be a short list of words that inform of the main focus of the 
+		page. Meta keywords have been so misused in the past that there are few if any search 
+		engines that take any heed of them.
+	
+	4- Doorway or Gateway Pages
+		Doorway or Gateway pages are pages designed for search engines and not for the end user. 
+	
+	5- Link Farming
+		Link farms or free for all (FFA) pages have no other purposes than to list links of 
+		unrelated websites.
+
+
+
+
+Yahoo specific
+	Yahoo is one of the most popular search engine and internet portal, their search engine is 
+	in fact as important as Google. [2]
+	
+	
+	Directory [2]
+		Yahoo has one of the biggest directory, therefore it is in the part of their algorithm, 
+		means if you are not in their directory you have to wait for a long time in order to 
+		appear in their SERPs. 
+	
+	Inbound Links: [2]
+		Yahoo ranks better website with high inbound links in terms of both quantity and quality 
+		links 
+		With Yahoo anchor relevancy is very essential.
+		The quantity of links will not really help, it is the quality links that matters
+
+	Title of your website: [2]
+		Title is the biggest and and the most important ranking factor of Yahoo.
+		
+	Relevant Content: [2]
+		The more relevant content you add to your website, the better ranking you get.
+		Blogs are good for relevant content.
+
+	Click Popularity [2]
+		This is a part of Yahoo’s algorithm. The more clicks your site gets on Yahoo Search 
+		Page, the more changes of your website getting on TOP 10. 
+
+	Other factors to optimize a website for Yahoo [2]
+		sitemap, age of domain, keyword density 
+
+
+Google specific
+	Meta Keywords is not important, Meta Description is.	[2]
+		For Google, meta description plays a good role since it gives your website a proper 
+		description snippet in the search.
+		"I am not saying or never did to exclude meta tags from your website, do not make this 
+		your important factor and base your SEO on this."
+	
+	Links	
+		Links are still the basic connector, and the only way for google to judge the websites 
+		importance. [2]
+		links which are non relevant are being devalued by google and putting much emphasis on 
+		trusted and relevant links, these are identified by “domain age” and ect. [2]
+
+		
+	Submit your url to google [6]
+		http://www.google.com/addurl.html 
+	
+	Localization [2]
+		google shows different results depending on where the user is from. Even when using 
+		the same google.com link and entering keyword in English
+	
+	Sitemaps [3][4][6]
+		 Sitemaps are an easy way for you to submit all your URLs to the Google index and get 
+		 detailed reports about the visibility of your pages on Google.
+		 http://www.google.com/webmasters/tools/
+		
+	
+	Google webmaster has a new tool as well for geographical targeting which is available at 
+	"Google Webmaster >> Tools >> Set Geographic Target" [2]
+	
+	To determine if a site is indexed by Google use the "site:www.myhost.com" as a keyword [4]
+	
+	Static IP better then Shared/Dynamic IP
+		Those who says it's true:
+			They start at http1 with basic parsing ability and gradually climb the list of http and html specifications 
+			until they understand the content inside it. I think it is fair (although it doesn't say this in the article) 
+			that eventually MozGoogleBot thingymajig will come along and parse all the content on the page, including JS, 
+			(though probably not VBScript) Flash etc etc. [12]
+			
+			Generally speaking having a website on a shared IP address will not cause you any harm.
+			When I search engine spider first comes across your site it will parse it with basic HTML 1.0. If its able to 
+			do this then it will normally go about getting spidered and indexed. 
+			For those sites with a static IP address they will get spidered with HTML 1.0 as its able to resolve the address 
+			immediately. 
+			If by chance you don't have a static IP address, Google may go about parse the site with HTML 2,3,4 and so on 
+			until its able to resolve the address for your specific site. This can take up to 3 months to happen. 
+			During this period of 1-3 months, any links that you build to your site that is found by Google, will get credited 
+			NOT to your site, but to the main root site on the shared IP. 
+			After Google is able to correctly identify your site from others, you will get credited for the links. [11]
+	
+			"It’s been said that about 3 percent of all Web sites have dedicated IPs, with the other 97 percent 
+			resting on shared IPs. Research was then conducted analyzing the top 50 results for certain queries 
+			in the various search engines. The research found that 90 percent of the top-50 results were using 
+			dedicated IP numbers."
+	
+		Those who don't 
+			"Google handles virtually hosted domains and their links just the same as domains on unique IP addresses. 
+			If your ISP does virtual hosting correctly, you'll never see a difference between the two cases. We do see 
+			a small percentage of ISPs every month that misconfigure their virtual hosting, which might account for this 
+			persistent misperception--thanks for giving me the chance to dispel a myth!
+					
+			Google doesn't actually use traffic ("hit") analysis in its rankings: the rankings are based entirely on how 
+			sites link to each other. One consequence of this approach is that sites which maintain a consistent focus on 
+			one issue, are more likely to accrue lots of links than a transient news story, even one on a major site.
+			
+																										Google Director of Technology Craig Silverstein,  Jul 03, 2002
+																																	
+	
+	
+	
+
+Tips for Link Building [2]:
+	1- Reciprocal Links: 
+		Good , however do not make this your habit and make it as majority of your backlinks.
+	
+	2- Links Age:
+		The age of your backlinks is important, go for permanent links and if you are renting, 
+		rent for as long as possible.
+	
+	3- Free Links:
+		3.1- CraigList 
+		3.2- It is good to answer to peoples’ question and provide a good resourceful link.
+		3.3- Submit stories to Digg.com and link it to an article to your site.
+		3.4- If you update your content regularly, people will syndicate your RSS content, 
+		     some of these will provide links.	
+		3.5- Links on forums signatures.
+	
+	4- Blog: 
+		Start a blog on your website. Comment on other blogs.
+		List your blog in "blog director"  (http://blogs.botw.org/)
+	
+	5- Paid Blogging ( Reviews )
+		Blog review is when advertiser pays you to write a review on their business and services 
+		and posting on your blog with links to their website.
+		
+	6- Testimonials:
+		If you have a web host, write a positive testimonial to send it to them, they would love 
+		to publish it and put a link to your website.
+		
+
+Tips to increase SERP geographically
+	1- Domain TLD:
+		 if your domain has .co.uk in it, chances are you will rank better in the UK.
+	
+	2- Hosting
+		This is a major factor, if web host has a server located in Pakistan, you are likely to 
+		rank well for Pakistan instead of UK. However, this can be altered easily.
+		
+	3- Keywords Usage: 
+		for example if your website has too much content for “Pakistan” or UK, Google will perceive 
+		this that the website is targeting the location mentioned in the content
+		
+	4- Google webmaster has a new tool as well for geographical targeting which is available at 
+	"Google Webmaster >> Tools >> Set Geographic Target"
+
+
+
+
+The slower your server, the fewer pages the spiders will be able to index on each visit 
+(they don’t want to crash it). [15]
+	
+	
+
+
+		
+More on
+	http://www.seoserp.com/web_tools/google_top_1000_serps_checker.asp
+		=> Top 1000 SERPs checker in Google.
+		
+	http://www.seochat.com/seo-tools/graphical-search-engine-comparison/
+		=> SEO Tools
+	
+	http://www.google.com/trends
+		=> Keywords trend and comparison
+
+	http://www.ranksmart.com/resources.html
+		=> SEO Resources and tips
+
+
+DMOZ specific
+	You can use the "NOODP" tag to have your own description.
+
+
+[1] http://en.wikipedia.org/wiki/Reputation_management
+[2] http://zafarahmed.com/
+[3] http://www.google.com/support/webmasters/bin/answer.py?answer=34654
+[4] http://www.google.com/support/webmasters/bin/answer.py?answer=34397
+[5] http://www.google.com/support/webmasters/bin/answer.py?answer=40349
+[6] http://www.google.com/support/webmasters/bin/answer.py?answer=35769
+[7] http://www.robotstxt.org/wc/faq.html
+[8] http://www.google.com/support/webmasters/bin/answer.py?answer=35291
+[9] http://www.pushon.co.uk/articles/top-5-white-hat-and-black-hat-search-optimisation-techniques
+[10] http://www.motoricerca.info/news/news-355.html
+[11] http://www.seroundtable.com/archives/002358.html
+[12] http://www.threadwatch.org/node/3443
+[13] http://www.mattcutts.com/blog/myth-busting-virtual-hosts-vs-dedicated-ip-addresses/
+[14] http://interviews.slashdot.org/interviews/02/07/03/1352239.shtml
+[15] http://www.bruceclay.com/blog/archives/2007/03/which_is_better.html
