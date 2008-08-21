@@ -1,3 +1,0 @@
-
-[1] http://docs.jboss.org/jbossas/jboss4guide/r4/html/cluster.chapt.html#clustering-http
-	How to install
