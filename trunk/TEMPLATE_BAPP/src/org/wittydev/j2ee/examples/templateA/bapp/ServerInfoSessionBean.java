@@ -11,18 +11,23 @@ import java.util.Properties;
 
 import javax.ejb.Remote;
 import javax.ejb.Stateless;
+import javax.jws.WebService;
 
 @SuppressWarnings({"serial","unchecked"})
 @javax.ejb.Stateless //(name="ServerInfoService", mappedName="ServerInfoServiceJNDI")
+
 // Define the EJB as being a remote service component  
 @javax.ejb.Remote ({ServerInfoService.class})
 
 // Define the EJB as being a local service component
 //@javax.ejb.Local ({ServerInfoService.class})
 
+// 
+@WebService (endpointInterface="org.wittydev.j2ee.examples.templateA.bapp.ServerInfoWebService")
 public class ServerInfoSessionBean implements ServerInfoService {
 	InetAddress[] inetAddresses;
 	String[] ips, hostNames;
+	 
 	public InetAddress[] getServerInetAddresses() throws SocketException {
 		if (inetAddresses==null){
 			java.util.List ias = new ArrayList();

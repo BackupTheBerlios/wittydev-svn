@@ -5,8 +5,7 @@
         Generic J2EE Business Application (JAR) build 
     </description>
 
-	
-  <!-- set global properties for this build -->
+	<!-- .................. START setting Global Properties ............... -->
 	<tstamp>
 		<format property="V_TODAY" pattern="yyyyMMdd" locale="it,IT"/>
 	</tstamp>
@@ -15,51 +14,113 @@
   	<property name="project.name" value="TEMPLATE"/>
 	<property name="build.path" value="${project.home}/build"/>
 	<property name="dist.path" value="${project.home}/dist"/>
-	<property name="jboss.home" value="C:/carlos/dev/servers/jboss-4.2.2.GA"/>
-	<!--property name="genericlibs" value="${project.home}/../W_SERVIZI_INCASSI/misc/lib"/-->
-	<!--property name="libapp.path" value="${project.home}/../WittyMiscServices_LIB"/-->
+	<property name="genericlibs" value="${project.home}/../MISC_LIBS"/>
+	<property name="project_libs.path" value="${project.home}/lib"/>
 	
-	<!-- Build classpath -->
-	<fileset dir="${jboss.home}" id="miscLibs">
-    	<include name="server/default/lib/commons-io-1.3.1.jar"/>
+	<property name="jboss.home" value="${genericlibs}/jboss"/>
+	<!-- .................. END setting Global Properties ............... -->
+	
+	
+	<!-- .................. START Build classpath ............... -->
+	<!-- JBoss classpath --> 
+	<fileset dir="${jboss.home}" id="jbossLibs">
     	<include name="server/default/lib/commons-logging.jar"/>
-    	<include name="server/default/lib/commons-fileupload-1.2.jar"/>
-    	<include name="server/default/lib/commons-io-1.3.1.jar"/>
-    	<include name="server/default/lib/commons-logging.jar"/>
+    	<include name="server/default/commons/commons-fileupload-1.2.jar"/>
+    	<include name="server/default/commons/commons-io-1.3.2.jar"/>
     	<include name="server/default/lib/servlet-api.jar"/>
 		<include name="server/default/lib/jboss-annotations-ejb3.jar"/>
 		<include name="server/default/lib/jboss-ejb3x.jar"/>
 		<include name="server/default/lib/hibernate-annotations.jar"/>
 		<include name="client/jbossall-client.jar"/>
     </fileset>
+	
+	<!-- EJB3 classpath -->
     <fileset dir="${jboss.home}/server/default/deploy/ejb3.deployer" id="ejb3Libs">
         <include name="*.jar"/>
     </fileset>
+	
+	<!-- EJB3 Persistence classpath -->
     <fileset dir="${jboss.home}/server/default/lib" id="ejb3PersistenceLibs">
         <include name="*ejb3-persistence.jar"/>
     </fileset>
 	
+	<!-- Miscellaneous classpath -->
+    <fileset dir="${genericlibs}" id="miscLibs">
+        <include name="JavaEE5/javaee.jar"/>
+    </fileset>
+
 	<!--fileset dir="${genericlibs}/struts/2.X" id="struts2Libs"/-->
 	<!--fileset dir="${genericlibs}/junit/4.X" id="junitLibs"/-->
 
 	<path id="classpath">
 		<!--fileset refid="struts2Libs"/-->
+		<fileset refid="jbossLibs"/>
 		<fileset refid="miscLibs"/>
 		<fileset refid="ejb3Libs"/>
 		<fileset refid="ejb3PersistenceLibs"/>
 		<!--fileset refid="struts2Libs"/-->
 		<!--fileset refid="junitLibs"/-->
-		<pathelement location="${build.classes.dir}"/>
+		<pathelement location="${build.path}/classes"/>
 		<!--pathelement location="${libapp.path}/dist/WittyMiscServices_LIB.jar"/-->
 	</path>
+	<!-- .................. END Build classpath ............... -->
+	
+	
+	
+	
+	
+	
+	<!-- .................. START JAX-WS WebService tasks definition ............... -->
+	<!-- setup JAS-WS runtime classpath -->
+	<path id="tool.cp">
+        <fileset dir="${genericlibs}/JAXWS_2_0">
+            <include name="*.jar"/>
+            <exclude name="j2ee.jar"/>
+        </fileset>
+	</path>
 
+	<!-- Setup Wsimport ant task. You would use this task in WSDL to Java case
+	to compile a WSDL and generate Java classes.
+	-->
+	<taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+	    <classpath refid="tool.cp"/>
+	</taskdef>
+
+	<!-- Setup Wsgen ant task. You would use this task in Java to WSDL case to
+	generate a WSDL or wrapper classes.
+	-->
+	<taskdef name="wsgen" classname="com.sun.tools.ws.ant.WsGen">
+	    <classpath refid="tool.cp"/>
+	</taskdef>
+	<!-- .................. END JAX-WS WebService tasks definition ............... -->
+	
+	
+	<!-- .................. START AXIS2 WebService tasks definition ............... -->
+	<path id="ant.cp">
+        <fileset dir="${genericlibs}/axis2">
+            <include name="*.jar"/>
+        </fileset>
+	</path>
+
+	<!-- Setup Wsimport ant task. You would use this task in WSDL to Java case
+	to compile a WSDL and generate Java classes.
+	-->
+	<taskdef name="codegen" classname="org.apache.axis2.tool.ant.AntCodegenTask">
+	    <classpath refid="ant.cp"/>
+	</taskdef>
+	<!-- .................. END AXIS2 WebService tasks definition ............... -->
+	
+	
+	
+	
+	
+	
   	<target name="checkHomeDir" unless="project.home.exists">
   		<echo message="Warning: Project home does not exists => ${project.home}"/>
   	</target>
 
 	<target name="clean" description="clean up" >
-	    <delete dir="${build.path}"/>
-		<!--delete file="${dist.path}/*.jar"/-->
+		<delete dir="${build.path}"/>
 		<delete dir="${dist.path}" includes="*.*"/>
 	</target>
 
@@ -68,6 +129,12 @@
 		<antcall target="checkHomeDir"/>
   		<mkdir dir="${build.path}/classes"/>
   		<mkdir dir="${dist.path}"/>
+		<mkdir dir="${build.path}/jaxws/server/classes"/>
+		<mkdir dir="${build.path}/jaxws/server/src"/>
+		<mkdir dir="${build.path}/jaxws/client/classes"/>
+		<mkdir dir="${build.path}/jaxws/client/src"/>
+		<mkdir dir="${build.path}/axis2/client/classes"/>
+		<mkdir dir="${build.path}/axis2/client/src"/>
 	</target>
 	
 	
@@ -87,27 +154,90 @@
 	        fork="false"
 			includes="**/*"
 			verbose="no"
-			excludes="**/ClassToExclude.java"
+			excludes="**/ClassToExclude.java **/ServerInfoWebServiceTest.java"
 		  >
 			<compilerarg value="-version"/>
 		</javac>
 
   	</target>
-  	
-  	<target name="packageIt" depends="compileIt"  description="Jar it">
+
+	<!-- Not to be used on JBoss -->
+	<target name="WsdlIt" depends="compileIt"  description="WSDL it">
+		<wsgen
+			sei="org.wittydev.j2ee.examples.templateA.bapp.ServerInfoSessionBean"
+			destdir="${build.path}/jaxws/server/classes"
+			resourcedestdir="${build.path}/jaxws/server/classes"
+			sourcedestdir="${build.path}/jaxws/server/src"
+			keep="true"
+			verbose="true"
+			genwsdl="true"
+		>
+			<classpath refid="classpath"/>
+		</wsgen>
+	</target>
+	
+	<target name="WsdlImportIt" depends="WsdlIt"  description="WSDL import it">
+		<wsimport
+			destdir="${build.path}/jaxws/client/classes"
+			debug="true"
+			wsdl="${build.path}/jaxws/server/classes/ServerInfoSessionBeanService.wsdl"
+			sourcedestdir="${build.path}/jaxws/client/src"
+			keep="true"
+			verbose="true"
+			package="org.wittydev.j2ee.examples.templateA.bapp.jaxws.client"
+		>
+			<!--classpath refid="classpath"/-->
+			<!--binding dir="${basedir}/etc" includes="custom.xml"/-->
+		</wsimport>
+	</target>
+	
+	<target name="WsdlAxis2It"  description="WSDL Axis2 it">
+		<codegen
+			output="${build.path}/axis2/client/classes"
+			generateservicexml="true"
+			wsdlfilename="D:\CARLOS\AAA.wsdl"
+			serverside="true"
+		>
+			<!-- 
+				wsdlfilename="${build.path}/jaxws/server/classes/ServerInfoSessionBeanService.wsdl" 
+				wsdlfilename="http://127.0.0.1:8080/ServerInfoSessionBeanService/ServerInfoSessionBean?wsdl"
+			-->
+			<!--classpath refid="classpath"/-->
+			<!--binding dir="${basedir}/etc" includes="custom.xml"/-->
+		</codegen>
+	</target>
+
+	<!--
+		servicename="{dummy.wittydev.com}DummyService"
+		portname="http://dummy.wittydev.com/DummyPort"
+	-->
+
+	
+	
+  	<target name="packageIt" depends="compileIt,WsdlImportIt"  description="Jar it">
   		<jar destfile="${dist.path}/${project.name}_BAPP.jar" >
   			<metainf dir="${build.path}/classes/META-INF"></metainf>
 			<fileset dir="${build.path}/classes/">
   		  		<exclude name="META-INF/*"/>	
   		  		<include name="**/*"/>
   		  	</fileset>
+			<!--fileset dir="${build.path}/jaxws/classes/">
+  		  		<exclude name="META-INF/*"/>	
+  		  		<include name="**/*"/>
+  		  	</fileset-->
   		</jar>
   		<jar destfile="${dist.path}/${project.name}_BAPP_client.jar" >
 			<fileset dir="${build.path}/classes/">
 				<include name="*/**/*Service.class"/>
 				<include name="*/**/domain/**/*"/>
   		  	</fileset>
+			<fileset dir="${build.path}/jaxws/client/classes/">
+  		  		<exclude name="META-INF/*"/>	
+  		  		<include name="**/*"/>
+  		  	</fileset>
   		</jar>
+
+  	
   	</target>
 	
 	
@@ -142,7 +272,7 @@
 	  </target>
 	
 	
-	
+	 
   <!--
   		target name="buildIt" depends="compileAll" if="PROJ_basedir.exists">
   	<delete file="${PROJ_basedir}/${GTAR_NAME}"/>

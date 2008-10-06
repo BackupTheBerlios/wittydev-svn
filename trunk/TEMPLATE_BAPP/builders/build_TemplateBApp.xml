@@ -3,14 +3,14 @@
 	<target name="Build_Template_copyIt" 
 			description="Build MavAttiva in sviluppo03" >
 		<!--property name="noCleanup" value="true"/-->
-		<property name="local.deploy.path" value="d:\appl\iwbin\jboss-4.2.1.GA\server\jb_retail01"/>
+		<property name="local.deploy.path" value="D:\carlos\develop\AppServers\jboss-4.2.0.GA\server\ck_1"/>
 		<property name="local.deploy.bappFolder" value="deploy"/>
 		<property name="local.deploy.wappFolder" value="deploy"/>
 		<ant antfile="./builders/build.xml" target="oneStepCopy" inheritall="true"/>
 	</target>
 	
 	<target name="Build_Template_remoteIt" 
-			description="Build MavAttiva in sviluppo03" >
+			description="Build template in remote server" >
 		<property name="remote.deploy.path" value="/remoteDir/servizi_incassi/"/>
 		<property name="remote.deploy.bappFolder" value="deploy_bapp"/>
 		<property name="remote.deploy.wappFolder" value="deploy_wapp"/>
