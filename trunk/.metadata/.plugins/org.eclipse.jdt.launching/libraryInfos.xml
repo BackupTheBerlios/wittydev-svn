@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <libraryInfos>
+<libraryInfo home="D:\carlos\develop\java\j2sdk1.4.2_14" version="1.4.2_14">
+<bootpath>
+<entry path="D:\carlos\develop\java\j2sdk1.4.2_14\jre\lib\rt.jar"/>
+<entry path="D:\carlos\develop\java\j2sdk1.4.2_14\jre\lib\i18n.jar"/>
+<entry path="D:\carlos\develop\java\j2sdk1.4.2_14\jre\lib\sunrsasign.jar"/>
+<entry path="D:\carlos\develop\java\j2sdk1.4.2_14\jre\lib\jsse.jar"/>
+<entry path="D:\carlos\develop\java\j2sdk1.4.2_14\jre\lib\jce.jar"/>
+<entry path="D:\carlos\develop\java\j2sdk1.4.2_14\jre\lib\charsets.jar"/>
+<entry path="D:\carlos\develop\java\j2sdk1.4.2_14\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="D:\carlos\develop\java\j2sdk1.4.2_14\jre\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="D:\carlos\develop\java\j2sdk1.4.2_14\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="D:\carlos\develop\java\jdk1.5.0_12" version="1.5.0_12">
+<bootpath>
+<entry path="D:\carlos\develop\java\jdk1.5.0_12\jre\lib\rt.jar"/>
+<entry path="D:\carlos\develop\java\jdk1.5.0_12\jre\lib\i18n.jar"/>
+<entry path="D:\carlos\develop\java\jdk1.5.0_12\jre\lib\sunrsasign.jar"/>
+<entry path="D:\carlos\develop\java\jdk1.5.0_12\jre\lib\jsse.jar"/>
+<entry path="D:\carlos\develop\java\jdk1.5.0_12\jre\lib\jce.jar"/>
+<entry path="D:\carlos\develop\java\jdk1.5.0_12\jre\lib\charsets.jar"/>
+<entry path="D:\carlos\develop\java\jdk1.5.0_12\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="D:\carlos\develop\java\jdk1.5.0_12\jre\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="D:\carlos\develop\java\jdk1.5.0_12\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
 <libraryInfo home="D:\carlos\develop\ide\MyEclipse-6.0M1" version="1.5.0_11">
 <bootpath>
 <entry path="D:\carlos\develop\ide\MyEclipse-6.0M1\jre\lib\rt.jar"/>

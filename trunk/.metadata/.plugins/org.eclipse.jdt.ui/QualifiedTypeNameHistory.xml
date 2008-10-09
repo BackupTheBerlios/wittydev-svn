@@ -1,2 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.junit.Ignore"/>
+<fullyQualifiedTypeName name="java.lang.AssertionError"/>
+<fullyQualifiedTypeName name="org.wittydev.bubble.Architect"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="org.junit.BeforeClass"/>
+<fullyQualifiedTypeName name="org.wittydev.core.WDException"/>
+<fullyQualifiedTypeName name="org.junit.Assert"/>
+<fullyQualifiedTypeName name="org.junit.AfterClass"/>
+<fullyQualifiedTypeName name="org.wittydev.bubble.test.pkg1.BeanA"/>
+<fullyQualifiedTypeName name="org.wittydev.bubble.test.pkg2.BeanB"/>
+<fullyQualifiedTypeName name="java.util.StringTokenizer"/>
+<fullyQualifiedTypeName name="org.wittydev.util.PathsUtil"/>
+<fullyQualifiedTypeName name="javax.jws.WebService"/>
+<fullyQualifiedTypeName name="javax.jws.WebMethod"/>
+<fullyQualifiedTypeName name="org.wittydev.j2ee.examples.templatea.bapp.ServerInfoSessionBeanService"/>
+<fullyQualifiedTypeName name="javax.xml.ws.WebServiceRef"/>
+<fullyQualifiedTypeName name="org.wittydev.j2ee.examples.templatea.bapp.ServerInfoWebService"/>
+<fullyQualifiedTypeName name="org.wittydev.j2ee.examples.templateA.bapp.jaxws.client.ServerInfoSessionBeanService"/>
+<fullyQualifiedTypeName name="javax.sql.rowset.WebRowSet"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.rmi.Remote"/>
+<fullyQualifiedTypeName name="com.sun.xml.rpc.client.ServiceFactoryImpl"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.rmi.RemoteException"/>
+<fullyQualifiedTypeName name="org.wittydev.j2ee.examples.templateA.wapp.rpcclient.ServerInfoRPCService_Impl"/>
+<fullyQualifiedTypeName name="org.wittydev.j2ee.examples.templateA.wapp.rpcclient.ServerInfoRPCService"/>
+<fullyQualifiedTypeName name="org.wittydev.j2ee.examples.templateA.wapp.rpcclient.ServerInfoRPCService_SerializerRegistry"/>
+<fullyQualifiedTypeName name="org.wittydev.j2ee.examples.templateA.wapp.ServerInfoRPCWebService_Stub"/>
+<fullyQualifiedTypeName name="org.apache.axis.encoding.ser.ArrayDeserializerFactory"/>
+<fullyQualifiedTypeName name="org.apache.axis.encoding.ser.ArraySerializerFactory"/>
+<fullyQualifiedTypeName name="org.wittydev.j2ee.examples.templateA.bapp.DummyObj"/>
+<fullyQualifiedTypeName name="javax.xml.namespace.QName"/>
+<fullyQualifiedTypeName name="javax.xml.rpc.ServiceFactory"/>
+<fullyQualifiedTypeName name="javax.xml.rpc.Service"/>
+<fullyQualifiedTypeName name="java.net.URL"/>
+<fullyQualifiedTypeName name="org.wittydev.j2ee.examples.templateA.bapp.jaxws.client.ServerInfoWebService"/>
+<fullyQualifiedTypeName name="org.wittydev.j2ee.examples.templateA.bapp.ServerInfoWebService"/>
+<fullyQualifiedTypeName name="javax.xml.ws.Service"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="java.net.InetAddress"/>
+<fullyQualifiedTypeName name="org.wittydev.j2ee.examples.templateA.wapp.ServerInfoRPCWebService"/>
+</qualifiedTypeNameHistroy>
