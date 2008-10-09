@@ -7,7 +7,6 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingEnumeration;
 
-import org.jnp.interfaces.NamingContext;
 import org.wittydev.j2ee.examples.templateA.bapp.ServerInfoService;
 
 public class ServerInfoServiceTest {

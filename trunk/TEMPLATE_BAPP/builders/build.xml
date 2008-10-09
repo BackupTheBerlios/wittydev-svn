@@ -17,7 +17,7 @@
 	<property name="genericlibs" value="${project.home}/../MISC_LIBS"/>
 	<property name="project_libs.path" value="${project.home}/lib"/>
 	
-	<property name="jboss.home" value="${genericlibs}/jboss"/>
+	<property name="jboss.home" value="${genericlibs}/jboss_4.2.0.GA"/>
 	<!-- .................. END setting Global Properties ............... -->
 	
 	
@@ -168,6 +168,7 @@
 			destdir="${build.path}/jaxws/server/classes"
 			resourcedestdir="${build.path}/jaxws/server/classes"
 			sourcedestdir="${build.path}/jaxws/server/src"
+			
 			keep="true"
 			verbose="true"
 			genwsdl="true"

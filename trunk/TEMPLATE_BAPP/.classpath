@@ -5,7 +5,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="/MISC_LIBS/commons/commons-fileupload-1.2.jar"/>
 	<classpathentry kind="lib" path="/MISC_LIBS/commons/commons-io-1.3.2.jar"/>
-	<classpathentry kind="lib" path="/MISC_LIBS/jboss/client/jbossall-client.jar"/>
 	<classpathentry kind="lib" path="/MISC_LIBS/JAXWS_2_0/activation.jar"/>
 	<classpathentry kind="lib" path="/MISC_LIBS/JAXWS_2_0/FastInfoset.jar"/>
 	<classpathentry kind="lib" path="/MISC_LIBS/JAXWS_2_0/http.jar"/>
@@ -21,7 +20,9 @@
 	<classpathentry kind="lib" path="/MISC_LIBS/JAXWS_2_0/resolver.jar"/>
 	<classpathentry kind="lib" path="/MISC_LIBS/JAXWS_2_0/saaj-api.jar"/>
 	<classpathentry kind="lib" path="/MISC_LIBS/JAXWS_2_0/saaj-impl.jar"/>
+	<classpathentry kind="lib" path="build/jaxws/server/classes"/>
 	<classpathentry kind="lib" path="/MISC_LIBS/JAXWS_2_0/sjsxp.jar"/>
 	<classpathentry kind="lib" path="dist/TEMPLATE_BAPP_client.jar"/>
+	<classpathentry kind="lib" path="/MISC_LIBS/jboss_4.2.0.GA/client/jbossall-client.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
