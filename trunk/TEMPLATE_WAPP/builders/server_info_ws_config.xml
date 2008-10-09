@@ -1,0 +1,11 @@
+ <configuration xmlns="http://www.jboss.org/jbossws-tools">
+    <java-wsdl>
+        <service name="ServerInfoRPCService" 
+                 style="rpc" 
+                 endpoint="org.wittydev.j2ee.examples.templateA.wapp.ServerInfoRPCWebService"/>
+        <namespaces target-namespace="http://wapp.templateA.examples.j2ee.wittydev.org/"
+                    type-namespace="http://wapp.templateA.examples.j2ee.wittydev.org/types"/>
+        <mapping file="jaxrpc-mapping.xml"/>
+        <webservices servlet-link="ServerInfoEndPoint"/>
+    </java-wsdl>
+</configuration>

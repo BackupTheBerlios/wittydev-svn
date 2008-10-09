@@ -16,12 +16,13 @@
 	<property name="build.path" value="${project.home}/build"/>
 	<property name="dist.path" value="${project.home}/dist"/>
 	<property name="webLibs.path" value="${project.home}/lib"/>
+	<property name="genericlibs" value="${project.home}/../MISC_LIBS"/>
 	<property name="jboss.home" value="C:/carlos/dev/servers/jboss-4.2.2.GA"/>
 	
-	<property name="bapp.path" value="${project.home}/../${project.name}_BAPP"/>
+	<property name="bapp.path" value="${project.home}/../TEMPLATE_BAPP"/>
 	
 	
-	<!-- Build classpath -->
+	<!-- .................. START Build classpath ............... -->
 	<fileset dir="${jboss.home}" id="miscLibs">
     	<include name="server/default/lib/commons-io-1.3.1.jar"/>
     	<include name="server/default/lib/commons-logging.jar"/>
@@ -50,16 +51,114 @@
 		<fileset refid="miscLibs"/>
 		<fileset refid="ejb3Libs"/>
 		<fileset refid="ejb3PersistenceLibs"/>
-		<pathelement location="${build.classes.dir}"/>
+		<pathelement location="${build.path}/classes"/>
 		<pathelement location="${bapp.path}/dist/TEMPLATE_BAPP_client.jar"/>
-	
+		<pathelement location="${genericlibs}/jboss_4.0.5.GA/client/jbossall-client.jar"/>
 	</path>
+	<!-- .................. END Build classpath ............... -->	
+
+	<!--path id="tool.cp">
+        <fileset dir="${genericlibs}/JAXRPC">
+            <include name="*.jar"/>
+        </fileset>
+	</path>	
+
+	<taskdef name="wscompile" classname="com.sun.xml.rpc.tools.ant.Wscompile">
+	    <classpath refid="tool.cp"/>
+	</taskdef>
 	
-  	<target name="checkHomeDir" unless="project.home.exists">
+	<wscompile
+	    gen="true"
+	    base="${build.path}"
+	    features="explicitcontext"
+	    debug="true"
+	    config="${project.home}/builders/server_info_ws_config.xml">
+		<classpath refid="tool.cp"/>
+	</wscompile-->
+	
+    <!-- Define a taskdef for the wstools ant task -->
+	
+	<path id="tool.cp">
+		<fileset dir="${genericlibs}/jboss_4.0.5.GA/client">
+            <include name="*.jar"/>
+        </fileset>
+		<pathelement location="${bapp.path}/dist/TEMPLATE_BAPP_client.jar"/>
+		<pathelement location="${build.path}/classes"/>
+		<pathelement location="${genericlibs}/jboss_4.2.0.GA/lib/endorsed/xercesImpl.jar"/>
+	</path>	
+    <taskdef name="wstools" classname="org.jboss.ws.tools.ant.wstools">
+      <classpath refid="tool.cp"/>
+    </taskdef>
+
+	
+    <!-- samples/rpcstyle -->
+	<target name="ws_generate_xmls" depends="compileIt">
+		<wstools dest="${build.path}/web/WEB-INF"
+		 	verbose="true"
+		     config="${project.home}/builders/server_info_ws_config.xml"
+		 >
+		</wstools>
+	</target>
+	
+
+	<path id="tool2.cp">
+		<fileset dir="${genericlibs}/JAXRPC">
+            <include name="*.jar"/>
+        </fileset>
+		<fileset dir="${genericlibs}/jboss_4.0.5.GA/client">
+            <include name="*.jar"/>
+        </fileset>
+		
+		<pathelement location="${bapp.path}/dist/TEMPLATE_BAPP_client.jar"/>
+		<pathelement location="${build.path}/classes"/>
+	</path>	
+	
+	<taskdef name="wscompile" classname="com.sun.xml.rpc.tools.ant.Wscompile">
+      <classpath refid="tool2.cp"/>
+    </taskdef>
+
+	<!-- samples/rpcstyle -->
+	<target name="ws_compile" >
+		<!--wscompile dest="${build.path}/web/WEB-INF"
+		 	verbose="true"
+		     config="${project.home}/builders/server_info_ws_config.xml"
+		 >
+		</wscompile-->
+		
+			<wscompile
+			    client="true"
+			    base="${build.path}/jaxrpc/client/classes"
+			    features="explicitcontext"
+			    debug="true"
+				verbose="true"
+				keep="true"
+			    config="${project.home}/builders/client_info_ws_config.xml">
+				<classpath refid="tool2.cp"/>
+			</wscompile>
+		
+	  		<jar destfile="${dist.path}/${project.name}_client.jar" >
+				<fileset dir="${build.path}/jaxrpc/client/classes/">
+	  		  		<include name="**/*"/>
+	  		  	</fileset>
+				<fileset dir="${build.path}/classes/">
+	  		  		<include name="org/wittydev/j2ee/examples/templateA/wapp/**/*"/>
+	  		  	</fileset>
+	  		</jar>
+		
+	</target>
+	
+	
+	
+	
+	
+	
+	
+	<target name="checkHomeDir" unless="project.home.exists">
   		<echo message="Warning: Project home does not exists => ${project.home}"/>
   	</target>
 
 	<target name="clean" description="clean up" >
+		<echo message="${build.path}/classes}"/>
 	    <!--delete dir="${build.path}"/-->
 		<delete dir="${build.path}">
 			<!--exclude name="**/*.class"/-->
@@ -72,6 +171,9 @@
 	  	<available file="${project.home}" type="dir" property="project.home.exists"	/>
 		<antcall target="checkHomeDir"/>
   		<mkdir dir="${build.path}/classes"/>
+		<mkdir dir="${build.path}/jaxrpc/client/classes"/>
+		<mkdir dir="${build.path}/jaxrpc/client/src"/>
+		<mkdir dir="${build.path}/web/WEB-INF"/>
   		<mkdir dir="${dist.path}"/>
 	</target>
 	
@@ -99,17 +201,18 @@
 	        destdir="${build.path}/classes"
 			classpathref="classpath"
 		    debug="on"
-	        source="1.5"
+	        source="1.4"
+			target="1.4"
 	        fork="false"
 			includes="**/*"
 			verbose="no"
 		  >
-			<compilerarg value="-version"/>
+			<!--compilerarg value="-version"/-->
 		</javac>
 
   	</target>
   	
-  	<target name="packageIt" depends="compileIt"  description="War it">
+  	<target name="packageIt" depends="compileIt,ws_generate_xmls"  description="War it">
   		<war destfile="${dist.path}/${project.name}_WAPP.war" 
   			webxml="${project.home}/web/WEB-INF/web.xml"
   			manifest="${project.home}/src/META-INF/MANIFEST.MF"
@@ -119,10 +222,14 @@
 				<exclude name="WEB-INF/web.xml"/>
 				<exclude name="WEB-INF/classes/**/*"/>
 			</fileset>
+  			<fileset dir="${project.home}/build/web/"/>
+  			
   		  <classes dir="${build.path}/classes" includes="**" />
   		  <!--lib dir="${project.home}/lib" includes="jsf*.jar" /-->
   		</war>
 
+  		
+  		
   	</target>
 
   	  <target name="oneStepFtp" depends="packageIt" description="ftp the war">

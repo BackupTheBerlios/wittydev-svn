@@ -3,7 +3,7 @@
 	<target name="Build_Template_copyIt" 
 			description="Build and copy on local server" >
 		<!--property name="noCleanup" value="true"/-->
-		<property name="local.deploy.path" value="C:\carlos\dev\servers\jboss-4.2.2.GA\server\ck1"/>
+		<property name="local.deploy.path" value="D:\carlos\develop\AppServers\jboss-4.2.0.GA\server\ck_1"/>
 		<property name="local.deploy.bappFolder" value="deploy"/>
 		<property name="local.deploy.wappFolder" value="deploy"/>
 		<ant antfile="./builders/build.xml" target="oneStepCopy" inheritall="true"/>

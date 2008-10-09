@@ -1,0 +1,14 @@
+<configuration xmlns="http://java.sun.com/xml/ns/jax-rpc/ri/config">
+    <service name="ServerInfoRPCService"
+        targetNamespace="http://127.0.0.1:8080/TEMPLATE_WAPP/ServerInfoRPC?wsdl"
+        typeNamespace="http://wapp.templateA.examples.j2ee.wittydev.org/types"
+        packageName="org.wittydev.j2ee.examples.templateA.wapp.rpcclient">
+            <interface
+                name="org.wittydev.j2ee.examples.templateA.wapp.ServerInfoRPCWebService"
+                servantName="org.wittydev.j2ee.examples.templateA.wapp.ServerInfoRPCWebServiceImpl">
+            </interface>
+    </service>
+</configuration>
+<!-- 
+targetNamespace="P:\\wd2\\trunk\\TEMPLATE_JSF_WAPP\\build\\web\\WEB-INF\\wsdl\\ServerInfoRPCService.wsdl"
+-->

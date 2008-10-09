@@ -5,5 +5,18 @@
 	<classpathentry kind="lib" path="lib/jsf-api.jar"/>
 	<classpathentry kind="lib" path="lib/jsf-impl.jar"/>
 	<classpathentry kind="lib" path="lib/el-api.jar"/>
+	<classpathentry kind="lib" path="/TEMPLATE_BAPP/dist/TEMPLATE_BAPP_client.jar"/>
+	<classpathentry kind="lib" path="/MISC_LIBS/JAXRPC/jaxrpc-impl.jar"/>
+	<classpathentry kind="lib" path="/MISC_LIBS/JAXRPC/jaxrpc-spi.jar"/>
+	<classpathentry kind="lib" path="/MISC_LIBS/jboss_4.0.5.GA/client/activation.jar"/>
+	<classpathentry kind="lib" path="/MISC_LIBS/jboss_4.0.5.GA/client/javassist.jar"/>
+	<classpathentry kind="lib" path="/MISC_LIBS/jboss_4.0.5.GA/client/jbossall-client.jar"/>
+	<classpathentry kind="lib" path="/MISC_LIBS/jboss_4.0.5.GA/client/jboss-backport-concurrent.jar"/>
+	<classpathentry kind="lib" path="/MISC_LIBS/jboss_4.0.5.GA/client/jbossretro-rt.jar"/>
+	<classpathentry kind="lib" path="/MISC_LIBS/jboss_4.0.5.GA/client/jbossws14-client.jar"/>
+	<classpathentry kind="lib" path="/MISC_LIBS/jboss_4.0.5.GA/client/jboss-xml-binding.jar"/>
+	<classpathentry kind="lib" path="/MISC_LIBS/jboss_4.0.5.GA/client/mail.jar"/>
+	<classpathentry kind="lib" path="/MISC_LIBS/jboss_4.2.0.GA/lib/endorsed/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="/MISC_LIBS/JAXWS_2_0/FastInfoset.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

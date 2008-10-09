@@ -65,6 +65,21 @@
         
     </context-param>
 
+
+    <!-- Server Info Web Service -->
+    <servlet>
+        <servlet-name>ServerInfoEndPoint</servlet-name>
+        <servlet-class>org.wittydev.j2ee.examples.templateA.wapp.ServerInfoRPCWebServiceImpl</servlet-class>
+    </servlet>
+
+    <!-- ServerInfo Web Service Mapping -->
+    <servlet-mapping>
+        <servlet-name>ServerInfoEndPoint</servlet-name>
+        <url-pattern>/ServerInfoRPC</url-pattern>
+    </servlet-mapping>
+
+
+
     <!-- Faces Servlet -->
     <servlet>
         <servlet-name>Faces Servlet</servlet-name>
@@ -78,6 +93,8 @@
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/guess/*</url-pattern>
     </servlet-mapping>
+
+
 
     <security-constraint>
 	 <!-- This security constraint illustrates how JSP pages 
