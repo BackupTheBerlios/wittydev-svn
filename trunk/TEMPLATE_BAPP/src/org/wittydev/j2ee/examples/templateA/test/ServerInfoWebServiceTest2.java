@@ -14,7 +14,9 @@ import org.wittydev.j2ee.examples.templateA.bapp.ServerInfoWebService;
 
 public class ServerInfoWebServiceTest2 {
 	public static void main(String[] args) throws Exception{
-		String wsdlLocation="http://127.0.0.1:8080/ServerInfoSessionBeanService/ServerInfoSessionBean?wsdl";
+		//String wsdlLocation="http://127.0.0.1:8080/ServerInfoSessionBeanService/ServerInfoSessionBean?wsdl";
+		String wsdlLocation="http://sviluppo03.lan.iw:8180/ServerInfoSessionBeanService/ServerInfoSessionBean?wsdl";
+		
 		
 		URL url = new URL(wsdlLocation);
 		
