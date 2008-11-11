@@ -1,7 +1,7 @@
 <project name="WittyBuild_BAPP" default="Build_Template_copyIt" basedir="../">
   	<property name="project.name" value="TEMPLATE"/>
 	<target name="Build_Template_copyIt" 
-			description="Build MavAttiva in sviluppo03" >
+			description="Build template in local server" >
 		<!--property name="noCleanup" value="true"/-->
 		<property name="local.deploy.path" value="D:\carlos\develop\AppServers\jboss-4.2.0.GA\server\ck_1"/>
 		<property name="local.deploy.bappFolder" value="deploy"/>
