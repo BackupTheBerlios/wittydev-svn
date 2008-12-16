@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.6.0_01"/>
+	<classpathentry kind="lib" path="libs/tjws/app.jar"/>
+	<classpathentry kind="lib" path="libs/tjws/gnujsp09.jar"/>
+	<classpathentry kind="lib" path="libs/tjws/jsp.jar"/>
+	<classpathentry kind="lib" path="libs/tjws/jspengine.jar"/>
+	<classpathentry kind="lib" path="libs/tjws/ora_chk.jar"/>
+	<classpathentry kind="lib" path="libs/tjws/servlet.jar"/>
+	<classpathentry kind="lib" path="libs/tjws/war.jar"/>
+	<classpathentry kind="lib" path="libs/tjws/webserver.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
