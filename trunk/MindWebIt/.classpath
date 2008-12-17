@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="libs/tjws/app.jar"/>
-	<classpathentry kind="lib" path="libs/tjws/gnujsp09.jar"/>
-	<classpathentry kind="lib" path="libs/tjws/jsp.jar"/>
-	<classpathentry kind="lib" path="libs/tjws/jspengine.jar"/>
-	<classpathentry kind="lib" path="libs/tjws/ora_chk.jar"/>
-	<classpathentry kind="lib" path="libs/tjws/servlet.jar"/>
-	<classpathentry kind="lib" path="libs/tjws/war.jar"/>
-	<classpathentry kind="lib" path="libs/tjws/webserver.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="libs/jetty/jsp-2.1/ant-1.6.5.jar"/>
+	<classpathentry kind="lib" path="libs/jetty/jsp-2.1/core-3.1.1.jar"/>
+	<classpathentry kind="lib" path="libs/jetty/jsp-2.1/jsp-2.1.jar"/>
+	<classpathentry kind="lib" path="libs/jetty/jsp-2.1/jsp-api-2.1.jar"/>
+	<classpathentry kind="lib" path="libs/jetty/jetty-6.1.14.jar"/>
+	<classpathentry kind="lib" path="libs/jetty/jetty-util-6.1.14.jar"/>
+	<classpathentry kind="lib" path="libs/jetty/servlet-api-2.5-6.1.14.jar"/>
+	<classpathentry kind="lib" path="libs/hsqldb/hsqldb.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
