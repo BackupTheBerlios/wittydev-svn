@@ -1,4 +1,4 @@
-package otg.wittydev.test.tjws;
+package org.wittydev.test.tjws;
 
 import java.io.IOException;
 
