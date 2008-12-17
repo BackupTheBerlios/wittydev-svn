@@ -47,6 +47,7 @@ public class ServerInfoServiceTest {
 	
 	public static void main_0(String[] args) throws Exception{
         
+		
 		Hashtable environment = new Hashtable();
 		// The environment configuration depends on the application server the EJB is deployed on
 		// The following setting is related to an EJB 3.0 deployed on JBoss 4.2.1 Application server 
