@@ -2,8 +2,8 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="D:/appl/iwbin/jboss-4.2.1.GA/client/jbossall-client.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/TEMPLATE_BAPP"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/WD_GENERIC_LIBS"/>
+	<classpathentry kind="lib" path="/MISC_LIBS/jboss_4.2.0.GA/client/jbossall-client.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
