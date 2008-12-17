@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="libs/jetty/jsp-2.1/ant-1.6.5.jar"/>
 	<classpathentry kind="lib" path="libs/jetty/jsp-2.1/core-3.1.1.jar"/>
 	<classpathentry kind="lib" path="libs/jetty/jsp-2.1/jsp-2.1.jar"/>
@@ -10,5 +9,6 @@
 	<classpathentry kind="lib" path="libs/jetty/jetty-util-6.1.14.jar"/>
 	<classpathentry kind="lib" path="libs/jetty/servlet-api-2.5-6.1.14.jar"/>
 	<classpathentry kind="lib" path="libs/hsqldb/hsqldb.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
