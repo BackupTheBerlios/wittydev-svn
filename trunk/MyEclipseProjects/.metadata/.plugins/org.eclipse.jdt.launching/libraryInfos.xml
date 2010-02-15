@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+<libraryInfo home="D:\carlos\dev\java\j2sdk1.4.2_19" version="1.4.2_19">
+<bootpath>
+<entry path="D:\carlos\dev\java\j2sdk1.4.2_19\jre\lib\rt.jar"/>
+<entry path="D:\carlos\dev\java\j2sdk1.4.2_19\jre\lib\i18n.jar"/>
+<entry path="D:\carlos\dev\java\j2sdk1.4.2_19\jre\lib\sunrsasign.jar"/>
+<entry path="D:\carlos\dev\java\j2sdk1.4.2_19\jre\lib\jsse.jar"/>
+<entry path="D:\carlos\dev\java\j2sdk1.4.2_19\jre\lib\jce.jar"/>
+<entry path="D:\carlos\dev\java\j2sdk1.4.2_19\jre\lib\charsets.jar"/>
+<entry path="D:\carlos\dev\java\j2sdk1.4.2_19\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="D:\carlos\dev\java\j2sdk1.4.2_19\jre\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="D:\carlos\dev\java\j2sdk1.4.2_19\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="D:\carlos\dev\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013" version="1.6.0_13">
+<bootpath>
+<entry path="D:\carlos\dev\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\lib\resources.jar"/>
+<entry path="D:\carlos\dev\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\lib\rt.jar"/>
+<entry path="D:\carlos\dev\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\lib\sunrsasign.jar"/>
+<entry path="D:\carlos\dev\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\lib\jsse.jar"/>
+<entry path="D:\carlos\dev\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\lib\jce.jar"/>
+<entry path="D:\carlos\dev\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\lib\charsets.jar"/>
+<entry path="D:\carlos\dev\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="D:\carlos\dev\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\lib\ext"/>
+<entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="D:\carlos\dev\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="D:\carlos\dev\java\jdk1.5.0_21" version="1.5.0_21">
+<bootpath>
+<entry path="D:\carlos\dev\java\jdk1.5.0_21\jre\lib\rt.jar"/>
+<entry path="D:\carlos\dev\java\jdk1.5.0_21\jre\lib\i18n.jar"/>
+<entry path="D:\carlos\dev\java\jdk1.5.0_21\jre\lib\sunrsasign.jar"/>
+<entry path="D:\carlos\dev\java\jdk1.5.0_21\jre\lib\jsse.jar"/>
+<entry path="D:\carlos\dev\java\jdk1.5.0_21\jre\lib\jce.jar"/>
+<entry path="D:\carlos\dev\java\jdk1.5.0_21\jre\lib\charsets.jar"/>
+<entry path="D:\carlos\dev\java\jdk1.5.0_21\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="D:\carlos\dev\java\jdk1.5.0_21\jre\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="D:\carlos\dev\java\jdk1.5.0_21\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+</libraryInfos>

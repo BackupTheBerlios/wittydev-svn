@@ -1,0 +1,419 @@
+// Decompiled by Jad v1.5.8f. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+
+package com.genuitec.eclipse.core;
+
+import com.genuitec.eclipse.core.util.PlatformUtil;
+import java.io.*;
+import java.util.*;
+import org.eclipse.core.runtime.IPluginDescriptor;
+import org.eclipse.core.runtime.Preferences;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Shell;
+import org.eclipse.ui.*;
+import org.eclipse.ui.activities.IMutableActivityManager;
+import org.eclipse.ui.activities.IWorkbenchActivitySupport;
+
+// Referenced classes of package com.genuitec.eclipse.core:
+//            C, ViperCore
+
+public final class LicenseUtil
+{
+    public static class Status
+    {
+
+        public String getMessage()
+        {
+            return _fld0102;
+        }
+
+        public int getStatus()
+        {
+            return _fld0101;
+        }
+
+        public static final int OK = 0;
+        public static final int WARNING = 1;
+        public static final int ERROR = 2;
+        private int _fld0101;
+        private String _fld0102;
+
+        public Status(int i, String s)
+        {
+            _fld0101 = i;
+            _fld0102 = s;
+        }
+    }
+
+
+    private static boolean _mth0108()
+    {
+        return _fld0102;
+    }
+
+    public static Status validateSubscriptionKey(String s, String s1)
+    {
+    	System.out.println("MMMMMMMMMMMMMMMMMMM validateSubscriptionKey");
+        return null;
+    	/*C c = new C(s.trim(), s1.trim(), ViperCore.getDefault().getDescriptor().getVersionIdentifier(), false);
+        Status status = null;
+        if(!c._mth0113())
+            if(c._mth0102(false))
+                status = new Status(c._mth011A() ? 1 : 0, c._mth010A());
+            else
+                status = new Status(2, c._mth010A());
+        c._mth0103();
+        return status;*/
+    }
+
+    public static boolean isExpired(String s, String s1)
+    {
+    	System.out.println("MMMMMMMMMMMMMMMMMMM isExpired");
+    	return false;
+    	/*C c = new C(s.trim(), s1.trim(), ViperCore.getDefault().getDescriptor().getVersionIdentifier(), false);
+        boolean flag = c._mth0102();
+        c._mth0103();
+        return flag;*/
+        
+    }
+
+    public static boolean isBlue(String s, String s1)
+    {
+    	System.out.println("MMMMMMMMMMMMMMMMMMM isBlue : false");
+    	return false;
+        /*C c = new C(s.trim(), s1.trim(), ViperCore.getDefault().getDescriptor().getVersionIdentifier(), false);
+        boolean flag = c._mth0107();
+        c._mth0103();
+        return flag;*/
+    }
+
+    public static boolean isSpring(String s, String s1)
+    {
+    	System.out.println("MMMMMMMMMMMMMMMMMMM isSpring : true");
+    	return true;
+    	/*
+    	C c = new C(s.trim(), s1.trim(), ViperCore.getDefault().getDescriptor().getVersionIdentifier(), false);
+        boolean flag = c._mth0106();
+        c._mth0103();
+        return flag;*/
+    }
+
+    public static String getCurrentLicensee()
+    {
+    	System.out.println("MMMMMMMMMMMMMMMMMMM getCurrentLicensee");
+    	//if(!_mth0108())
+          //  _mth0101();
+        return "ciccione l";//PlatformUtil.trimString(_fld0104);
+    }
+
+    public static String getCurrentLicenseCode()
+    {
+    	System.out.println("MMMMMMMMMMMMMMMMMMM getCurrentLicenseCode");
+    	//if(!_mth0108())
+        //    _mth0101();
+        return "ciccione lc";//PlatformUtil.trimString(_fld0101);
+    }
+
+    public static String getCurrentLicenseDetail()
+    {
+        //if(!_mth0108())
+        //    _mth0101();
+        return ViperCore.getDefault().getLicenseDescription(false);
+    }
+
+    public static void storeKey(String s, String s1)
+    {
+        _fld0104 = s;
+        _fld0101 = s1;
+        _mth0102();
+        ViperCore.getDefault().licenseHasBeenModified();
+        Runnable runnable = new Runnable() {
+
+            public void run()
+            {
+                LicenseUtil.adjustStdProFeatureExposure();
+            }
+
+        };
+        IWorkbench iworkbench = PlatformUI.getWorkbench();
+        IWorkbenchWindow aiworkbenchwindow[] = iworkbench.getWorkbenchWindows();
+        if(aiworkbenchwindow != null && aiworkbenchwindow.length > 0)
+        {
+            Display display = aiworkbenchwindow[0].getShell().getDisplay();
+            display.syncExec(runnable);
+        } else
+        {
+            runnable.run();
+        }
+    }
+
+    private static void _mth0106()
+    {
+        Runnable runnable = new Runnable() {
+
+            public void run()
+            {
+                LicenseUtil._mth0103();
+            }
+
+        };
+        IWorkbench iworkbench = PlatformUI.getWorkbench();
+        IWorkbenchWindow aiworkbenchwindow[] = iworkbench.getWorkbenchWindows();
+        if(aiworkbenchwindow != null && aiworkbenchwindow.length > 0)
+        {
+            Display display = aiworkbenchwindow[0].getShell().getDisplay();
+            display.syncExec(runnable);
+        } else
+        {
+            runnable.run();
+        }
+    }
+
+    private static void _mth0104()
+    {
+        String as[] = {
+            "com.genuitec.eclipse.capability.pro.uml", "com.genuitec.eclipse.capability.pro.oracle", "com.genuitec.eclipse.capability.pro.mssql", "com.genuitec.eclipse.capability.pro.mysql"
+        };
+        HashSet hashset = new HashSet(Arrays.asList(as));
+        boolean flag = ViperCore.getDefault().isLicenseValidPro(false, false);
+        IMutableActivityManager imutableactivitymanager = PlatformUtil.getWorkbench().getActivitySupport().createWorkingCopy();
+        HashSet hashset1 = new HashSet(imutableactivitymanager.getEnabledActivityIds());
+        boolean flag1 = hashset1.containsAll(hashset);
+        if(PlatformUtil.isWindowsPlatform() || PlatformUtil.isLinuxPlatform())
+        {
+            hashset.add("com.genuitec.eclipse.capability.pro.jsdebugging");
+            hashset.add("com.genuitec.eclipse.capability.pro.matisse");
+        }
+        if(PlatformUtil.isWindowsPlatform())
+            hashset.add("com.genuitec.eclipse.capability.pro.screencapture");
+        if(flag && !flag1)
+        {
+            hashset1.addAll(hashset);
+            PlatformUtil.getWorkbench().getActivitySupport().setEnabledActivityIds(hashset1);
+        } else
+        if(!flag && flag1)
+        {
+            hashset.add("com.genuitec.eclipse.capability.pro.jsdebugging");
+            hashset.add("com.genuitec.eclipse.capability.pro.matisse");
+            hashset.add("com.genuitec.eclipse.capability.pro.screencapture");
+            hashset1.removeAll(hashset);
+            PlatformUtil.getWorkbench().getActivitySupport().setEnabledActivityIds(hashset1);
+        }
+    }
+
+    static void _mth0105()
+    {
+        _fld0104 = "";
+        _fld0101 = "";
+    }
+
+    private static void _mth0102()
+    {/*
+        boolean flag;
+        String s;
+        File file1;
+        Properties properties;
+        FileOutputStream fileoutputstream;
+        flag = false;
+        s = "";
+        String s1 = System.getProperty("user.home");
+        File file = null;
+        if(!PlatformUtil.isNullOrEmpty(s1))
+            try
+            {
+                file = new File(s1);
+            }
+            catch(Exception exception)
+            {
+                ViperCore.getDefault().log("Unable to access user.home", exception);
+            }
+        if(file == null || !file.exists())
+        {
+            flag = true;
+            s = (new StringBuilder("Unable to save MyEclipse global properties. ")).append(file.getAbsolutePath()).append("does not exist.").toString();
+            break MISSING_BLOCK_LABEL_281;
+        }
+        if(!file.canWrite())
+        {
+            flag = true;
+            s = (new StringBuilder("Unable to save MyEclipse global properties. ")).append(file.getAbsolutePath()).append(" is read-only.").toString();
+            break MISSING_BLOCK_LABEL_281;
+        }
+        String s2 = _mth0107();
+        file1 = new File(file, s2);
+        properties = new Properties();
+        fileoutputstream = null;
+        try
+        {
+            fileoutputstream = new FileOutputStream(file1);
+            properties.setProperty("LICENSEE", _fld0104);
+            properties.setProperty("LICENSE_KEY", _fld0101);
+            properties.store(fileoutputstream, "MyEclipse global properties");
+            break MISSING_BLOCK_LABEL_267;
+        }
+        catch(Exception exception1)
+        {
+            flag = true;
+            s = (new StringBuilder("Unable to save MyEclipse global properties. Error: ")).append(exception1.getMessage()).toString();
+        }
+        try
+        {
+            if(fileoutputstream != null)
+                fileoutputstream.close();
+        }
+        catch(Exception _ex) { }
+        break MISSING_BLOCK_LABEL_281;
+        //Exception exception2;
+        //exception2;
+        try
+        {
+            if(fileoutputstream != null)
+                fileoutputstream.close();
+        }
+        catch(Exception _ex) { }
+        //throw exception2;
+        try
+        {
+            if(fileoutputstream != null)
+                fileoutputstream.close();
+        }
+        catch(Exception _ex) { }
+        if(flag)
+        {
+            ViperCore.getDefault().log(s);
+            Preferences preferences = ViperCore.getDefault().getPluginPreferences();
+            preferences.setValue("LICENSEE", _fld0104);
+            preferences.setValue("LICENSE_KEY", _fld0101);
+            ViperCore.getDefault().savePluginPreferences();
+        }
+        return;
+    }
+
+    static void _mth0101()
+    {
+        boolean flag;
+        String s;
+        String s2;
+        File file1;
+        Properties properties;
+        FileInputStream fileinputstream;
+        _fld0102 = true;
+        flag = false;
+        s = "";
+        File file = null;
+        String s1 = System.getProperty("user.home");
+        if(!PlatformUtil.isNullOrEmpty(s1))
+            try
+            {
+                file = new File(s1);
+            }
+            catch(Exception exception)
+            {
+                ViperCore.getDefault().log("Unable to access user.home", exception);
+            }
+        ViperCore.getDefault().getPreferenceStore();
+        if(file == null || !file.exists())
+        {
+            flag = true;
+            s = "Unable to load MyEclipse global properties. user.home properties is null.";
+            break MISSING_BLOCK_LABEL_349;
+        }
+        if(!file.exists())
+        {
+            flag = true;
+            s = (new StringBuilder("Unable to load MyEclipse global properties. ")).append(file.getAbsolutePath()).append(" does not exist").toString();
+            break MISSING_BLOCK_LABEL_349;
+        }
+        if(!file.canRead())
+        {
+            flag = true;
+            s = (new StringBuilder("Unable to load MyEclipse global properties. ")).append(file.getAbsolutePath()).append(" is not readable").toString();
+            break MISSING_BLOCK_LABEL_349;
+        }
+        s2 = _mth0107();
+        file1 = new File(file, s2);
+        if(!file1.exists())
+            break MISSING_BLOCK_LABEL_322;
+        properties = new Properties();
+        fileinputstream = null;
+        try
+        {
+            fileinputstream = new FileInputStream(file1);
+            properties.load(fileinputstream);
+            _fld0104 = properties.getProperty("LICENSEE", "");
+            _fld0101 = properties.getProperty("LICENSE_KEY", "");
+            break MISSING_BLOCK_LABEL_305;
+        }
+        catch(Exception _ex)
+        {
+            flag = true;
+            s = (new StringBuilder("Unable to load ")).append(s2).append(" file").toString();
+        }
+        try
+        {
+            if(fileinputstream != null)
+                fileinputstream.close();
+        }
+        catch(Exception _ex) { }
+        break MISSING_BLOCK_LABEL_349;
+        Exception exception1;
+        exception1;
+        try
+        {
+            if(fileinputstream != null)
+                fileinputstream.close();
+        }
+        catch(Exception _ex) { }
+        throw exception1;
+        try
+        {
+            if(fileinputstream != null)
+                fileinputstream.close();
+        }
+        catch(Exception _ex) { }
+        break MISSING_BLOCK_LABEL_349;
+        flag = true;
+        s = (new StringBuilder("Unable to locate ")).append(s2).append(" file").toString();
+        if(flag)
+        {
+            ViperCore.getDefault().log(s);
+            Preferences preferences = ViperCore.getDefault().getPluginPreferences();
+            _fld0104 = preferences.getString("LICENSEE");
+            _fld0101 = preferences.getString("LICENSE_KEY");
+        }*/
+        return;
+    }
+
+    private static String _mth0107()
+    {
+        return PlatformUtil.isBlueEdition() ? ".myeclipse-blue.properties" : ".myeclipse.properties";
+    }
+
+    public static void adjustStdProFeatureExposure()
+    {
+        _mth0106();
+    }
+
+    private LicenseUtil()
+    {
+    }
+
+    public static String maskCode(String s)
+    {
+        return s.replaceAll("[a-zA-Z0-9]{6}", "XXXXXX");
+    }
+
+    static void _mth0103()
+    {
+        _mth0104();
+    }
+
+    private static final String _fld0103 = "user.home";
+    public static final String MYECLIPSE_PROPFILE = ".myeclipse.properties";
+    public static final String MYECLIPSE_BLUE_PROPFILE = ".myeclipse-blue.properties";
+    public static final int MINIMUM_VALID_KEY_LENGTH = 27;
+    private static boolean _fld0102;
+    private static String _fld0104;
+    private static String _fld0101;
+}

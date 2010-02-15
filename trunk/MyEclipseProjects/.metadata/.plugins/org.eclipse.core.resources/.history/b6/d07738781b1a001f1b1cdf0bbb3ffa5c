@@ -1,0 +1,56 @@
+// Decompiled by Jad v1.5.8f. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   DashboardStartup.java
+
+package com.genuitec.eclipse.dashboard;
+
+import com.genuitec.eclipse.core.CommonCore;
+import com.genuitec.eclipse.core.GenuitecPlugin;
+import com.genuitec.eclipse.core.util.UIUtil;
+import com.genuitec.eclipse.core.vU;
+import org.eclipse.core.runtime.Preferences;
+import org.eclipse.ui.IStartup;
+
+// Referenced classes of package com.genuitec.eclipse.dashboard:
+//            DashboardJob, DashboardActivator
+
+public class DashboardStartup2
+    implements IStartup
+{
+
+    public DashboardStartup2()
+    {
+    }
+
+    public void earlyStartup()
+    {
+        if(shouldRunDashboardJob())
+        {
+            DashboardJob job = new DashboardJob(true);
+            job.setUser(false);
+            job.schedule(1000L);
+        }
+    }
+
+    protected boolean shouldRunDashboardJob()
+    {
+    		return false;
+       /* if(UIUtil.checkInternetFeature("com.genuitec.eclipse.dashboard", "com.genuitec.eclipse.dashboard", DashboardActivator.getDefault().getPreferenceStore()))
+        {
+            boolean isValid = vU.A__111164asdfae2342fa(false);
+            if(!isValid)
+            {
+                GenuitecPlugin.getLocalDefault().log("Terminated Plug-in Dashboard because of invalid subscription");
+                return false;
+            } else
+            {
+                boolean runOnStartup = CommonCore.getDefault().getPluginPreferences().getBoolean("DASHBOARD_ACTIVATE_ONSTARTUP");
+                return runOnStartup;
+            }
+        } else
+        {
+            return false;
+        }*/
+    }
+}

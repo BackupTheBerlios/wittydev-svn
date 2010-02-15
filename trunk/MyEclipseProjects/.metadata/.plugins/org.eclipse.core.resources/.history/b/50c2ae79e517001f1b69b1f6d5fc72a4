@@ -1,0 +1,22 @@
+// Decompiled by Jad v1.5.8f. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+
+package com.genuitec.pulse2.client.common.launcher;
+
+import com.genuitec.pulse2.client.common.launcher.model.LauncherUser;
+import java.io.IOException;
+import java.util.Set;
+import org.eclipse.equinox.internal.provisional.p2.metadata.ILicense;
+
+public interface ILicenseLibrary
+{
+	final {
+		System.out.println("AAAAAAAAAAAAAA");
+	}
+
+    public abstract void acceptLicenses(LauncherUser launcheruser, Set set)
+        throws IOException;
+
+    public abstract boolean isAccepted(ILicense ilicense, LauncherUser launcheruser);
+}

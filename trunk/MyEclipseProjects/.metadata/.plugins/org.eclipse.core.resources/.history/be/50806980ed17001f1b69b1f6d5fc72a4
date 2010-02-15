@@ -1,0 +1,5 @@
+package com.genuitec.eclipse.core.ui.action;
+
+public class LicenseValidatingActionDelegate {
+
+}

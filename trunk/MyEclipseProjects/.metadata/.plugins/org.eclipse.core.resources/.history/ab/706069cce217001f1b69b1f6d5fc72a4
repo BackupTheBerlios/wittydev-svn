@@ -1,0 +1,50 @@
+// Decompiled by Jad v1.5.8f. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+
+package com.genuitec.pulse2.client.common.launcher.transition;
+
+import com.genuitec.pulse2.client.common.launcher.State;
+import com.genuitec.pulse2.client.common.launcher.TransitionFailedException;
+import com.genuitec.pulse2.client.common.launcher.internal.LauncherFlow;
+import org.eclipse.core.runtime.*;
+
+// Referenced classes of package com.genuitec.pulse2.client.common.launcher.transition:
+//            AbstractTransition
+
+public class AcceptLicensesTransition extends AbstractTransition
+{
+
+    public AcceptLicensesTransition(LauncherFlow launcherflow, State state)
+    {
+        super(launcherflow, state, true);
+    }
+
+    public boolean isAllLicenesAccepted()
+    {
+       // return allLicensesAccepted;
+    	System.out.println("AAAAAAAAAAAAAA");
+    	return true;
+    }
+
+    public void setAllLicensesAccepted(boolean flag)
+    {
+        allLicensesAccepted = flag;
+    }
+
+    public State transition(IProgressMonitor iprogressmonitor)
+        throws TransitionFailedException
+    {
+        return getFlow().transition(this, iprogressmonitor);
+    }
+
+    public IStatus validate()
+    {
+        if(!allLicensesAccepted)
+            return createInvalidStatus("All licenses must be accepted to continue.");
+        else
+            return Status.OK_STATUS;
+    }
+
+    private boolean allLicensesAccepted;
+}

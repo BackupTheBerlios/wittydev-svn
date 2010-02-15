@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+
+<project name="WittyBuild_TEMPLATE_BAPP" default="packageIt" basedir="../">
+    <description>
+        MyEclipse buh 
+    </description>
+
+	<!-- .................. START setting Global Properties ............... -->
+	<tstamp>
+		<format property="V_TODAY" pattern="yyyyMMdd" locale="it,IT"/>
+	</tstamp>
+
+  	<property name="project.home" value="${basedir}"/>
+  	<property name="project.name" value="MyEclipseBuh"/>
+	<property name="build.path" value="${project.home}/build"/>
+	<property name="dist.path" value="${project.home}/dist"/>
+	<property name="genericlibs" value="${project.home}/../MISC_LIBS"/>
+	<property name="project_libs.path" value="${project.home}/lib"/>
+	
+	<property name="jboss.home" value="${genericlibs}/jboss_4.2.0.GA"/>
+	<!-- .................. END setting Global Properties ............... -->
+	
+	
+	<!-- .................. START Build classpath ............... -->
+	<path id="classpath">
+		<pathelement location="${build.path}/classes"/>
+		<pathelement location="${project.home}/lib/com.genuitec.eclipse.core_8.0.0.me200911192113.jar"/>
+	</path>
+	<!-- .................. END Build classpath ............... -->
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+  	<target name="checkHomeDir" unless="project.home.exists">
+  		<echo message="Warning: Project home does not exists => ${project.home}"/>
+  	</target>
+
+	<target name="clean" description="clean up" >
+		<delete dir="${build.path}"/>
+		<delete dir="${dist.path}" includes="*.*"/>
+	</target>
+
+	<target name="init" depends="clean">
+	  	<available file="${project.home}" type="dir" property="project.home.exists"	/>
+		<antcall target="checkHomeDir"/>
+  		<mkdir dir="${build.path}/classes"/>
+  		<mkdir dir="${dist.path}"/>
+		<mkdir dir="${build.path}/jaxws/server/classes"/>
+		<mkdir dir="${build.path}/jaxws/server/src"/>
+		<mkdir dir="${build.path}/jaxws/client/classes"/>
+		<mkdir dir="${build.path}/jaxws/client/src"/>
+		<mkdir dir="${build.path}/axis2/client/classes"/>
+		<mkdir dir="${build.path}/axis2/client/src"/>
+	</target>
+	
+	
+  	<target name="compileIt" depends="init"  description="compile the source " if="project.home.exists">
+ 	    <echo message="Copying resources ${project.home}/src"/>		
+  		<copy todir="${build.path}/classes">
+	      <fileset dir="${project.home}/src" excludes="**/*.java"/>
+	    </copy>
+
+  	    <echo message="compiling ${project.home}/src"/>		
+	  	
+		<javac srcdir="${project.home}/src"
+	        destdir="${build.path}/classes"
+			classpathref="classpath"
+		    debug="on"
+	        source="1.5"
+	        fork="false"
+			includes="**/*"
+			verbose="no"
+			excludes="**/ClassToExclude.java **/ServerInfoWebServiceTest.java"
+		  >
+			<compilerarg value="-version"/>
+		</javac>
+
+  	</target>
+
+	
+  	<target name="packageIt" depends="compileIt"  description="Jar it">
+  		<jar destfile="${dist.path}/${project.name}_BAPP.jar" >
+  			<metainf dir="${build.path}/classes/META-INF"></metainf>
+			<fileset dir="${build.path}/classes/">
+  		  		<exclude name="META-INF/*"/>	
+  		  		<include name="**/*"/>
+  		  	</fileset>
+			<!--fileset dir="${build.path}/jaxws/classes/">
+  		  		<exclude name="META-INF/*"/>	
+  		  		<include name="**/*"/>
+  		  	</fileset-->
+  		</jar>
+  		<jar destfile="${dist.path}/${project.name}_BAPP_client.jar" >
+			<fileset dir="${build.path}/classes/">
+				<include name="*/**/*Service.class"/>
+				<include name="*/**/domain/**/*"/>
+  		  	</fileset>
+			<fileset dir="${build.path}/jaxws/client/classes/">
+  		  		<exclude name="META-INF/*"/>	
+  		  		<include name="**/*"/>
+  		  	</fileset>
+  		</jar>
+
+  	
+  	</target>
+	
+	
+
+	
+
+  	  <target name="oneStepFtp" depends="packageIt" description="ftp the war">
+  	  	<echo message="Local file: ${dist.path}/${project.name}.jar"/>
+  	  	<echo message="Remote file: ${remote.deploy.path}/${project.name}.jar"/>
+  	    <ftp server="${remote.ftp.host}"
+  	         port="${remote.ftp.port}"
+  	         remotedir="${remote.deploy.path}/${remote.deploy.bappFolder}"
+  	         userid="${remote.ftp.user}"
+  	         password="${remote.ftp.password}"
+  	         passive="yes"
+  	         depends="yes"
+  	         binary="yes" 
+  	    	 verbose="false"
+  	    	>
+  	      <fileset file="${dist.path}/${project.name}.jar"/>
+  	    </ftp>
+  	  </target>
+	
+	  <target name="oneStepCopy" depends="packageIt" description="copy to deploy dir">
+ 	    <echo message="Copying resources JAR file"/>		
+	  	<echo message="From file: ${dist.path}/${project.name}_BAPP.jar"/>
+	  	<echo message="To file: ${local.deploy.path}/${local.deploy.bappFolder}/${project.name}_BAPP.jar"/>
+  		<copy todir="${local.deploy.path}/${local.deploy.bappFolder}">
+  			<fileset file="${dist.path}/${project.name}_BAPP.jar"/>
+	    </copy>
+
+	  </target>
+	
+	
+	 
+  <!--
+  		target name="buildIt" depends="compileAll" if="PROJ_basedir.exists">
+  	<delete file="${PROJ_basedir}/${GTAR_NAME}"/>
+  	<tar destfile="${PROJ_basedir}/${GTAR_NAME}"
+		  basedir="${PROJ_basedir}/templates"
+		  longfile="gnu"
+	/>	
+  </target>
+	
+  <target name="ftpIt" depends="buildIt" if="PROJ_basedir.exists">
+  	<property name="REMOTE_DIR" 
+  		value="/usr/cpqrdp/rdist_iwbank/templates/DEPLOY_PACKETS/temp/AUTO_GEN/"/>
+  	<echo message="Local file: ${PROJ_basedir}/${GTAR_NAME}"/>
+  	<echo message="Remote file: ${REMOTE_DIR}${GTAR_NAME}"/>
+    <ftp server="iwbtest03.lan.iw"
+         port="21"
+         remotedir="${REMOTE_DIR}"
+         userid="dynamo"
+         password="dynamo"
+         passive="yes"
+         depends="yes"
+         binary="yes" 
+    	 verbose="false"
+    	>
+      <fileset file="${PROJ_basedir}/${GTAR_NAME}"/>
+    </ftp>
+  </target-->
+	
+	
+  <!--target name="dist" depends="compile"
+        description="generate the distribution" >
+    <jar jarfile="${dist}/lib/MyProject-${DSTAMP}.jar" basedir="${build}"/>
+  </target-->
+
+</project>
+

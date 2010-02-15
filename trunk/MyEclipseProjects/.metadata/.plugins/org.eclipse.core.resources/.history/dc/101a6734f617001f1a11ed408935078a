@@ -1,0 +1,5 @@
+package com.genuitec.eclipse.dashboard;
+
+public class DashboardStartup {
+
+}

@@ -1,0 +1,119 @@
+// Decompiled by Jad v1.5.8f. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+
+package com.genuitec.eclipse.core.ui.action;
+
+import com.genuitec.eclipse.core.ViperCore;
+import com.genuitec.eclipse.core.vU;
+import org.eclipse.jface.action.IAction;
+import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.swt.widgets.Event;
+import org.eclipse.ui.IActionDelegate2;
+
+public abstract class LicenseValidatingActionDelegate2
+    implements IActionDelegate2
+{
+
+	{
+		System.out.println("OOOOOOOOOOOOOOOOOOO static constructor");
+	}
+	{
+		System.out.println("OOOOOOOOOOOOOOOOOOO constructor");
+	}
+    public LicenseValidatingActionDelegate2()
+    {
+        _fld0102 = true;
+        _fld0101 = true;
+        _fld0104 = true;
+    }
+
+    public void run(IAction iaction)
+    {
+        preRunValidate();
+        iaction.run();
+    }
+
+    public void runWithEvent(IAction iaction, Event event)
+    {
+        run(iaction);
+    }
+
+    public boolean preRunValidate()
+    {
+        return isLicenseValid();
+    }
+
+    public void selectionChanged(IAction iaction, ISelection iselection)
+    {
+        if(shouldValidateOnSelectionChange())
+            if(isLicenseValid());
+    }
+
+    public void init(IAction iaction)
+    {
+    }
+
+    public void dispose()
+    {
+    }
+
+    public boolean shouldValidateOnSelectionChange()
+    {
+        return _fld0102;
+    }
+
+    protected void setShouldValidateOnSelectionChange(boolean flag)
+    {
+        _fld0102 = flag;
+    }
+
+    public boolean shouldDisplayFailureMessage()
+    {
+        return _fld0104;
+    }
+
+    public void setShouldDisplayFailureMessage(boolean flag)
+    {
+        _fld0104 = flag;
+    }
+
+    public void setActionEnabled(IAction iaction, boolean flag)
+    {
+        iaction.setEnabled(flag);
+    }
+
+    public boolean shouldAllowEnablement()
+    {
+        return _fld0101;
+    }
+
+    protected void setShouldAllowEnablement(boolean flag)
+    {
+        _fld0101 = flag;
+    }
+
+    final boolean isLicenseValid()
+    {
+        return isLicenseValid(_fld0104);
+    }
+
+    final boolean isLicenseValid(boolean flag)
+    {
+        //return vU.A__111164asdfae2342fa(_fld0104);
+    	System.out.println("OOOOOOOOOOOOOOOOOOO isLicenseValid");
+    	return true;
+    }
+
+    final String getLicenseDescription()
+    {
+        return ViperCore.getDefault().getLicenseDescription();
+    }
+
+    private static final boolean _fld0106 = true;
+    private static final boolean _fld0103 = true;
+    private static final boolean _fld0105 = true;
+    private boolean _fld0102;
+    private boolean _fld0101;
+    private boolean _fld0104;
+}

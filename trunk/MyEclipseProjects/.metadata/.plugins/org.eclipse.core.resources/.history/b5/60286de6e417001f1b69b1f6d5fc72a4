@@ -1,0 +1,5 @@
+package com.genuitec.pulse2.client.common.launcher;
+
+public class ILicenseLibrary {
+
+}
