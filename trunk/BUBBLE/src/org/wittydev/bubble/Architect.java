@@ -1,5 +1,6 @@
 package org.wittydev.bubble;
 import javax.naming.InitialContext;
+import javax.naming.NamingException;
 
 import org.wittydev.config.ConfigEntry;
 import org.wittydev.config.ConfigLoader;
@@ -74,25 +75,44 @@ public class Architect extends  ScopeBubbleContext {//BubbleContext implements O
                                                 this, null,
                                                 "",//getArchitectComponentPath(),
                                                 null );
+        
+        
+        
         startService(event);
+        
+        
+        
     }
     public void startService(BubbleServiceEvent event) throws WDException{
-        loadConfig();
-        loadMe();
+    	try {
+			this.bind(getArchitectComponentPath(), this);
+		} catch (NamingException e) {
+			LoggingService.getDefaultLogger().logError(this, e);
+		}
+    	loadConfig();
         registerJNDI();
+        loadMe();
         loadInitialServices();
 
-
+        
+        
         //str=System.getProperty(InitialContext.INITIAL_CONTEXT_FACTORY);
         super.startService(event);
     }
 
+    
     private void loadMe() throws WDException{
         ConfigEntry ce=getConfigEntry(getArchitectComponentPath());
         if ( ce!=null ){
             super.configEntry=ce;
             getConfigLoader().fillObject( this, getArchitectComponentPath(), this, null);
         }
+        /*try {
+			super.bind(getArchitectComponentPath(), this);
+		} catch (NamingException e) {
+			throw new WDException("Can't bind the Architect...", e);
+		}*/
+        //System.out.println("===>ARCHITECT COMPONENT PATH: ["+ce+"]["+this+"]");
     }
     private void loadInitialServices(){
         if ( initialServices !=null){
@@ -108,10 +128,10 @@ public class Architect extends  ScopeBubbleContext {//BubbleContext implements O
 
     }*/
 
-    public void setInitalServices(String[] initialServices ){
+    public void setInitialServices(String[] initialServices ){
         this.initialServices =initialServices;
     }
-    public String[] getInitalServices(){
+    public String[] getInitialServices(){
         return this.initialServices ;
     }
     /*public boolean getJndiNamespaceIsSubContext(){
@@ -131,12 +151,15 @@ public class Architect extends  ScopeBubbleContext {//BubbleContext implements O
     }
 
     private void loadConfig(){
-        confLoader=new ConfigLoader();
+        confLoader=getNewConfigLoaderInstance();
         String cp=getConfigPath();
         if ( cp !=null ) confLoader.setConfigPath( cp );
         if ( pathSeparator !=null ) confLoader.setPathSeparator( pathSeparator  );
     }
-
+    protected ConfigLoader getNewConfigLoaderInstance(){
+    	return new ConfigLoader();
+    }
+    
     private void registerJNDI(){
         /*try{
             bind(getArchitectComponentPath(), this);
@@ -162,7 +185,7 @@ public class Architect extends  ScopeBubbleContext {//BubbleContext implements O
                     ctx.bind(getArchitectComponentPath() , this);*/
 
             }catch(Exception e){
-                e.printStackTrace();
+            	LoggingService.getDefaultLogger().logError(this, e);
             }
             internalLogInfo("JNDI name space '"+nameSpace+"' added as SubContext!");
             break;
@@ -193,13 +216,13 @@ public class Architect extends  ScopeBubbleContext {//BubbleContext implements O
                 }
 
             }catch(Exception e){
-                e.printStackTrace();
+            	LoggingService.getDefaultLogger().logError(this, e);
             }
 
             internalLogInfo("JNDI name space '"+NAME_SPACE+"' registered with URLContextFactory!");
             break;
         default:
-            internalLogInfo("JNDI name space '"+NAME_SPACE+"' not registered!");
+            internalLogInfo("JNDI name space '"+NAME_SPACE+"' not registered! ["+jndiNamespaceType+"]");
         }
         lastJndiNamespaceRegistrationType=jndiNamespaceType;
     }
@@ -229,9 +252,11 @@ public class Architect extends  ScopeBubbleContext {//BubbleContext implements O
     }
 
     public Object resolveName( String componentPath ){
+    	
         return resolveName(componentPath, true );
     }
     public Object resolveName( String componentPath, boolean create ){
+    	//System.out.println("resolveName ["+componentPath+", "+create+"]");
         return resolveName(componentPath,  this, create );
     }
 
@@ -357,7 +382,7 @@ public class Architect extends  ScopeBubbleContext {//BubbleContext implements O
         return architectName;
     }*/
     protected String getArchitectComponentPath(){
-        return "Architect";
+        return "/Architect";
     }
 
 /*    protected javax.naming.Name cleanName(javax.naming.Name name) throws javax.naming.InvalidNameException {

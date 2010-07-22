@@ -46,11 +46,21 @@ public class BubbleFilter implements Filter{
         //System.out.println("============>doFilter");
         //System.out.println("PrimaAAAAAAAAAAAAAAAAAAAAAAresponse.getBufferSize()============>"+response.getBufferSize());
         //System.out.println("DopAAAAAAAAAAAAAAAAAAAAAAresponse.getBufferSize()============>"+response.getBufferSize());
+    	
+
+    	
         WebArchitect webArchitect = getWebArchitect();
+
+    	if (LoggingService.getDefaultLogger().isLoggingTrace())
+    		LoggingService.getDefaultLogger().logTrace(this, "doFilter ..."+webArchitect+"--"+request);
+        
+        
         if (  webArchitect!=null &&  request instanceof HttpServletRequest  ){
             request=wrapRequest((HttpServletRequest)request, webArchitect);
             response=wrapResponse((HttpServletResponse)response, webArchitect);
             //response=new BubbleHttpServletResponse((HttpServletResponse)response, webArchitect);
+        }else{
+        	System.out.println("aiutoooooo ["+webArchitect+"]["+request+"]");
         }
 
         try{
@@ -75,8 +85,11 @@ public class BubbleFilter implements Filter{
         if ( this.webArchitect==null ){
             try{
                 this.webArchitect =(WebArchitect)bubbleURLContextFactory.getBubbleContext();
+                if ( this.webArchitect==null )
+                	LoggingService.getDefaultLogger().logWarning(this, "Bubble WebArchitect is null ....");
             }catch(WDException e){
                 LoggingService.getDefaultLogger().logWarning(this, "Bubble WebArchitect not found....");
+                
             }
         }
         return this.webArchitect;

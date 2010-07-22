@@ -7,6 +7,7 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.wittydev.bubble.Architect;
+import org.wittydev.bubble.servlet.http.WebArchitect;
 import org.wittydev.bubble.test.pkg1.BeanA;
 import org.wittydev.bubble.test.pkg2.BeanB;
 import org.wittydev.core.WDException;
@@ -18,8 +19,9 @@ public class BubbleUnitTest {
 	
 	@BeforeClass
 	public static void  setUp() throws WDException {
-		configPath="P:\\wd2\\trunk\\BUBBLE\\resources\\config";
-		archy=new Architect();
+		//configPath="P:\\wd2\\trunk\\BUBBLE\\resources\\config";
+		configPath="N:\\wd2\\trunk\\BUBBLE\\resources\\META-INF\\resources\\config";
+		archy=new WebArchitect(null);
 		archy.setLoggingDebug(true);
 		archy.setLoggingWarning(true);
 		archy.setConfigPath(configPath);

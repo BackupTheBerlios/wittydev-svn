@@ -57,7 +57,8 @@ public class BubbleHttpServletRequest extends HttpServletRequestWrapper {
         //if (conf==null || conf.getScope()==null)
         //    return getWebArchitect().resolveName( componentPath, request)
 
-
+        //System.out.println("=>"+getWebArchitect().getSessionsManager());
+        //System.out.println("=>"+getWebArchitect().getSessionsManager().getSessionContext(getSession(), true));
         RequestBubbleContext ctx =getWebArchitect().getSessionsManager().
                         getSessionContext ( getSession(), true ).
                         getRequestsManager().getRequestContext(this, true);

@@ -63,6 +63,7 @@ public class BubbleContext implements BubbleNameContext, BubbleService, BubbleSe
             return this;
         }
         Object nextComponent=children.get(name.get(0));
+        //System.out.println("["+name.get(0)+"]=========>"+nextComponent);
         if ( nextComponent==null ) {
 
             if ( errOnNotFound )
@@ -90,6 +91,7 @@ public class BubbleContext implements BubbleNameContext, BubbleService, BubbleSe
         return answer;*/
     }
     public void bind(Name name, Object obj) throws NamingException{
+    	//new Throwable("BINDING: "+name).printStackTrace();
         name=cleanName(name);
         if (name.isEmpty() )
             throw new InvalidNameException("Cannot bind empty name");
@@ -97,6 +99,8 @@ public class BubbleContext implements BubbleNameContext, BubbleService, BubbleSe
         if (lookup_0( name, false) != null)
             throw new NameAlreadyBoundException("Use rebind to override ["+name+"]");
 
+        //System.out.println("==========>BINDING Me please "+name);
+        
         if ( name.size() == 1 ){
             //startObjectIW(name.get(0), obj);
             /*if ( obj instanceof BubbleServiceListener ){
@@ -107,6 +111,7 @@ public class BubbleContext implements BubbleNameContext, BubbleService, BubbleSe
                     throw new NamingException(iwe.getMessage() );
                 }
             }*/
+        	//System.out.println("==========>BINDING: "+name.get(0));
             children.put( name.get(0), obj );
             if ( obj instanceof BubbleContext ) ((BubbleContext)obj).setParent(this);
         }else{
@@ -377,9 +382,11 @@ public class BubbleContext implements BubbleNameContext, BubbleService, BubbleSe
         if ( ctx==null)
             ctx=this;
         else{
-            while ( ctx!=null && ctx.getParent()!=null ){
+            while ( ctx!=null && ctx.getParent()!=null && ctx!=ctx.getParent()){
                 ctx=ctx.getParent();
             }
+            //if (count==100)
+            //	internalLogWarning("Root seeking stopped at level 100. found: "+ctx);
         }
         return ctx;
     }
@@ -402,7 +409,7 @@ public class BubbleContext implements BubbleNameContext, BubbleService, BubbleSe
             //try{
             String key=(String)e.nextElement();
             Object obj= children.get(key);//e.nextElement();
-            if ( obj instanceof BubbleServiceListener  ){
+            if ( obj instanceof BubbleServiceListener  && obj!=this ){
                 BubbleServiceEvent childEvent=null;
                 if (event!=null)
                     childEvent=new BubbleServiceEvent(  event.getService(),
@@ -420,7 +427,7 @@ public class BubbleContext implements BubbleNameContext, BubbleService, BubbleSe
         for ( Enumeration e= children.elements(); e.hasMoreElements(); ){
 
             Object obj=e.nextElement();
-            if ( obj instanceof BubbleService){
+            if ( obj instanceof BubbleService && obj!=this){
                 ((BubbleServiceListener)obj).stopService();
             }
         }

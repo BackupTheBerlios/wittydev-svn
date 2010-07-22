@@ -1,9 +1,13 @@
 package org.wittydev.bubble.servlet.http;
 import javax.servlet.http.HttpSession;
 import javax.servlet.Servlet;
+import javax.servlet.ServletContext;
 
 import org.wittydev.bubble.Architect;
 import org.wittydev.bubble.BubbleContext;
+import org.wittydev.config.ConfigLoader;
+import org.wittydev.config.servlet.http.WebConfigLoader;
+import org.wittydev.logging.LoggingService;
 import org.wittydev.util.OrderedMap;
 
 
@@ -29,11 +33,20 @@ public class WebArchitect extends Architect{
     //public static final String DEFAULT_SCOPE_ID="general";
     String sessionsManagerComponentPath;
     SessionsManager sessionsManager;
-    public WebArchitect() {
+    ServletContext servletContext;
+    
+    /*public WebArchitect() {
+    	internalLogWarning("New instance without ServletContext... Testing?");
+    }*/
+    public WebArchitect(ServletContext servletContext) {
         super();
+        this.servletContext=servletContext;
     }
 
-
+    protected ConfigLoader getNewConfigLoaderInstance(){
+    	return new WebConfigLoader(servletContext);
+    }
+    
     /*public SessionsManager getSessionsManager(){
         if (sessionsManager==null){
             if ( sessionsManagerComponentPath ==null ){
@@ -121,12 +134,34 @@ public class WebArchitect extends Architect{
     }*/
 
     public static void main ( String[] args ) throws Exception{
-        String confP="D:\\web\\jakarta-tomcat-5.0.27\\webapps\\bubble\\WEB-INF\\config";
-        WebArchitect wa=new WebArchitect();
+        //String confP="D:\\web\\jakarta-tomcat-5.0.27\\webapps\\bubble\\WEB-INF\\config";
+    	String confP="D:\\temp\\bubble\\config";
+    	LoggingService.getDefaultLogger().setLoggingTrace(true);
+        WebArchitect wa=new WebArchitect(null);
         wa.setConfigPath( confP );
         wa.startService(null);
+        
+        System.out.println(wa.getConfigLoader().getPathSeparator());
         //wa.resolveName("/com/nfj/servlets/ProvaServlet");
-        wa.resolveName("/aaa");
+        Object obj = wa.resolveName("/Architect");
+        System.out.println(obj);
+        
+        
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

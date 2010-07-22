@@ -4,7 +4,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
+import java.net.URL;
 
+import java.util.Enumeration;
+import java.util.List;
 import java.util.StringTokenizer;
 import java.util.Vector;
 import java.util.zip.ZipFile;
@@ -14,6 +17,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
+import org.wittydev.bubble.Architect;
 import org.wittydev.core.WDException;
 import org.wittydev.logging.LoggingService;
 import org.wittydev.util.BeansUtil;
@@ -40,14 +44,19 @@ public class ConfigLoader {
     String configPath;
     File[] configPathArr=new File[0];
     String pathSeparator;
+    String propertiesFileExtension;
 
-    Context ctx;
+	Context ctx;
 
 
     public ConfigLoader(){
         this(-1);
+        System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPP");
     }
     public ConfigLoader( long cacheExpirationMillis ){
+    	this(cacheExpirationMillis, "properties");
+    }
+    public ConfigLoader( long cacheExpirationMillis, String propertiesFileExtention ){
 
         //configEntriesCache =new LRUCache(cacheExpirationMillis);
         setCacheExpirationMillis( cacheExpirationMillis );
@@ -57,9 +66,18 @@ public class ConfigLoader {
             internalLogWarning( "Errore while loading JNDI initial context! JNDI lookup disabled!");
             internalLogWarning( ne );
         }
+        this.propertiesFileExtension=propertiesFileExtention;
+        
+        
+        
 
     }
     long cacheExpirationMillis;
+
+    public String getPropertiesFileExtension() {
+		return propertiesFileExtension;
+	}
+
     public void setCacheExpirationMillis(long cacheExpirationMillis){
         configEntriesCache= new LRUCache ( cacheExpirationMillis );
         this.cacheExpirationMillis=cacheExpirationMillis;
@@ -130,9 +148,11 @@ public class ConfigLoader {
         try{
             result =ce.type.newInstance();
         }catch(InstantiationException ie){
+        	ie.printStackTrace();
             internalLogError(ie);
             throw new WDException (WDException .CODE_SYSTEM_EXCEPTION, ie.getMessage() , ie);
         }catch(IllegalAccessException iae){
+        	iae.printStackTrace();
             internalLogError(iae);
             throw new WDException (WDException .CODE_SYSTEM_EXCEPTION, iae.getMessage() , iae);
         }
@@ -250,6 +270,7 @@ public class ConfigLoader {
 
     Object getObj(String callerPath, ConfigProperty cp, String scope,ObjectResolver resolver, Object[] resolverArgs) throws WDException{
         Object result;
+        //System.out.println("===================>callerPath: "+callerPath);
         //System.out.println(cp.getType()+"=====>"+cp.getStringValue());
         // se e' esplicitamente un "riferimento semplice",
         // o se non e' un "riferimento semplice" esplicito ne un "riferimento JDI" esplecito,
@@ -265,9 +286,9 @@ public class ConfigLoader {
                 propertyName=objectPath.substring(pos2+1);
                 objectPath=objectPath.substring(0, pos2);
             }
-            
+            //System.out.println("==>objectPath before: "+objectPath+"-callerPath: "+callerPath);
             objectPath=normalizePath(callerPath, objectPath);
-            
+            //System.out.println("==>objectPath after: "+objectPath);
             result=resolver.resolveComponentReference( objectPath, scope, resolverArgs  );
             //System.out.println("===>"+objectPath+"==>"+result);
 
@@ -362,34 +383,81 @@ public class ConfigLoader {
         return false;
     }
 
-
+    public ConfigEntry getConfigEntry( String callerPath, String componentPath ) throws WDException {
+    	return getConfigEntry( PathsUtil.normalizePath(callerPath, componentPath) );
+    }
     public ConfigEntry getConfigEntry( String componentPath ) throws WDException {
         if ( componentPath ==null ){
             internalLogWarning("Invalid component path: null");
             return null;
         }
+        
+        if ( componentPath ==null || componentPath.length()==0){
+            internalLogWarning("Invalid component path: null");
+            return null;
+        }else if (componentPath.charAt(0)!='/' && componentPath.charAt(0)!='\\' && componentPath.charAt(0)!='.' )
+        	componentPath='/'+componentPath;
 
+        //if ("./WideCommHttpServer".equals(componentPath) )throw new RuntimeException();
+        
         ConfigEntry ce=(ConfigEntry)configEntriesCache.get(componentPath);
-
+        
         if (ce==null){
             ce=getConfigEntry_0(componentPath);
             if ( ce!=null )
                 configEntriesCache.put(componentPath, ce);
+            else{
+            	LoggingService.getDefaultLogger().logTrace(this, "Configuration not found for component: "+componentPath);
+            }
+            	
         }
         return ce;
     }
     protected ConfigEntry getConfigEntry_0( String componentPath ) throws WDException {
 
         Vector v= new Vector();
-        if ( componentPath ==null ){
-            internalLogWarning("Invalid component path: null");
-            return null;
-        }
-        String propertiesPath= componentPath+".properties";
+        
 
-        for ( int i=0; i<configPathArr.length; i++){
+        String propertiesPath= componentPath+"."+getPropertiesFileExtension();
+        //System.out.println(componentPath);
+        internalLogDebug("Looking for:"+configPathArr);
+        
+        // Loading config and localconfig form META-INF/resources of the bubble jar file (getClass().getResourceAsStream(..))  
+        try {
+        	String [] dummy={"/META-INF/resources/config", "/META-INF/resources/localconfig"};
+        	for (int i=0;i<dummy.length; i++){
+        		InputStream is=getClass().getResourceAsStream(dummy[i]+propertiesPath);
+				if (is!=null){
+					try {
+						String result=readFile(is);
+	                    if ( result != null && result.length()>0) {
+	                        ConfigPropertiesFile cf= new ConfigPropertiesFile(
+	                        								dummy[i],
+	                                                        propertiesPath,
+	                                                        result, 0 );
+	                        v.add(cf);
+	                    }
+	                }catch(IOException ioe){
+	                	ioe.printStackTrace();
+	                    internalLogError("Error while loading: "+propertiesPath);
+	                    internalLogError(ioe);
+	                }
+	
+				}
+        	}
+		} catch (Throwable e) {
+			internalLogError(e);
+		}
+		
+		// Just a protected method to override eventually 
+		getConfigEntry_0(v, propertiesPath);
+		
+		
+		// Loading configuration folders forn the CONFIG-PATH environment variable
+		for ( int i=0; i<configPathArr.length; i++){
             if ( configPathArr[i].isDirectory() ){
                 File f= new File( configPathArr[i], propertiesPath );
+                internalLogDebug("checking for absolute path:"+f.getAbsolutePath());
                 if ( f.exists() && f.canRead()  && f.isFile() ) {
                     try {
                         String result=readFile(new FileInputStream( f ));
@@ -435,8 +503,13 @@ public class ConfigLoader {
         //return new ConfigEntry( propertiesPath, cfs);
         return new ConfigEntry( componentPath, cfs);
     }
+    
+    
+    protected void getConfigEntry_0( List v, String propertiesPath ) throws WDException {
+    	
+    }
 
-    private String readFile(InputStream is) throws IOException{
+    protected String readFile(InputStream is) throws IOException{
         if ( is==null) return null;
         BufferedInputStream bis=new BufferedInputStream(is);
 
@@ -476,6 +549,7 @@ public class ConfigLoader {
     }
 
     public void internalLogError(Throwable t){
+    	System.out.println("HEYYYYY : "+LoggingService.getDefaultLogger().isLoggingError());
         LoggingService.getDefaultLogger().logError(this, t);
     }
     public void internalLogError(String t){
@@ -508,17 +582,21 @@ public class ConfigLoader {
     public static void main (String[] args) throws Exception{
         ConfigLoader tw= new ConfigLoader();
         // String pat="c:;d:;e";
-        String path="D:\\shared\\pvcs\\IMIWEB_LIBRARIES\\beanworld";
-        path+=";D:\\shared\\pvcs\\IMIWEB_LIBRARIES\\beanworld\\it.zip";
+        //String path="D:\\shared\\pvcs\\IMIWEB_LIBRARIES\\beanworld";
+        //path+=";D:\\shared\\pvcs\\IMIWEB_LIBRARIES\\beanworld\\it.zip";
+        String path="";
         tw.setConfigPath( path );
-        ConfigEntry ce=tw.getConfigEntry("/it/imiweb/DataStore.properties");
+        //ConfigEntry ce=tw.getConfigEntry("/it/imiweb/DataStore.properties");
+        ConfigEntry ce=tw.getConfigEntry("/Architect");
         //ConfigEntry ce=tw.getConfigEntry("it/imiweb/a.properties");
         Thread.currentThread().sleep(1000);
-
+        System.out.println("CE==>"+ce);
 
         //tw.findPropertiesFiles( "it/imiweb/a.properties");
        //Object r=tw.findPropertiesFiles( "it/imiweb/a.properties") ;
         //System.out.println( DataTools.arrayToString(r));
+        //String s=tw.getClass().getSimpleName()+".class";
+        //System.out.println(tw.getClass().getResource(s));
     }
 
 

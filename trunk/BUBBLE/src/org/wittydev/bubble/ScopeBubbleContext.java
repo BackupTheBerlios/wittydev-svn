@@ -103,9 +103,10 @@ public class ScopeBubbleContext extends BubbleContext implements ObjectResolver{
         if ( context ==null ) context = this;
         Object result;
         try{
-            //System.out.println("==============>before lookup_0");
+        	
+            //System.out.println("==============>before lookup_0 on ["+context+"]");
             result=context.lookup_0( pathName, false );
-            //System.out.println("==============>after lookup_0:"+result);
+            //System.out.println("==============>after lookup_0 on ["+context+"]: "+result);
         }catch(javax.naming.NamingException e){
             internalLogError( "Error while loading: "+componentPath );
             internalLogError( e );
@@ -122,8 +123,10 @@ public class ScopeBubbleContext extends BubbleContext implements ObjectResolver{
                 try{
                     if(result!=null)
                         bind(pathName, result);
-                    else
+                    else{
+                    	internalLogWarning("Configuration not found for bean: "+componentPath);
                         return null;
+                    }
                 }catch(javax.naming.NamingException ne ){
                     internalLogError( "Error while loading: "+componentPath );
                     internalLogError( ne );

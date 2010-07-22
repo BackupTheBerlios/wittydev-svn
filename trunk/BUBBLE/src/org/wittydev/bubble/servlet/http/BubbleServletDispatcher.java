@@ -59,6 +59,7 @@ public class BubbleServletDispatcher extends GenericServlet{
             }else{
                 Servlet servlet=wa.getServlet(servletPath);
                 if (servlet==null){
+                	System.out.println("ERROR IN BUBBLESERVLETDISPATCHER===>");
                     ServletException e=new ServletException("Invalid servlet path: "+servletPath);
                     LoggingService.getDefaultLogger().logError( this, e);
                     throw e;

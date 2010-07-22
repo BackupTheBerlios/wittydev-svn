@@ -1,4 +1,5 @@
 package org.wittydev.bubble.servlet.http;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletContextListener;
 import javax.servlet.ServletRequestListener;
 import javax.servlet.ServletContextEvent;
@@ -20,6 +21,13 @@ import org.wittydev.logging.LoggingService;
 
 public class BubbleWebContainerListener implements ServletContextListener {
     public static final String WEB_ARCHITECT="_WEB_ARCHITECT_";
+    
+    {
+    	LoggingService.getDefaultLogger().setLoggingDebug(true);
+    	LoggingService.getDefaultLogger().setLoggingWarning(true);
+    	LoggingService.getDefaultLogger().setLoggingError(true);
+    	LoggingService.getDefaultLogger().setLoggingInfo(true);
+    }
 
 
     public void contextInitialized(ServletContextEvent event){
@@ -38,8 +46,10 @@ public class BubbleWebContainerListener implements ServletContextListener {
             if (wa!=null){
                 LoggingService.getDefaultLogger().logError(this, "Setting Bubble Initial Context found in factory!!");
             }else{
-                wa=createWebArchitect();
+                wa=createWebArchitect(event.getServletContext());
+                
                 String confPath=event.getServletContext().getInitParameter(WebArchitect.CONFIG_PATH_KEY);
+                LoggingService.getDefaultLogger().logInfo(this, "CONFIG_PATH:["+confPath+"]");
                 if ( confPath!=null ) wa.setConfigPath(confPath);
                 try{
                     wa.startService();
@@ -63,7 +73,7 @@ public class BubbleWebContainerListener implements ServletContextListener {
 
     }
 
-    public WebArchitect createWebArchitect(){
-        return new WebArchitect();
+    public WebArchitect createWebArchitect(ServletContext servletContext){
+        return new WebArchitect(servletContext);
     }
 }
