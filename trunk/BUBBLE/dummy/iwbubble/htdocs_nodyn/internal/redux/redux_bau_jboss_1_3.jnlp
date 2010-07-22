@@ -1,0 +1,71 @@
+<jnlp spec="1.0+" codebase="http://sviluppo02-s1.lan.iw:1080/internal/redux" href="redux_bau_jboss_1_3.jnlp" >
+	<information>
+		<title>IW QuickTrade</title>
+		<vendor>IW BANK S.p.A.</vendor>
+		<!--homepage href="docs/help.html"/-->
+		<description kind="one-line">QuickTrade e' una piattaforma di negoziazione sviluppata da IW BANK S.p.A.</description>
+		<description kind="short">QuickTrade e' una piattaforma di negoziazione sviluppata da IW BANK S.p.A. Tutti i diritti sono riservati.</description>
+		<icon href="img/qtico-64x64.gif" width="64" height="64"/>
+		<icon href="img/qtico-32x32.gif" width="32" height="32"/>
+		<offline-allowed/>
+	</information>
+	<security>
+		<all-permissions/>
+	</security> 
+	<resources>
+		<j2se version="1.3.*" initial-heap-size="8m" max-heap-size="128m"/>
+
+		<jar href="lib/autopatch.jar"/>
+	
+			
+		<jar href="lib/ReduxPatch.jar"/>
+		<jar href="lib/Redux.jar" main="true"/>
+			
+	
+		<jar href="lib/chartingpatch.jar"/>
+		<jar href="lib/charting_res.jar"/>
+		<jar href="lib/charting_lib.jar"/>
+		<jar href="lib/charting.jar"/>
+		<jar href="lib/MiniXerces.jar"/>
+		<jar href="lib/jcert.jar"/>
+		<jar href="lib/jnet.jar"/>
+		<jar href="lib/jsse.jar"/>
+		<jar href="lib/XMLredux.jar"/>
+		<jar href="lib/ReduxResources.jar"/>
+		<jar href="lib/is_jlib01.jar"/>
+		<jar href="lib/neva.jar" /> 
+		<jar href="lib/iwtscalc.jar" /> 
+
+		
+			<jar href="lib/iwman.jar" /> 
+		
+
+		
+		<property name="redux.logging.info" value="true"/>
+		<property name="redux.isg.newsURL" value="http://chart.imiweb.it:80/imilib/news.html"/>
+		<property name="redux.logging.debug" value="false"/>
+		<property name="redux.sessionName" value="JSESSIONID"/>
+		<property name="redux.maximumWatchListsWindows" value="2"/>
+		<property name="redux.MAXNUMSUBSCRIBEKEY" value="50"/>
+		<property name="redux.QTConf" value="http://sviluppo02-s1.lan.iw:1080/internal/redux/conf/redux_conf_jboss.xml"/>
+		<property name="redux.isg.ftsHostURL" value="http://chart.imiweb.it:80"/>
+		<property name="redux.disableRealtimeExchange" value="false"/>
+		<property name="redux.home" value="/internal/redux/"/>
+		<property name="redux.helpIndexUrl" value="http://iwbtest.lan.iw/internal/redux/help/index.htm"/>
+		<property name="redux.isg.spreaderHostURL" value="http://chart.imiweb.it:443"/>
+		<property name="redux.availabilityDetailsUrl" value="https://iwbtest.lan.iw:11443/internal/watchlist/availabilitydetails/initSessAvail.jhtml"/>
+		
+	</resources>
+		
+	<resources os="Windows">
+		<nativelib href="lib/extlibs.jar"/> 
+	</resources>
+	
+	
+	<application-desc main-class="it.imiweb.app.redux.application.Application">
+		  <!--argument>-jconsole enable</argument-->
+		  <!--argument>show</argument-->
+		  <!--argument>-classic</argument-->
+	</application-desc>
+
+</jnlp>
